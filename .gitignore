@@ -1,0 +1,3 @@
+# Ignore compilated output files from gcc
+*.out
+out/
