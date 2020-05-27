@@ -1,0 +1,14 @@
+Para comenzar con Python, hay que instalar las librerias en nuestro sistema.
+
+1. Ir a la pagina de descarga de Python https://www.python.org/downloads/
+
+2. Seleccionar version de Python.
+
+3. Instalar
+    a. Asegurate de agregar Python a PATH (Windows)
+    b. Se recomienda instalar para TODOS LOS USUARIOS
+    c. Se recomienda instalar en una carpeta sencilla ej: C:\Python37\
+
+4. Para abrir el shell de Python, basta con abrir el simbolo del sistema y escribir "py" o "python".
+
+NOTA: En Linux y en MacOS, Python ya viene preinstalado, solo basta con acceder al shell y escribir "python".
