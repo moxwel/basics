@@ -1,0 +1,17 @@
+Tenemos nuestro juego listo, ahora ¿que pasa si quisieramos poder compartir nuestro juego con alguien sin que este tenga que instalar Python y Pygame?
+
+Primero necesitamos transformar nuestro juego en un archivo ejecutable, de tal forma que nuestro amigo solo haga click en el archivo .exe para abrir el programa.
+
+Para poder crear un archivo ejecutable de nuestro juego, podemos usar el modulo "cx_Freeze".
+
+Para ello, basta con escribir en la consola:
+
+pip install cx_Freeze
+
+Y ya lo tendremos instalado.
+
+NOTA: Antes de comenzar con el procedimiento, hay que tener en cuenta lo siguiente: hay que crear un nuevo archivo Python con el nombre de "setup.py", en la misma carpeta en donde se encuentra nuestro codigo.
+
+Para comenzar a compilar, hay que abrir una ventana de comandos que este ubicada dentro de la carpeta donde se encuentra el archivo "setup.py", y ejecutar el siguiente comando:
+
+python setyp.py build

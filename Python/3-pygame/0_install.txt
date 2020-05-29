@@ -1,0 +1,7 @@
+Para poder usar el modulo de Pygame, es necesario instalarlo primero.
+
+1. Accede al simbolo del sistema (o terminal).
+
+2. Escribe "pip install pygame"
+
+3. Listo
