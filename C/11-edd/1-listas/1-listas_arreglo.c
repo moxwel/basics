@@ -102,7 +102,7 @@ tElemLista erase(tLista *L) {
 }
 
 // Retorna el tamaño de la lista
-int getSize(tLista *L) {
+int length(tLista *L) {
     return L->listSize;
 }
 
@@ -153,8 +153,8 @@ void moveToEnd(tLista *L) {
 
 // Imprimir lista
 void printl(tLista *L) {
-    printf("Pos:\tValor:\tTam:%i\tCur:%i\n",getSize(L),currPos(L));
-    for (int i = 0; i < getSize(L); i++) {
+    printf("Pos:\tValor:\tTam:%i\tCur:%i\n",length(L),currPos(L));
+    for (int i = 0; i < length(L); i++) {
         printf("%i\t%i\n",i,L->listArray[i]);
     }
 }
