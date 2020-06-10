@@ -1,13 +1,13 @@
 ## To Do
 
-- [ ] Listas
+- [x] Listas
   - [x] Arreglos
   - [x] Enlazada
-  
+
 - [ ] Pilas
   - [ ] Arreglos
   - [ ] Enlazada
-  
+
 - [ ] Colas
   - [ ] Arreglos
   - [ ] Enlazada
