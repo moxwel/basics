@@ -272,19 +272,32 @@ void printList(tLista *L) {
     tNodo* aux = L->head;
 
     printf("\n==========::LISTA::==========\n");
-    printf("Len:%i\tCur:%i\nHead:%p\tTail:%p\n\n",length(L),currPos(L),L->head,L->tail);
+    printf("Len:%i\tCur:%i\tVal:%i\nHead:%p\tTail:%p\n\n",length(L),currPos(L),getValue(L),L->head,L->tail);
+
     printf("Mem:\t\tPos:\tInfo:\tSig:\n");
 
     for (int i = 0; i < length(L); i++) {
-        if (i == 0 && i == currPos(L)) {
-            printf("%p\t>%i CAB\t%i\t%p\n",aux,i,aux->info,aux->sig);
-        } else if (i == 0 && !(i == currPos(L))) {
-            printf("%p\t%i CAB\t%i\t%p\n",aux,i,aux->info,aux->sig);
-        } else if (i == currPos(L)) {
-            printf("%p\t>%i\t%i\t%p\n",aux,i,aux->info,aux->sig);
-        } else {
-            printf("%p\t%i\t%i\t%p\n",aux,i,aux->info,aux->sig);
+
+        printf("%p\t", aux);
+
+        if (i == currPos(L)) {
+            printf(">");
         }
+        if (i == currPos(L) + 1) {
+            printf(">>");
+        }
+
+        printf("%i ", i);
+
+        if (aux == L->head) {
+            printf("H");
+        }
+        if (aux == L->tail) {
+            printf("T");
+        }
+
+        printf("\t%i\t%p\n",aux->info,aux->sig);
+
         aux = aux->sig;
     }
 

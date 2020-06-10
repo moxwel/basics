@@ -12,10 +12,15 @@ int main() {
 
     printf("2-Agregando elementos...\n");
     append(pl, 54);
+    printList(pl);
     append(pl, 4);
+    printList(pl);
     append(pl, 3214);
+    printList(pl);
     append(pl, 24);
+    printList(pl);
     append(pl, 100);
+    printList(pl);
     append(pl, 8367);
     printList(pl);
 
