@@ -1,9 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
+
 // Este archivo puede incluirse de forma individual en cualquier
 // programa en el que se necesiten listas.
 
 // Como los elementos se van a guardar en un arreglo, significa que tienen un tamaño maximo
 // Suponemos que el tamaño maximo de la lista es 'MAX_SIZE'
 #define MAX_SIZE 1000000
+#define INVALID_ELEMENT INT_MIN
 
 
 
@@ -84,6 +89,11 @@ int append(tLista *L, tElemLista item) {
 
 // Elimina el elemento de la ubicacion del cursor (retorna el valor eliminado)
 tElemLista erase(tLista *L) {
+    // Asegurarse de que no se pueden eliminar elementos si no hay nada en la lista
+    if (L->listSize == 0) {
+        return INVALID_ELEMENT;
+    }
+
     // Se guarda el elemento actual para despues retornarlo
     tElemLista item = L->listArray[L->curr];
 
@@ -150,8 +160,8 @@ void prev(tLista *L) {
 
 // Mover el cursor a la posicion indicada (1 = exito)
 int moveToPos(tLista *L, int pos) {
-    // Asegurarse que la posicion a la que se quiere mover no excede el tamaño de la lista
-    if (pos >= L->listSize) {
+    // Asegurarse que la posicion a la que se quiere mover sea valido
+    if (pos < 0 || pos >= L->listSize) {
         return 0;
     }
 

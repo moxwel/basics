@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "./list_array_TDA.c"
+#include "./list_pointer_TDA.c"
 
 int main() {
     tLista mi_lista;
@@ -23,7 +23,7 @@ int main() {
     moveToPos(pl, 4);
     printList(pl);
 
-    printf("4-Insertando elemento en la posicion 4...\n");
+    printf("4-Insertando elemento despues de la posicion 4...\n");
     insert(pl,9876);
     printList(pl);
 
@@ -34,7 +34,14 @@ int main() {
     printf("6-Eliminando elemento %i...\n",erase(pl));
     printList(pl);
 
-    deleteList(pl);
+    printf("7-Moviendo cursor hacia atras\n");
+    prev(pl);
+    printList(pl);
+
+    printf("8-Eliminando elemento %i...\n",erase(pl));
+    printList(pl);
+
+    clear(pl);
 
     printList(pl);
     return 0;
