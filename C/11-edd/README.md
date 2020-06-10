@@ -2,7 +2,7 @@
 
 - [ ] Listas
   - [x] Arreglos
-  - [ ] Enlazada
+  - [x] Enlazada
   
 - [ ] Pilas
   - [ ] Arreglos
