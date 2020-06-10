@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "./list_pointer_TDA.c"
+#include "./linked_list_TDA.c"
 
 int main() {
     tLista mi_lista;
