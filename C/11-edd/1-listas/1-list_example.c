@@ -35,7 +35,5 @@ int main() {
     printList(pl);
 
     deleteList(pl);
-
-    printList(pl);
     return 0;
 }
