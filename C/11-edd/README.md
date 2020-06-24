@@ -5,7 +5,7 @@
   - [x] Enlazada
 
 - [ ] Pilas
-  - [ ] Arreglos
+  - [x] Arreglos
   - [ ] Enlazada
 
 - [ ] Colas
