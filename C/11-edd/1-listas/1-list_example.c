@@ -34,6 +34,11 @@ int main() {
     printf("6-Eliminando elemento %i...\n",erase(pl));
     printList(pl);
 
+    clear(pl);
+
+    append(pl,13);
+    printList(pl);
+
     deleteList(pl);
     return 0;
 }
