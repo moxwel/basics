@@ -46,9 +46,9 @@ int main() {
     printf("8-Eliminando elemento %i...\n",erase(pl));
     printList(pl);
 
-    printf("9-Limpiando lista...\n");
-    clear(pl);
 
+    printf("10-Liberando memoria...\n");
+    deleteList(pl);
     printList(pl);
     return 0;
 }

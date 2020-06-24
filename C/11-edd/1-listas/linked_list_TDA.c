@@ -61,15 +61,17 @@ void initList(tLista *L) {
 
 // Borrar lista. Hay que liberar de la memoria a cada nodo.
 void deleteList(tLista *L) {
-    // Se mueve el cursor al head
+    // Se mueve el cursor y el tail al head
     L->curr = L->head;
+    L->tail = L->head;
+
     L->pos = 0;
 
     // Puntero auxiliar. Apunta al nodo siguiente del cursor.
     tNodo* aux;
 
     // Ir eliminando uno a uno hasta que no hayan mas nodos
-    while (L->listSize != 0) {
+    while (L->listSize > 0) {
         aux = L->curr->sig;
 
         L->curr->sig = L->curr->sig->sig;
@@ -77,6 +79,7 @@ void deleteList(tLista *L) {
         free(aux);
 
         L->listSize--;
+        //printList(L);
     }
 }
 
