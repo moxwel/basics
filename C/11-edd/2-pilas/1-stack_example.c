@@ -24,6 +24,7 @@ int main() {
     printf("3-Eliminando elemento %i...\n",pop(ps));
     printf("4-Eliminando elemento %i...\n",pop(ps));
     printf("5-Eliminando elemento %i...\n",pop(ps));
+    printf("5-Eliminando elemento %i...\n",pop(ps));
     printStack(ps);
 
     return 0;

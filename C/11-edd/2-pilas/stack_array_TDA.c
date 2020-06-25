@@ -109,7 +109,7 @@ int size(tPila *P) {
 
 // Imprimir Pila
 void printStack(tPila *P) {
-    printf("\n==========::Pila::==========\n");
+    printf("\n==========::PILA::==========\n");
     printf("Pos:\tVal:\tSize:%i\tTop:%i\n",size(P),topValue(P));
 
     for (int i = 0; i < size(P); i++) {
@@ -120,5 +120,5 @@ void printStack(tPila *P) {
         }
     }
 
-    printf("=============================\n\n");
+    printf("=^==========================\n\n");
 }
