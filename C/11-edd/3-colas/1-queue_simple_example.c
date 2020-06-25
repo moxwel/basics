@@ -7,11 +7,11 @@ int main() {
     tCola mi_cola;
     tCola *pc = &mi_cola;
 
-    printf("1-Inicializando pila...\n");
+    printf("1-Inicializando cola...\n");
     initQueue(pc);
     printQueue(pc);
 
-    printf("2-Agregando elementos a la pila...\n");
+    printf("2-Agregando elementos a la cola...\n");
     enqueue(pc,1431);
     printQueue(pc);
     enqueue(pc,5321);

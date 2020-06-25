@@ -21,7 +21,7 @@ typedef struct {
 
     unsigned int maxSize; // El tamaño maximo del arreglo
 
-    unsigned int listSize; // EL tamaño de la "porcion del arreglo" que se esta utilizando
+    unsigned int queueSize; // EL tamaño de la "porcion del arreglo" que se esta utilizando
 
     tElemCola* queueArray; // El arreglo en donde se van a guardar los elementos
 } tCola;
@@ -35,7 +35,7 @@ typedef struct {
 // Inicializador de Cola. Asigna memoria.
 void initQueue(tCola *L) {
     L->maxSize = MAX_SIZE;
-    L->listSize = 0;
+    L->queueSize = 0;
     L->queueArray = (tElemCola*)malloc(L->maxSize * sizeof(tElemCola));
 }
 
@@ -49,20 +49,20 @@ void deleteQueue(tCola *L) {
 // Insertar elemento al final de la cola
 int enqueue(tCola *L, tElemCola item) {
     // Si el tamaño de la Cola ya es el maximo posible, entonces no agrega nada
-    if (L->listSize >= L->maxSize) {
+    if (L->queueSize >= L->maxSize) {
         return 0;
     }
 
     // Al final, se inserta el elemento deseado
-    L->queueArray[L->listSize] = item;
-    L->listSize++;
+    L->queueArray[L->queueSize] = item;
+    L->queueSize++;
     return 1;
 }
 
 // Elimina el elemento al frente de la cola
 tElemCola dequeue(tCola *L) {
     // Asegurarse de que no se pueden eliminar elementos si no hay nada en la Cola
-    if (L->listSize == 0) {
+    if (L->queueSize == 0) {
         return INVALID_ELEMENT;
     }
 
@@ -70,12 +70,12 @@ tElemCola dequeue(tCola *L) {
     tElemCola item = L->queueArray[0];
 
     // Hay que mover todos los elementos despues del cursor una casilla mas a la izquierda
-    for (int i = 0; i < (L->listSize - 1); i++) {
+    for (int i = 0; i < (L->queueSize - 1); i++) {
         L->queueArray[i] = L->queueArray[i+1];
     }
 
     // Al final, el tamaño de la Cola disminuye
-    L->listSize--;
+    L->queueSize--;
     return item;
 }
 
@@ -83,14 +83,14 @@ tElemCola dequeue(tCola *L) {
 void clear(tCola *L) {
     //Liberar y volver a declarar
     free(L->queueArray);
-    L->listSize = 0;
+    L->queueSize = 0;
     L->queueArray = (tElemCola*)malloc(L->maxSize * sizeof(tElemCola));
 }
 
 // Retorna el elemento al frente de la cola
 tElemCola frontValue(tCola *L) {
     // Si la lista esta vacia, entonces retorna invalido
-    if (L->listSize == 0) {
+    if (L->queueSize == 0) {
         return INVALID_ELEMENT;
     }
     return L->queueArray[0];
@@ -98,7 +98,7 @@ tElemCola frontValue(tCola *L) {
 
 // Retorna el tamaño de la Cola
 int size(tCola *L) {
-    return L->listSize;
+    return L->queueSize;
 }
 
 
