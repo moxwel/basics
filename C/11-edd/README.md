@@ -9,5 +9,5 @@
   - [ ] Enlazada
 
 - [ ] Colas
-  - [ ] Arreglos
-  - [ ] Enlazada
+  - [x] Simple
+  - [ ] Circular
