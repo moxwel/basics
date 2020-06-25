@@ -4,9 +4,8 @@
   - [x] Arreglos
   - [x] Enlazada
 
-- [ ] Pilas
+- [x] Pilas
   - [x] Arreglos
-  - [ ] Enlazada
 
 - [ ] Colas
   - [x] Simple
