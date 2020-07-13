@@ -135,7 +135,7 @@ int size(tABB *T) {
 
 
 
-
+// Elimina un nodo del arbol
 void removeNode(tABB *T, tElemArbolBin item) {
     if (find(T,item)) {
         // Primero hay que buscar el nodo que se quiere borrar
@@ -263,12 +263,13 @@ void removeAux(tNodoArbolBin *nodo, tElemArbolBin elem, tABB* T) {
 // Recorrer arbol Pre-Orden
 void preOrden(tABB *T) {
     preOrdenAux(T->raiz);
+    printf("\n");
 }
 void preOrdenAux(tNodoArbolBin *nodo) {
     if (nodo == NULL) {
         return;
     }
-    printf("%i\n",getValue(nodo)); // Procesar nodo
+    printf("%i ",getValue(nodo)); // Procesar nodo
     preOrdenAux(nodo->izq);
     preOrdenAux(nodo->der);
 }
@@ -317,12 +318,4 @@ int findAux(tNodoArbolBin *nodo, tElemArbolBin elem) {
         return findAux(nodo->der, elem);
     }
     return 0;
-}
-
-
-
-
-void infoABB(tABB *T) {
-    printf("=======::ABB::======\n");
-    printf("Raiz: %p - N Elems: %i\n\n",T->raiz,T->nElem);
 }
