@@ -1,0 +1,50 @@
+{
+  "version": "0.2.0",
+
+  "configurations":
+  [
+    {
+      "name": "[gdb] Depurar",
+      "type": "cppdbg",
+      "request": "launch",
+
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "[gcc] Compilar",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+    },
+    {
+      "name": "[gdb] Depurar con 1 argumento",
+      "type": "cppdbg",
+      "request": "launch",
+
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "[gcc] Compilar",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+      "args": ["${input:args1}"]
+    },
+    {
+      "name": "[gdb] Depurar con 2 argumentos",
+      "type": "cppdbg",
+      "request": "launch",
+
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "[gcc] Compilar",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+      "args": ["${input:args1}","${input:args2}"]
+    },
+  ],
+
+  "inputs":
+  [
+    {
+      "id": "args1",
+      "type": "promptString",
+      "description": "Argumento 1"
+    },
+    {
+      "id": "args2",
+      "type": "promptString",
+      "description": "Argumento 2"
+    },
+  ]
+}

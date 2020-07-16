@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+
+  "tasks":
+  [
+    {
+      "label": "[gcc] Compilar",
+      "type": "shell",
+
+      "group": {"kind": "build", "isDefault": true},
+      "problemMatcher": "$gcc",
+
+      "linux":
+      {
+        "command": "gcc",
+        "args":
+        [
+          "${file}",
+          "-o",
+          "${fileDirname}/${fileBasenameNoExtension}.out",
+          "-Wall", "-lm", "-g"
+        ]
+      },
+    },
+  ],
+}
