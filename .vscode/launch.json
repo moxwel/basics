@@ -4,6 +4,14 @@
   "configurations":
   [
     {
+      "name": "[Python] Depurar",
+      "type": "python",
+      "request": "launch",
+
+      "cwd": "${workspaceFolder}",
+      "program": "${file}",
+    },
+    {
       "name": "[gdb] Depurar",
       "type": "cppdbg",
       "request": "launch",

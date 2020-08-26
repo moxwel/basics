@@ -22,13 +22,13 @@ Aqui se dejan las instrucciones de depuracion para los archivos. Trabaja junto c
 
 Arrastra la carpeta `.vscode` a la carpeta raiz de tu proyecto. Luego, en la seccion *"Ejecutar"* de VSCode, puedes ver las opciones de depuración disponibles.
 
-> ⚠ Asegurate de tener la extension de C/C++ instalada. Es necesario para poder depurar codigo.
+> ⚠ Asegurate de tener las extensiones recomendadas (`extensions.json`) instaladas. Es necesario para poder depurar codigo.
 
 ---
 
 ## Solución de problemas
 
-Si al intentar depurar resulta en errores, prueba a reinstalar GCC y GDB:
+Para C/C++: si al intentar depurar resulta en errores, prueba a reinstalar GCC y GDB:
 
 - `sudo apt install gcc`
 - `sudo apt install gdb`
