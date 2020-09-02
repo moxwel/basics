@@ -1,0 +1,25 @@
+% Se puede añadir un titulo y autores para la portada de nuestro documento
+
+\documentclass[12pt ,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+% El titulo del documento
+\title{Mi primer documento}
+% El autor del documento
+\author{Maximiliano S.}
+% La fecha del documento (\today se refiere al momento de compilacion del documento)
+\date{\today}
+
+\begin{document}
+
+    % Aqui podemos crear una nueva "seccion" en el documento, que sera una pagina
+    % nueva donde estara la portada.
+    \begin{titlepage}
+        \maketitle
+    \end{titlepage}
+
+    Éste es el contenido de nuestro documento \LaTeX.
+
+\end{document}
