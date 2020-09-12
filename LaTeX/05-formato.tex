@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+% Con esto se puede cambiar el formato de hoja y margenes del documento
+\usepackage[legalpaper, margin=1cm]{geometry}
+
+% Con esto se puede cambiar la separacion entre parrafos
+\setlength{\parskip}{1em}
+
+\begin{document}
+
+    % Noindent sirve para quitar la sangria de un parrafo
+    \noindent Podemos formatear el texto para dar un \textbf{enfasis} en el
+    contenido. Por ejemplo:
+
+    % Comienzo de texto en viñetas
+    \begin{itemize}
+        % Cada elemento que contenga un "item" tendra una viñeta
+        \item \textbf{Texto en negrita}
+
+        \item \textit{Texto en cursiva}
+
+        \item \underline{Texto subrayado}
+
+        \item \texttt{Texto monoespaciado}
+    \end{itemize}
+
+    \noindent Tambien podemos hacer una mezcla de estas:
+    \begin{itemize}
+        \item \textbf{\textit{Texto en negrita y cursiva}}
+
+        \item \textit{\texttt{Texto en cursiva y monoespaciado}}
+
+        \item \underline{\textit{Texto subrayado y cursiva}}
+    \end{itemize}
+
+    \noindent Formateando el texto en \LaTeX, nos servira para:
+    % Comienzo de texto enumerado
+    \begin{enumerate}
+        % Cada elemento que contenga un "item" tendra un numero.
+        \item Enfatizar aspectos \textbf{\underline{importantes}} de nuestro texto.
+
+        \item Dar mas \textit{dinamismo} al texto.
+
+        \item No aburrir al lector con texto \texttt{aburrido}.
+    \end{enumerate}
+
+\end{document}

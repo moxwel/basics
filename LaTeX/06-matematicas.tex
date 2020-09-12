@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[letterpaper]{geometry}
+
+% Para escribir simbolos matematicos, se necesitan estos paquetes
+\usepackage{amsmath, amsfonts, amssymb}
+
+\setlength{\parskip}{1em}
+
+\begin{document}
+
+    % \( ... \) se usa para poner expresiones matematicas "en linea" con el texto
+    \LaTeX tambien se caracteriza por poder poner expresiones matematicas
+    pero de una forma relativamente sencilla.
+
+    % \ ... \] se usa para poner expresiones matematicas "en bloque" y centrado
+    El teorema de Pitagoras \( a^2 + b^2 = c^2 \) se demostró ser invalido para otros
+    exponentes que no sean 2, osea, que no es valido para:
+    \[ a^n + b^n = c^n, \qquad \forall n \in \mathbb{R} \]
+
+    Sabemos que:
+    \[ ( \ln(x) )' = \frac{1}{x} \]
+
+    Si suponemos que \(x\) es una funcion \(f\) , entonces, por regla de la cadena:
+    \[ ( \ln( f(x) ) )' = \frac{1}{ f(x) } \cdot f'(x) = \frac{ f'(x) }{ f(x) } \]
+
+    Una \textbf{\textit{matriz identidad}} es una matriz de dimension \(n \times n\) (es decir,
+    cuadrada) que tiene su diagonal principal con 1, y todo el resto 0:
+    \[
+        I_n =
+        \left[\begin{matrix}
+            1      & 0      & 0      & \cdots & 0      \\
+            0      & 1      & 0      & \cdots & 0      \\
+            0      & 0      & 1      & \cdots & 0      \\
+            \vdots & \vdots & \vdots & \ddots & \vdots \\
+            0      & 0      & 0      & \cdots & 1      \\
+        \end{matrix}\right]_{n \times n}
+    \]
+
+    Se pueden \textbf{alinear} ecuaciones de la siguiente manera:
+    \begin{align*}
+        20x + 5 &= \frac{y}{2} \\
+        20x &= \frac{y}{2} - 5 \\
+        20x &= \frac{y - 10}{2} \\
+        x &= \frac{y - 10}{20}
+    \end{align*}
+
+\end{document}

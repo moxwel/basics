@@ -1,0 +1,33 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[letterpaper]{geometry}
+\usepackage{amsmath, amsfonts, amssymb}
+
+\setlength{\parskip}{1em}
+
+\begin{document}
+
+    Se pueden crear tablas en \LaTeX :
+
+    % Se crea un ambito de tabla para poder centrarlo
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{ c | c | c || c | c }
+            % c = centrar los elementos de la celda.
+            % | = crear linea para separar cada celda
+            % || = crear linea doble para separar
+            \(p\)      & \(q\)      & \(\lnot p\) & \(\lnot p \lor q\) & \(p \implies q\) \\
+            % Crear linea horizontal
+            \hline \hline
+            \textbf{V} & \textbf{V} & \textbf{F}  & \textbf{V}         & \textbf{V}       \\
+            \textbf{V} & \textbf{F} & \textbf{F}  & \textbf{F}         & \textbf{F}       \\
+            \textbf{F} & \textbf{V} & \textbf{V}  & \textbf{V}         & \textbf{V}       \\
+            \textbf{F} & \textbf{F} & \textbf{V}  & \textbf{V}         & \textbf{V}       \\
+        \end{tabular}
+
+        Por lo tanto se puede decir que \( ( \lnot p \lor q ) \equiv ( p \implies q ) \) .
+    \end{table}
+
+\end{document}
