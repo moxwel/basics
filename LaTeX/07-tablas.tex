@@ -9,25 +9,27 @@
 
 \begin{document}
 
-    Se pueden crear tablas en \LaTeX :
+    Se pueden crear tablas en \LaTeX{}.
+
+    Por ejemplo, para hacer una tabla de verdad logicas:
 
     % Se crea un ambito de tabla para poder centrarlo
     \begin{table}[h]
-        \centering
+        \centering % Centrar
+
+        % c = centrar los elementos de la celda.
+        % | = crear linea para separar cada celda
+        % || = crear linea doble para separar
         \begin{tabular}{ c | c | c || c | c }
-            % c = centrar los elementos de la celda.
-            % | = crear linea para separar cada celda
-            % || = crear linea doble para separar
             \(p\)      & \(q\)      & \(\lnot p\) & \(\lnot p \lor q\) & \(p \implies q\) \\
-            % Crear linea horizontal
-            \hline \hline
+            \hline \hline % Crear doble linea horizontal
             \textbf{V} & \textbf{V} & \textbf{F}  & \textbf{V}         & \textbf{V}       \\
             \textbf{V} & \textbf{F} & \textbf{F}  & \textbf{F}         & \textbf{F}       \\
             \textbf{F} & \textbf{V} & \textbf{V}  & \textbf{V}         & \textbf{V}       \\
-            \textbf{F} & \textbf{F} & \textbf{V}  & \textbf{V}         & \textbf{V}       \\
+            \textbf{F} & \textbf{F} & \textbf{V}  & \textbf{V}         & \textbf{V}
         \end{tabular}
-
-        Por lo tanto se puede decir que \( ( \lnot p \lor q ) \equiv ( p \implies q ) \) .
     \end{table}
+
+    Por lo tanto se puede decir que \( ( \lnot p \lor q ) \equiv ( p \implies q ) \) .
 
 \end{document}
