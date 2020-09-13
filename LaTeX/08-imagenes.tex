@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[legalpaper, margin=2cm]{geometry}
+\usepackage{amsmath, amsfonts, amssymb}
+
+\setlength{\parskip}{1em}
+
+% Para poder insertar imagenes, se puede usar el siguente paquete
+\usepackage{graphicx}
+% Aqui se define la carpeta en donde van a estar todas las imagenes
+\graphicspath{ {./images/} }
+
+\begin{document}
+
+    Se pueden insertar imagenes en \LaTeX.
+
+    Por ejemplo, Miguel.
+
+    % Ambito de imagen para poder centrarlo
+    \begin{figure}[h]
+        \centering % Centrar
+
+        % Con este comando, se puede insertar imagenes, usando el nombre del archivo.
+        \includegraphics{miguel.png}
+
+        \caption{Miguel} % Figura 1: Miguel
+    \end{figure}
+
+    Saluda a Miguel.
+
+    \rule{5cm}{0.4pt}
+
+    Sigue pagina...
+
+    \newpage
+
+
+    Miguel puede ser mas chikito.
+
+    \begin{figure}[h]
+        \centering
+
+        % Se puede usar el atributo "scale" para cambiar el tamaño de la imagen
+        \includegraphics[scale=0.2]{miguel.png}
+
+        \caption{Miguel chikito}
+    \end{figure}
+
+
+    O mas grande.
+
+    \begin{figure}[h]
+        \centering
+
+        \includegraphics[scale=2]{miguel.png}
+
+        \caption{Miguelote}
+    \end{figure}
+
+    Podemos aplastar a Miguel
+
+    \begin{figure}[h]
+        \centering
+
+        % Con los atributos "width" y "height" se puede cambiar el tamaño de forma
+        % mas especifica
+        \includegraphics[width=400px, height=100px]{miguel.png}
+
+        \caption{Miguel aplastado nooooo}
+    \end{figure}
+
+    Presiona \textbf{F} para \textit{\textbf{Dar Respetos}} a Miguel \texttt{u\_u}.
+
+\end{document}
