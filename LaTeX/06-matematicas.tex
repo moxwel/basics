@@ -2,7 +2,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
-\usepackage[letterpaper]{geometry}
+\usepackage[legalpaper]{geometry}
 
 % Para escribir simbolos matematicos, se necesitan estos paquetes
 \usepackage{amsmath, amsfonts, amssymb}
@@ -11,13 +11,13 @@
 
 \begin{document}
 
-    % \( ... \) se usa para poner expresiones matematicas "en linea" con el texto
-    \LaTeX tambien se caracteriza por poder poner expresiones matematicas
+    \LaTeX{} tambien se caracteriza por poder poner expresiones matematicas
     pero de una forma relativamente sencilla.
 
-    % \ ... \] se usa para poner expresiones matematicas "en bloque" y centrado
+    % \( ... \) se usa para poner expresiones matematicas "en linea" con el texto
     El teorema de Pitagoras \( a^2 + b^2 = c^2 \) se demostró ser invalido para otros
     exponentes que no sean 2, osea, que no es valido para:
+    % \[ ... \] se usa para poner expresiones matematicas "en bloque" y centrado
     \[ a^n + b^n = c^n, \qquad \forall n \in \mathbb{R} \]
 
     Sabemos que:
@@ -35,16 +35,18 @@
             0      & 1      & 0      & \cdots & 0      \\
             0      & 0      & 1      & \cdots & 0      \\
             \vdots & \vdots & \vdots & \ddots & \vdots \\
-            0      & 0      & 0      & \cdots & 1      \\
+            0      & 0      & 0      & \cdots & 1
         \end{matrix}\right]_{n \times n}
     \]
 
-    Se pueden \textbf{alinear} ecuaciones de la siguiente manera:
+    Se puede \textbf{alinear} ecuaciones de la siguiente manera:
+    % El simbolo & (ampersand) va a ser el caracter con el que se va a alinear
+    % la ecuacion
     \begin{align*}
-        20x + 5 &= \frac{y}{2} \\
-        20x &= \frac{y}{2} - 5 \\
-        20x &= \frac{y - 10}{2} \\
-        x &= \frac{y - 10}{20}
+        20x + 5 &= \frac{y}{2}      \\
+            20x &= \frac{y}{2} - 5  \\
+            20x &= \frac{y - 10}{2} \\
+              x &= \frac{y - 10}{20}
     \end{align*}
 
 \end{document}
