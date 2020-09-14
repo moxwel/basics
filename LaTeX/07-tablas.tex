@@ -5,6 +5,9 @@
 \usepackage[letterpaper]{geometry}
 \usepackage{amsmath, amsfonts, amssymb}
 
+% Se utiliza este paquete para poner color en tablas
+\usepackage[table]{xcolor}
+
 \setlength{\parskip}{1em}
 
 \begin{document}
@@ -24,7 +27,9 @@
             \(p\)      & \(q\)      & \(\lnot p\) & \(\lnot p \lor q\) & \(p \implies q\) \\
             \hline \hline % Crear doble linea horizontal
             \textbf{V} & \textbf{V} & \textbf{F}  & \textbf{V}         & \textbf{V}       \\
-            \textbf{V} & \textbf{F} & \textbf{F}  & \textbf{F}         & \textbf{F}       \\
+            % "cellcolor" cambia el color de una celda especifica, los argumentos son
+            % {color!transparencia(1-100)}
+            \cellcolor{red!25}\textbf{V} & \cellcolor{red!25}\textbf{F} & \cellcolor{red!25}\textbf{F}  & \cellcolor{red!25}\textbf{F}         & \cellcolor{red!25}\textbf{F}       \\
             \textbf{F} & \textbf{V} & \textbf{V}  & \textbf{V}         & \textbf{V}       \\
             \textbf{F} & \textbf{F} & \textbf{V}  & \textbf{V}         & \textbf{V}
         \end{tabular}
