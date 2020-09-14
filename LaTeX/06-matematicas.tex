@@ -6,6 +6,8 @@
 
 % Para escribir simbolos matematicos, se necesitan estos paquetes
 \usepackage{amsmath, amsfonts, amssymb}
+% Para poder encuadrar texto de forma bonita, se usa este paquete
+\usepackage{fancybox}
 
 \setlength{\parskip}{1em}
 
@@ -48,5 +50,11 @@
             20x &= \frac{y - 10}{2} \\
               x &= \frac{y - 10}{20}
     \end{align*}
+
+    Podemos poner ecuaciones dentro de un cuadrado de esta forma:
+    % El comando "shadowbox" nos va a crear un cuadro con sombra, bien bonito.
+    % Dentro de shadowbox podemos poner una expresion matematica en linea.
+    % Usando el comando "displaystyle", la ecuacion no se "compacta" al texto.
+    \[ \shadowbox{\( \displaystyle \sum_{k=1}^{n} k = \frac{n (n - 1)}{2} \)} \]
 
 \end{document}
