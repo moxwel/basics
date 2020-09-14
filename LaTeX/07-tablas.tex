@@ -6,7 +6,7 @@
 \usepackage{amsmath, amsfonts, amssymb}
 
 % Se utiliza este paquete para poner color en tablas
-\usepackage[table]{xcolor}
+\usepackage{colortbl}
 
 \setlength{\parskip}{1em}
 
@@ -29,7 +29,8 @@
             \textbf{V} & \textbf{V} & \textbf{F}  & \textbf{V}         & \textbf{V}       \\
             % "cellcolor" cambia el color de una celda especifica, los argumentos son
             % {color!transparencia(1-100)}
-            \cellcolor{red!25}\textbf{V} & \cellcolor{red!25}\textbf{F} & \cellcolor{red!25}\textbf{F}  & \cellcolor{red!25}\textbf{F}         & \cellcolor{red!25}\textbf{F}       \\
+            \rowcolor[rgb]{1,0.6,0.6}
+            \textbf{V} & \textbf{F} & \textbf{F}  & \textbf{F}         & \textbf{F}       \\
             \textbf{F} & \textbf{V} & \textbf{V}  & \textbf{V}         & \textbf{V}       \\
             \textbf{F} & \textbf{F} & \textbf{V}  & \textbf{V}         & \textbf{V}
         \end{tabular}
