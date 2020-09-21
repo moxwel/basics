@@ -24,6 +24,7 @@ Una vez instalado todo, se puede configurar MiKTeX para activar la descarga de p
 
 `MiKTeX Console > Stay in user mode`
 ![1](./sources/1.png)
+
 `Settings > Always install packages on-the-fly`
 ![2](./sources/2.png)
 
