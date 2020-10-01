@@ -1,4 +1,6 @@
-# Para comenzar a usar Python veamos primero como poder imprimir cosas en pantalla. Para eso, podemos usar la funcion print() . Para usar cadenas de texto, hay que usar doble comillas (""), todo lo que este dentro de las comillas, Python lo tratara como texto normal.
+# Para comenzar a usar Python veamos primero como poder imprimir cosas en pantalla.
+# Para eso, podemos usar la funcion print() . Para usar cadenas de texto, hay que usar doble comillas (""),
+# todo lo que este dentro de las comillas, Python lo tratara como texto normal.
 print("Hola mundo")
 
 # Tambien sirve usanso comillas simples.
