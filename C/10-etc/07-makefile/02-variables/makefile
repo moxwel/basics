@@ -23,6 +23,9 @@ LDFLAGS = -Wall -g
 # Ahora si necesitamos agregar mas archivos objeto, ya solo bastara con
 # cambiar las variables y no todo el archivo.
 
+# Si una linea queda muy larga, se puede usar el backslash \
+para seguir en una linea siguiente
+
 # =============
 
 
