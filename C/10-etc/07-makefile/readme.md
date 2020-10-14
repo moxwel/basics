@@ -24,7 +24,7 @@ $ gcc main.c prog1.c prog2.c -o mi_programa
 * Compila todos esos archivos a archivo de objeto ``.o`` (lenguaje maquina)
 * Finalmente los enlaza todos y los une en un ejecutable llamado ``mi_programa``
 
-En los casos de el proyecto sea muy pesado, y se necesite tiempo para compilar, al modificar solo un archivo, seria muy ineficiente tener que recompilar todos los archivos nuevamente.
+En los casos que el proyecto sea muy pesado, y se necesite tiempo para compilar, al modificar solo un archivo, seria muy ineficiente tener que recompilar todos los archivos nuevamente.
 
 Por eso tambien se decide hacer compilacion separada:
 
