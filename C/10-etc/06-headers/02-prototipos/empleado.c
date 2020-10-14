@@ -8,7 +8,7 @@ utilizar los mismos tipos de datos y funciones, y en el archivo .c es donde se d
 #include <stdlib.h>
 
 // Tambien incluimos el header aqui, ya que en el header se encuentran
-// las definicion desl typedef "emp".
+// las definicion del typedef "emp".
 #include "empleado.h"
 
 emp* crearEmpleado(int c, float s, char r) {
