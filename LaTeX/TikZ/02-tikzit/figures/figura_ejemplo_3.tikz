@@ -1,0 +1,51 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (4) at (-6, 2) {};
+		\node [style=none] (5) at (-5, 2.5) {};
+		\node [style=none] (6) at (-5, 2) {};
+		\node [style=none] (7) at (-6, 3) {};
+		\node [style=none] (8) at (-6, 3.5) {$z$};
+		\node [style=none] (9) at (-4.75, 3) {$y$};
+		\node [style=none] (10) at (-4.5, 2) {$x$};
+		\node [style=none] (11) at (-0.25, 1.75) {};
+		\node [style=none] (12) at (3, 2.25) {};
+		\node [style=none] (13) at (2, 0.5) {};
+		\node [style=none] (14) at (-0.25, 5.25) {};
+		\node [style=none] (15) at (-0.25, 2.25) {};
+		\node [style=none] (16) at (0.25, 1.825) {};
+		\node [style=none] (17) at (0.075, 1.575) {};
+		\node [style=none] (18) at (0.25, 2.35) {};
+		\node [style=none] (19) at (0.075, 2.1) {};
+		\node [style=none] (20) at (-0.25, 0) {};
+		\node [style=none] (21) at (-0.25, -1) {};
+		\node [style=none] (0) at (-7, 0) {};
+		\node [style=none] (1) at (-1, 3) {};
+		\node [style=none] (2) at (3, 0) {};
+		\node [style=none] (3) at (9, 3) {};
+		\node [style=none] (22) at (6.5, 2.5) {$\Pi$};
+		\node [style=none] (23) at (3.5, 2.5) {$\overrightarrow{u}$};
+		\node [style=none] (24) at (2.25, 1) {$\overrightarrow{v}$};
+		\node [style=none] (25) at (-0.25, 5.75) {$\overrightarrow{n}$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=Rojo FlechaMD] (4.center) to (6.center);
+		\draw [style=Verde Flecha] (4.center) to (5.center);
+		\draw [style=Azul Flecha] (4.center) to (7.center);
+		\draw [style=Flecha] (11.center) to (12.center);
+		\draw [style=Flecha] (11.center) to (13.center);
+		\draw [style=Rojo FlechaMD] (11.center) to (14.center);
+		\draw [style=Rojo] (15.center)
+			 to (18.center)
+			 to (16.center);
+		\draw [style=Rojo] (15.center)
+			 to (19.center)
+			 to (17.center);
+		\draw [style=Rojo] (21.center) to (20.center);
+		\draw [style=Rojo Discont] (20.center) to (11.center);
+		\draw [style=Normal] (0.center)
+			 to (1.center)
+			 to (3.center)
+			 to (2.center)
+			 to cycle;
+	\end{pgfonlayer}
+\end{tikzpicture}

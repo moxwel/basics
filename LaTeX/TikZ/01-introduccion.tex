@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+
+% TikZ tiene un conflicto con Babel, específicamente con el idioma español.
+% Este conflicto se puede resolver cambiando esta línea de código.
+\usepackage[spanish,es-noshorthands]{babel}
+
+\usepackage[legalpaper, margin=2cm]{geometry}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx, colortbl, fancybox}
+
+% Para poder hacer dibujos en TikZ, es necesario importar el paquete
+\usepackage{tikz}
+
+\setlength{\parskip}{1em}
+
+\title{Mi Documento}
+\author{Autor}
+\date{\today}
+
+\begin{document}
+
+  \section*{TikZ}
+
+    TikZ es un lenguaje en \LaTeX{} que nos permitirá crear figuras, formas,
+    diagramas, grafos, etc. Esto aumenta las capacidades de \LaTeX{} para
+    representar figuras.
+
+    \begin{center}
+
+      % Para comenzar un entorno de TikZ, se debe usar esta sección
+      \begin{tikzpicture}
+        \filldraw[color=red!80, fill=red!25, very thick](0,0) rectangle (3,2);
+        \draw[orange, ultra thick] (4,0) -- (6,0) -- (5.7,2) -- cycle;
+        \fill[blue!50] (8,1) circle (1.5);
+      \end{tikzpicture}
+
+    \end{center}
+
+    Los comandos TikZ se pueden usar de forma separada:
+
+    \tikz \draw (0,0) circle (1);
+    \tikz \draw (-1,0) -- (0,1) -- (1,0) -- (0,-1) -- cycle;
+
+    O se pueden usar en un mismo ``lienzo'':
+
+    \begin{tikzpicture}
+      \draw (0,0) circle (1cm);
+      \draw (-1,0) -- (0,1) -- (1,0) -- (0,-1) -- cycle;
+    \end{tikzpicture}
+
+\end{document}

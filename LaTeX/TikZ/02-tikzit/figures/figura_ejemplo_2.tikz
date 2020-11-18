@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=Punto] (0) at (0, 0) {};
+		\node [style=Punto] (1) at (0, 3) {};
+		\node [style=Punto] (2) at (3, 3) {};
+		\node [style=Punto] (3) at (3, 0) {};
+		\node [style=Punto] (4) at (2, 5) {};
+		\node [style=Punto] (5) at (5, 5) {};
+		\node [style=Punto] (6) at (5, 2) {};
+		\node [style=Circulo] (7) at (2, 2) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=Normal] (1) to (2);
+		\draw [style=Normal] (2) to (3);
+		\draw [style=Normal] (3) to (0);
+		\draw [style=Normal] (0) to (1);
+		\draw [style=Normal] (1) to (4);
+		\draw [style=Normal] (4) to (5);
+		\draw [style=Normal] (5) to (6);
+		\draw [style=Normal] (3) to (6);
+		\draw [style=Normal] (2) to (5);
+		\draw [style=Discontinuo] (0) to (7);
+		\draw [style=Discontinuo] (7) to (4);
+		\draw [style=Discontinuo] (7) to (6);
+	\end{pgfonlayer}
+\end{tikzpicture}

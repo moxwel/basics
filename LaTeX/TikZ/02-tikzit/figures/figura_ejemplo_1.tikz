@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=Circulo] (0) at (-2, 0) {a};
+		\node [style=Circulo Rojo] (1) at (0, 2) {b};
+		\node [style=Circulo Verde] (2) at (2, 0) {c};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (0) to (1);
+		\draw [style=Rojo Discont] (1) to (2);
+		\draw [style=D Flecha, bend right] (0) to (2);
+	\end{pgfonlayer}
+\end{tikzpicture}
