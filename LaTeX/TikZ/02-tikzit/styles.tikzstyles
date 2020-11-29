@@ -7,6 +7,7 @@
 \tikzstyle{Espacio}=[fill=white, draw=white, shape=rectangle]
 \tikzstyle{Circulo}=[fill=white, draw=black, shape=circle]
 \tikzstyle{Punto}=[fill=black, draw=black, shape=circle]
+\tikzstyle{Puntito}=[fill=black, draw=black, scale=0.3, shape=circle, tikzit draw=magenta]
 \tikzstyle{Punto Azul}=[fill=red, draw=black, shape=circle]
 \tikzstyle{Punto Azul}=[fill={rgb,255: red,20; green,94; blue,255}, draw=black, shape=circle]
 \tikzstyle{Punto Verde}=[fill={rgb,255: red,23; green,203; blue,65}, draw=black, shape=circle]
