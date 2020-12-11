@@ -28,4 +28,4 @@
 \tikzstyle{Verde Flecha}=[draw={rgb,255: red,26; green,220; blue,12}, ->]
 \tikzstyle{Azul}=[-, draw={rgb,255: red,39; green,115; blue,255}]
 \tikzstyle{Azul Flecha}=[draw={rgb,255: red,30; green,135; blue,226}, ->]
-\tikzstyle{Grueso}=[-, draw=black, ultra thick, tikzit draw=magenta, tikzit fill=black]
+\tikzstyle{Grueso}=[draw=black, ultra thick, tikzit draw=magenta, tikzit fill=black, ->]
