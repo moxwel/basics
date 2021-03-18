@@ -47,10 +47,7 @@ typedef struct {
     // Se usa unsigned para que los valores de int lleguen hasta 4294967295
 } tList;
 
-/**
- * Imprimir lista.
- **/
-void printList(tList* L);
+
 
 /**
  * Crear lista nueva.
@@ -63,6 +60,8 @@ tList* newList();
  * Libera toda la memoria.
  **/
 void deleteList(tList* L);
+
+
 
 /**
  * Insertar elemento en lista.
@@ -90,17 +89,71 @@ int erase(tList* L);
  * Limpiar lista.
  * Todos los elementos se borran.
  **/
-void clear(tList* L);
+void clearList(tList* L);
+
+
 
 /**
  * Mover cursor hacia el siguiente elemento.
+ *
+ * Retornos:
+ * - 1 : Exito
+ * - 0 : Sin exito (final de la lista)
  **/
-void next(tList* L);
+int next(tList* L);
 
 /**
  * Mover cursor al elemento anterior.
+ *
+ * Retornos:
+ * - 1 : Exito
+ * - 0 : Sin exito (comienzo de la lista)
  **/
-void prev(tList* L);
+int prev(tList* L);
+
+/**
+ * Mover cursor a posicion determinada.
+ *
+ * Retornos:
+ * - 1 : Exito
+ * - 0 : Sin exito (invalido)
+ **/
+int moveToPos(tList* L, int target);
+
+/**
+ * Mover cursor al inicio de la lista.
+ **/
+void moveToStart(tList* L);
+
+/**
+ * Mover cursor al final de la lista.
+ **/
+void moveToEnd(tList* L);
+
+
+
+/**
+ * Obtiene el valor del elemento siguiente al cursor.
+ * Si el cursor esta al final, se obtiene el valor actual.
+ **/
+tListElem getValue(tList* L);
+
+/**
+ * Obtiene el valor del tamano de la lista.
+ **/
+int getLength(tList* L);
+
+/**
+ * Obtiene el valor de la posicion del cursor.
+ **/
+int getPos(tList* L);
+
+
+
+/**
+ * Imprimir lista.
+ **/
+void printList(tList* L);
 
 // ====================
 

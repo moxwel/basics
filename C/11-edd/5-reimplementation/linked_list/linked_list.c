@@ -4,11 +4,15 @@
 #include "linked_list.h"
 
 tList* newList(){
+    // Asignar memoria para la lista
     tList* L = (tList*)malloc(sizeof(tList));
 
+    // Asignar memoria para el primer nodo
     L->head = L->tail = L->curr = (tListNode*)malloc(sizeof(tListNode));
 
-    L->curr->sig = NULL; L->pos = 0; L->len = 0;
+    L->curr->info = 0; L->curr->sig = NULL;
+
+    L->pos = 0; L->len = 0;
 
     return L;
 }
@@ -20,6 +24,7 @@ void insert(tList* L, tListElem item){
     L->curr->sig->info = item;
     L->curr->sig->sig = aux;
 
+    // Si el cursor esta al final, el tail debe moverse.
     if (L->curr == L->tail) {
         L->tail = L->curr->sig;
     }
@@ -41,10 +46,9 @@ void append(tList* L, tListElem item){
 
 void printList(tList* L){
     tListNode* view = L->head;
-    int pos = 0;
 
-    printf("=====LIST=====\nLen: %d - Pos: %d\n", L->len, L->pos);
-    for (int i = 0; i <= L->len; i++) {
+    printf("-----LIST-----\nLen: %d - Pos: %d - Curr: %d\n", getLength(L), getPos(L), getValue(L));
+    for (int i = -1; i < getLength(L); i++) {
         printf("[%d] %d ", i, view->info);
         if (L->head == view) {
             printf("| H ");
@@ -62,10 +66,12 @@ void printList(tList* L){
 }
 
 int erase(tList* L){
-    if (L->len == 0) {
+    // Si la lista esta vacia, entonces no hacer nada
+    if (getLength(L) == 0) {
         return 0;
     }
 
+    // Si el cursor esta al final, mover cursor hacia atras
     if (L->curr == L->tail) {
         prev(L);
     }
@@ -74,6 +80,7 @@ int erase(tList* L){
 
     L->curr->sig = L->curr->sig->sig;
 
+    // Si el tail esta en el nodo a eliminarse, el tail debe moverse.
     if (L->tail == aux) {
         L->tail = L->curr;
     }
@@ -85,14 +92,29 @@ int erase(tList* L){
     return 1;
 }
 
-void next(tList* L){
-    if (L->curr->sig != NULL) {
+int next(tList* L){
+    // Si la lista esta vacia, entonces no hacer nada
+    if (getLength(L) == 0) {
+        return 0;
+    }
+
+    // Se puede mover hacia adelante hasta que el cursor llegue al tail
+    if (L->curr != L->tail) {
         L->curr = L->curr->sig;
         L->pos++;
+        return 1;
     }
+
+    return 0;
 }
 
-void prev(tList* L){
+int prev(tList* L){
+    // Si la lista esta vacia, entonces no hacer nada
+    if (getLength(L) == 0) {
+        return 0;
+    }
+
+    // Se puede mover hacia atras hasta que el cursor llegue al head
     if (L->curr != L->head) {
         tListNode* aux = L->head;
 
@@ -103,20 +125,77 @@ void prev(tList* L){
         L->curr = aux;
 
         L->pos--;
+
+        return 1;
     }
+
+    return 0;
 }
 
-void clear(tList* L){
+void clearList(tList* L){
     while(erase(L)){
         continue;
     }
 }
 
 void deleteList(tList* L){
-    clear(L);
+    clearList(L);
     tListNode* aux = L->curr;
 
     free(aux);
 
     free(L);
+}
+
+tListElem getValue(tList* L){
+    // Si la lista esta vacia, retornar valor actual
+    if (getLength(L) == 0) {
+        return L->curr->info;
+    }
+
+    // Si el cursor esta al final, retornar valor actual
+    if (L->curr == L->tail) {
+        return L->curr->info;
+    }
+
+    return L->curr->sig->info;
+}
+
+int getLength(tList* L){
+    return L->len;
+}
+
+int getPos(tList* L){
+    return L->pos;
+}
+
+int moveToPos(tList* L, int target){
+    // Si la posicion es negativa, es invalido
+    if (target < 0) {
+        return 0;
+    }
+
+    // Si la posicion sale del rango, es invalido
+    if (target >= getLength(L)) {
+        return 0;
+    }
+
+    moveToStart(L);
+
+    for (int i = 0; i < target; i++) {
+        next(L);
+    }
+
+    return 1;
+
+}
+
+void moveToStart(tList* L){
+    L->curr = L->head;
+    L->pos = 0;
+}
+
+void moveToEnd(tList* L){
+    L->curr = L->tail;
+    L->pos = getLength(L);
 }
