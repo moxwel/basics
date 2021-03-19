@@ -3,7 +3,7 @@
 
 #include "universal_list.h"
 
-tList* newList(){
+tList* newList() {
     // Asignar memoria para la lista
     tList* L = (tList*)malloc(sizeof(tList));
 
@@ -19,7 +19,7 @@ tList* newList(){
     return L;
 }
 
-void insert(tList* L, tListElem item){
+void insert(tList* L, tListElem item) {
     tListNode* aux = L->curr->sig;
 
     L->curr->sig = (tListNode*)malloc(sizeof(tListNode));
@@ -40,7 +40,7 @@ void insert(tList* L, tListElem item){
     L->len++;
 }
 
-void append(tList* L, tListElem item){
+void append(tList* L, tListElem item) {
     tListNode* aux = L->tail;
 
     L->tail->sig = (tListNode*)malloc(sizeof(tListNode));
@@ -53,7 +53,7 @@ void append(tList* L, tListElem item){
     L->len++;
 }
 
-void printList(tList* L){
+void printList(tList* L) {
     tListNode* view = L->head;
 
     printf("-----LIST-----\nLen: %d - Pos: %d - Curr: %d\n", getLength(L), getPos(L), getValue(L));
@@ -74,7 +74,7 @@ void printList(tList* L){
     printf("==============\n");
 }
 
-int erase(tList* L){
+int erase(tList* L) {
     // Si la lista esta vacia, entonces no hacer nada
     if (getLength(L) == 0) {
         return 0;
@@ -103,7 +103,7 @@ int erase(tList* L){
     return 1;
 }
 
-int next(tList* L){
+int next(tList* L) {
     // Si la lista esta vacia, entonces no hacer nada
     if (getLength(L) == 0) {
         return 0;
@@ -119,7 +119,7 @@ int next(tList* L){
     return 0;
 }
 
-int prev(tList* L){
+int prev(tList* L) {
     // Si la lista esta vacia, entonces no hacer nada
     if (getLength(L) == 0) {
         return 0;
@@ -135,13 +135,13 @@ int prev(tList* L){
     return 0;
 }
 
-void clearList(tList* L){
-    while(erase(L)){
+void clearList(tList* L) {
+    while(erase(L)) {
         continue;
     }
 }
 
-void deleteList(tList* L){
+void deleteList(tList* L) {
     clearList(L);
     tListNode* aux = L->curr;
 
@@ -150,7 +150,7 @@ void deleteList(tList* L){
     free(L);
 }
 
-tListElem getValue(tList* L){
+tListElem getValue(tList* L) {
     // Si la lista esta vacia, retornar valor actual
     if (getLength(L) == 0) {
         return L->curr->info;
@@ -164,15 +164,15 @@ tListElem getValue(tList* L){
     return L->curr->sig->info;
 }
 
-int getLength(tList* L){
+int getLength(tList* L) {
     return L->len;
 }
 
-int getPos(tList* L){
+int getPos(tList* L) {
     return L->pos;
 }
 
-int moveToPos(tList* L, int target){
+int moveToPos(tList* L, int target) {
     // Si la posicion es negativa, es invalido
     if (target < 0) {
         return 0;
@@ -193,12 +193,62 @@ int moveToPos(tList* L, int target){
 
 }
 
-void moveToStart(tList* L){
+void moveToStart(tList* L) {
     L->curr = L->head;
     L->pos = 0;
 }
 
-void moveToEnd(tList* L){
+void moveToEnd(tList* L) {
     L->curr = L->tail;
     L->pos = getLength(L);
+}
+
+void push(tList* L, tListElem item) {
+    append(L, item);
+}
+
+int pop(tList* L) {
+    int ret = 0;
+
+    // Si el cursor no esta al final, guardar ubicacion actual del cursor para no modificarlo
+    if (L->curr != L->tail) {
+        tListNode* temp = L->curr;
+        moveToEnd(L);
+        ret = erase(L);
+        L->curr = temp;
+    } else {
+        ret = erase(L);
+    }
+
+    return ret;
+}
+
+tListElem topValue(tList* L) {
+    return L->tail->info;
+}
+
+
+void enqueue(tList* L, tListElem item) {
+    append(L, item);
+}
+
+int dequeue(tList* L) {
+    int ret = 0;
+
+    // Si el nodo anterior no es el head, guardar ubicacion actual del cursor para no modificarlo
+    if (L->curr->ant != L->head) {
+        tListNode* temp = L->curr;
+        moveToStart(L);
+        ret = erase(L);
+        L->curr = temp;
+    } else {
+        moveToStart(L);
+        ret = erase(L);
+    }
+
+    return ret;
+}
+
+tListElem frontValue(tList* L) {
+    return L->head->info;
 }

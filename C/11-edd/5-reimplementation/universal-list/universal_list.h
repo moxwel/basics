@@ -18,7 +18,7 @@ typedef int tListElem;
  *
  * Celdas:
  * - info : Elemento a guardar
- * - ant ; Puntero al nodo anterior
+ * - ant : Puntero al nodo anterior
  * - sig : Puntero al nodo siguiente
  **/
 typedef struct ListNode{
@@ -145,6 +145,52 @@ int getLength(tList* L);
  * Obtiene el valor de la posicion del cursor.
  **/
 int getPos(tList* L);
+
+// Operaciones de pila
+
+/**
+ * Agregar elemento a la pila.
+ * Se va a insertar al final de la lista.
+ **/
+void push(tList* L, tListElem item);
+
+/**
+ * Eliminar elemento de la pila.
+ * Se va a eliminar el ultimo elemento de la lista.
+ *
+ * Retornos:
+ * - 1 : Exito
+ * - 0 : Sin exito (lista vacia)
+ **/
+int pop(tList* L);
+
+/**
+ * Obtiene el valor del ultimo elemento de la lista.
+ **/
+tListElem topValue(tList* L);
+
+// Operaciones de cola
+
+/**
+ * Insertar elemento en cola.
+ * Se va a insertar al final de la lista.
+ **/
+void enqueue(tList* L, tListElem item);
+
+/**
+ * Eliminar elemento de la cola.
+ * Se va a eliminar el primer elemento de la lista.
+ *
+ * Retornos:
+ * - 1 : Exito
+ * - 0 : Sin exito (lista vacia)
+ **/
+int dequeue(tList* L);
+
+/**
+ * Obtiene el valor del primer elemento de la lista.
+ **/
+tListElem frontValue(tList* L);
 
 
 

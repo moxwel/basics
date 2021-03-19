@@ -11,7 +11,7 @@ int main() {
     int ret = -1;
     int flag = 1;
     while (flag) {
-        printf("Ultimo retorno: %d\n1 - prev = 11 - start\n2 - next = 22 - end\n3 - insert\n4 - append\n5 - erase\n6 - clear\n7 - movetopos\nSeleccione accion: ", ret);
+        printf("Ultimo retorno: %d\n1 - prev = 11 - start\n2 - next = 22 - end\n3 - insert = 33 - push = 333 - enqueue\n4 - append\n5 - erase = 55 - pop = 555 - dequeue\n6 - clear\n7 - movetopos\nSeleccione accion: ", ret);
         scanf("%d",&input);
 
         switch (input) {
@@ -46,6 +46,20 @@ int main() {
                 printList(miLista);
                 break;
 
+            case 33:
+                printf("Accion PUSH - Añadir valor: ");
+                scanf("%d",&input);
+                push(miLista, input);
+                printList(miLista);
+                break;
+
+            case 333:
+                printf("Accion ENQUEUE - Añadir valor: ");
+                scanf("%d",&input);
+                enqueue(miLista, input);
+                printList(miLista);
+                break;
+
             case 4:
                 printf("Accion APPEND - Añadir valor: ");
                 scanf("%d",&input);
@@ -56,6 +70,18 @@ int main() {
             case 5:
                 printf("Accion ERASE\n");
                 ret = erase(miLista);
+                printList(miLista);
+                break;
+
+            case 55:
+                printf("Accion POP\n");
+                ret = pop(miLista);
+                printList(miLista);
+                break;
+
+            case 555:
+                printf("Accion DEQUEUE\n");
+                ret = dequeue(miLista);
                 printList(miLista);
                 break;
 
@@ -72,9 +98,12 @@ int main() {
                 printList(miLista);
                 break;
 
+            case 0:
+                flag = 0;
+                break;
+
             default:
                 printf("No valido\n");
-                flag = 0;
         }
         printf("\n");
     }
