@@ -244,3 +244,7 @@ Len: 3 - Pos: 1
 ## Cambio de tipo de dato
 
 Al cambiar el tipo de dato de `tListElem`, hay que tener en cuenta las funciones que manejan los _elementos_ de la lista, como `newList`, `insert`, `append` y `getValue`; hay que adaptarlos para que tambien puedan manejar ese tipo de dato.
+
+## Funcion de imprimir lista
+
+La funcion `printList` es una funcion auxiliar que sirve para poder ver la tabla en este caso. Sirve para depurar listas enlazadas creadas con esta implementacion. Si se cambia el tipo de dato de `tListElem`, se debe reimplementar esta funcion.
