@@ -38,16 +38,12 @@ typedef struct ListNode{
 typedef struct {
     tListNode* head;
     tListNode* tail;
-
     tListNode* curr;
     int pos;
-
     int len;
-
-    // Se usa unsigned para que los valores de int lleguen hasta 4294967295
 } tList;
 
-
+// Operaciones de inicializacion
 
 /**
  * Crear lista nueva.
@@ -61,7 +57,7 @@ tList* newList();
  **/
 void deleteList(tList* L);
 
-
+// Operaciones de elemento
 
 /**
  * Insertar elemento en lista.
@@ -91,7 +87,7 @@ int erase(tList* L);
  **/
 void clearList(tList* L);
 
-
+// Operaciones de cursor
 
 /**
  * Mover cursor hacia el siguiente elemento.
@@ -130,7 +126,7 @@ void moveToStart(tList* L);
  **/
 void moveToEnd(tList* L);
 
-
+// Operaciones de obtencion
 
 /**
  * Obtiene el valor del elemento siguiente al cursor.
