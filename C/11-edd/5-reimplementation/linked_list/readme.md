@@ -4,6 +4,29 @@ Esta es una implementacion de una lista enlazada en C.
 
 Consiste en una estructura donde bloques llamados _nodos_ estan unidos mediante punteros.
 
+## Compilacion
+
+Para poder usarse, se debe utilizar compilacion separada. Para ello, se debe incluir el header del TDA de lista enlazada en tu codigo principal:
+
+```c
+// tu_archivo.c
+
+#include "linked.list.h"
+
+int main() {
+     /* ... */
+    return 0;
+}
+```
+
+Y luego compilar y enlazar de forma separada:
+
+```shell
+$ gcc -c linked_list.c tu_archivo.c
+
+$ gcc linked_list.o tu_archivo.o
+```
+
 ## Estructuras
 
 * `tListElem` : **Elemento** de la lista. Puede modificarse para poder albergar otro tipo de dato.
