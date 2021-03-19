@@ -57,13 +57,13 @@ void deleteQueue(tQueue* Q);
 
 /**
  * Insertar elemento en cola.
- * Se va a insertar despues del cursor.
+ * Se va a insertar al final de la cola.
  **/
 void enqueue(tQueue* Q, tQueueElem item);
 
 /**
  * Eliminar elemento de la cola.
- * Se va a eliminar el elemento despues del cursor.
+ * Se va a eliminar el primer elemento que se agrego.
  *
  * Retornos:
  * - 1 : Exito
@@ -80,8 +80,7 @@ void clearQueue(tQueue* Q);
 // Operaciones de obtencion
 
 /**
- * Obtiene el valor del elemento siguiente al cursor.
- * Si el cursor esta al final, se obtiene el valor actual.
+ * Obtiene el valor del primer elemento que se agrego
  **/
 tQueueElem frontValue(tQueue* Q);
 
