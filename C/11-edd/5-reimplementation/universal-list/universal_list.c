@@ -56,7 +56,7 @@ void append(tList* L, tListElem item) {
 void printList(tList* L) {
     tListNode* view = L->head;
 
-    printf("-----LIST-----\nLen: %d - Pos: %d - Curr: %d\n", getLength(L), getPos(L), getValue(L));
+    printf("-----LIST-----\nLen: %d - Pos: %d - Curr: %d - Front: %d - Top: %d\n", getLength(L), getPos(L), getValue(L), frontValue(L), topValue(L));
     for (int i = -1; i < getLength(L); i++) {
         printf("[%d] %d ", i, view->info);
         if (L->head == view) {
@@ -210,13 +210,23 @@ void push(tList* L, tListElem item) {
 int pop(tList* L) {
     int ret = 0;
 
+    // Si la lista esta vacia, entonces no hacer nada
+    if (getLength(L) == 0) {
+        return ret;
+    }
+
     // Si el cursor no esta al final, guardar ubicacion actual del cursor para no modificarlo
     if (L->curr != L->tail) {
-        tListNode* temp = L->curr;
+        tListNode* tempCurr = L->curr;
+        int tempPos = L->pos;
+
         moveToEnd(L);
         ret = erase(L);
-        L->curr = temp;
+
+        L->curr = tempCurr;
+        L->pos = tempPos;
     } else {
+        // El cursor esta al final
         ret = erase(L);
     }
 
@@ -235,13 +245,27 @@ void enqueue(tList* L, tListElem item) {
 int dequeue(tList* L) {
     int ret = 0;
 
+    // Si la lista esta vacia, entonces no hacer nada
+    if (getLength(L) == 0) {
+        return ret;
+    }
+
     // Si el nodo anterior no es el head, guardar ubicacion actual del cursor para no modificarlo
     if (L->curr->ant != L->head) {
         tListNode* temp = L->curr;
+        int tempPos = L->pos;
+
         moveToStart(L);
         ret = erase(L);
+
         L->curr = temp;
+
+        // Cuando se elimina un elemento, su posicion debe disminuir, excepto cuando es el head
+        if (L->curr != L->head) {
+            L->pos = tempPos - 1;
+        }
     } else {
+        // El cursor esta justo despues del head
         moveToStart(L);
         ret = erase(L);
     }
@@ -250,5 +274,10 @@ int dequeue(tList* L) {
 }
 
 tListElem frontValue(tList* L) {
-    return L->head->info;
+    // Si la lista esta vacia, retornar valor del head
+    if (getLength(L) == 0) {
+        return L->head->info;
+    }
+
+    return L->head->sig->info;
 }
