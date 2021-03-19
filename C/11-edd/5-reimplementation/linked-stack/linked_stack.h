@@ -1,5 +1,5 @@
-#ifndef __LINKED_LIST__
-#define __LINKED_LIST__
+#ifndef __LINKED_STACK__
+#define __LINKED_STACK__
 
 // ====================
 
@@ -31,9 +31,7 @@ typedef struct StackNode{
  * Celdas:
  * - head : Puntero al primer nodo
  * - tail : Puntero al ultimo nodo
- * - curr : Puntero al nodo actual
- * - pos : Posicion del cursor
- * - len : tamano de la lista
+ * - len : tamano de la pila
  **/
 typedef struct {
     tStackNode* head;
@@ -58,53 +56,43 @@ void deleteStack(tStack* S);
 // Operaciones de elemento
 
 /**
- * Adjuntar elemento en la lista.
- * Se va a insertar al final de la lista.
+ * Agregar elemento a la pila.
+ * Se va a insertar al final de la pila.
  **/
 void push(tStack* S, tStackElem item);
 
 /**
- * Eliminar elemento de la lista.
- * Se va a eliminar el elemento despues del cursor.
+ * Eliminar elemento de la pila.
+ * Se va a eliminar el ultimo elemento que se agrego.
  *
  * Retornos:
  * - 1 : Exito
- * - 0 : Sin exito (lista vacia)
+ * - 0 : Sin exito (pila vacia)
  **/
 int pop(tStack* S);
 
 /**
- * Limpiar lista.
+ * Limpiar pila.
  * Todos los elementos se borran.
  **/
 void clearStack(tStack* S);
 
-// Operaciones de cursor
-
-
-
-
-
-
-
-
 // Operaciones de obtencion
 
 /**
- * Obtiene el valor del elemento siguiente al cursor.
- * Si el cursor esta al final, se obtiene el valor actual.
+ * Obtiene el valor del ultimo elemento que se agrego.
  **/
 tStackElem topValue(tStack* S);
 
 /**
- * Obtiene el valor del tamano de la lista.
+ * Obtiene el valor del tamano de la pila.
  **/
 int getLength(tStack* S);
 
 
 
 /**
- * Imprimir lista.
+ * Imprimir pila.
  **/
 void printStack(tStack* L);
 

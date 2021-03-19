@@ -31,20 +31,17 @@ void push(tStack* S, tStackElem item){
 
 
 int pop(tStack* S){
-    // Si la lista esta vacia, entonces no hacer nada
+    // Si la pila esta vacia, entonces no hacer nada
     if (getLength(S) == 0) {
         return 0;
     }
 
-
+    // Establecer un puntero auxiliar que apunte al penultimo nodo
     tStackNode* penult = S->head;
 
     while (penult->sig != S->tail) {
         penult = penult->sig;
     }
-
-
-
 
     tStackNode* aux = penult->sig;
 
@@ -77,7 +74,7 @@ void deleteStack(tStack* S){
 }
 
 tStackElem topValue(tStack* S){
-    // Si la lista esta vacia, retornar valor actual
+    // Si la pila esta vacia, retornar valor actual
     if (getLength(S) == 0) {
         return S->tail->info;
     }
