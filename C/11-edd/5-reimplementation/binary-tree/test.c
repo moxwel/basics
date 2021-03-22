@@ -23,6 +23,10 @@ int main() {
     printf("%d\n", getSize(miArbol));
     printf("%d ", insert(miArbol, 3));
     printf("%d\n", getSize(miArbol));
+    printf("%d ", insert(miArbol, 2));
+    printf("%d\n", getSize(miArbol));
+
+    printf("%d\n", find(miArbol, 8));
 
 
     return 0;

@@ -86,3 +86,33 @@ int insertAux(tABBNode* node, tABBElem item) {
 int getSize(tABB* T) {
     return T->size;
 }
+
+int find(tABB* T, tABBElem item) {
+    printf("[3] Buscando elemento: %d. Entrando en la raiz...\n", item);
+    return findAux(T->root, item);
+}
+
+int findAux(tABBNode* node, tABBElem item) {
+    // Si el nodo actual esta vacio, se llegó al final del arbol, no hay nada
+    if (node == NULL) {
+        printf("[4] Aqui no hay nada, no esta el elemento.\n");
+        return 0;
+    }
+
+    printf("[4] Buscando elemento: %d - Nodo actual: %d\n", item, getValue(node));
+
+    // Si el nodo actual ya posee el elemento, se encontró
+    if (getValue(node) == item) {
+        printf("[4] Se encontro el elemento.\n");
+        return 1;
+    }
+
+    // Si el elemento es mayor al nodo actual, ir por la derecha, sino, por la izquierda
+    if (item > getValue(node)) {
+        printf("[4] El elemento es mayor al nodo, buscar por la derecha...\n");
+        return findAux(node->der, item);
+    } else {
+        printf("[4] El elemento es menor al nodo, buscar por la izquierda...\n");
+        return findAux(node->izq, item);
+    }
+}

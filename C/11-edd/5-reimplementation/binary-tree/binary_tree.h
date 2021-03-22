@@ -89,8 +89,6 @@ void clearABB();
  **/
 tABBNode* newNode(tABBElem item);
 
-void setValue();
-
 // Operaciones de obtencion
 
 /**
@@ -103,7 +101,25 @@ tABBElem getValue(tABBNode* node);
  **/
 int getSize(tABB* T);
 
-int find();
+/**
+ * Buscar un elemento en el arbol.
+ *
+ * Retornos:
+ * 1 - Exito (existe)
+ * 0 - Sin exito (no existe)
+ **/
+int find(tABB* T, tABBElem item);
+/**
+ * [Funcion auxiliar recursiva]
+ * Buscar un elemento en un nodo.
+ *
+ * Se utiliza para recorrer por nodo.
+ *
+ * Retornos:
+ * 1 - Exito (existe)
+ * 0 - Sin exito (no existe)
+ **/
+int findAux(tABBNode* node, tABBElem item);
 
 // ====================
 
