@@ -14,21 +14,7 @@ int main() {
     printf("%d\n", insertNode(miArbol, 9));
     printf("%d\n", insertNode(miArbol, 14));
 
-    printf("%d\n", removeNode(miArbol, 8));
-    printf("%d\n", removeNode(miArbol, 13));
-    printf("%d\n", removeNode(miArbol, 14));
-    printf("%d\n", removeNode(miArbol, 15));
-    printf("%d\n", removeNode(miArbol, 20));
-    printf("%d\n", removeNode(miArbol, 9));
-
-    printf("%d\n", getSize(miArbol));
-
-    printf("%d\n", insertNode(miArbol, 20));
-    printf("%d\n", insertNode(miArbol, 21));
-
-    printf("%d\n", removeNode(miArbol, 20));
-    printf("%d\n", removeNode(miArbol, 21));
-
+    deleteABB(miArbol);
 
     return 0;
 }

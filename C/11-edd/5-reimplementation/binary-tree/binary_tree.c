@@ -282,3 +282,15 @@ tABBNode* sucesor(tABBNode* node) {
 
     return succ;
 }
+
+void clearABB(tABB* T) {
+    while (T->root != NULL) {
+        removeNode(T, getValue(T->root));
+    }
+}
+
+void deleteABB(tABB* T) {
+    clearABB(T);
+
+    free(T);
+}

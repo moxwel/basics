@@ -47,7 +47,11 @@ typedef struct {
  **/
 tABB* newABB();
 
-void deleteABB();
+/**
+ * Eliminar arbol.
+ * Libera toda la memoria.
+ **/
+void deleteABB(tABB* T);
 
 // Operaciones de recorrido
 
@@ -97,7 +101,11 @@ int removeNode(tABB* T, tABBElem item);
  **/
 void removeAux(tABB* T, tABBNode* node, tABBNode* penult, tABBElem item);
 
-void clearABB();
+/**
+ * Limpiar arbol.
+ * Todos los elementos se borran.
+ **/
+void clearABB(tABB* T);
 
 /**
  * Crear nuevo nodo con un elemento.
