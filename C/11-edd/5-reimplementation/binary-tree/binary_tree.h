@@ -41,6 +41,10 @@ typedef struct {
 
 // Operaciones de inicializacion
 
+/**
+ * Crear arbol nuevo.
+ * Debe asignarse a una variable tABB*.
+ **/
 tABB* newABB();
 
 void deleteABB();
@@ -55,17 +59,44 @@ void postOrden();
 
 // Operaciones de elemento
 
-void insert();
+/**
+ * Insertar elemento en el arbol.
+ *
+ * Retornos:
+ * 1 - Exito
+ * 0 - Sin exito (ya existe el elemento)
+ **/
+int insert(tABB *T, tABBElem item);
+/**
+ * [Funcion auxiliar recursiva]
+ * Inserta elemento en un nodo.
+ *
+ * Se utiliza para recorrer por nodo.
+ *
+ * Retornos:
+ * 1 - Exito
+ * 0 - Sin exito (ya existe el elemento)
+ **/
+int insertAux(tABBNode* node, tABBElem item);
 
 int remove();
 
 void clearABB();
 
+/**
+ * Crear nuevo nodo con un elemento.
+ * Debe asignarse a una variable tABBNode*.
+ **/
+tABBNode* newNode(tABBElem item);
+
 void setValue();
 
 // Operaciones de obtencion
 
-tABBElem getValue();
+/**
+ * Obtener el valor de un nodo.
+ **/
+tABBElem getValue(tABBNode* node);
 
 int getSize();
 
