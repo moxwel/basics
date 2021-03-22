@@ -14,7 +14,7 @@ tABB* newABB() {
 }
 
 tABBNode* newNode(tABBElem item) {
-    printf("[newnode] Creando nodo nuevo con elemento: %d. Asignando memoria...\n", item);
+    printf("[newNode] Creando nodo nuevo con elemento: %d. Asignando memoria...\n", item);
     tABBNode* temp = (tABBNode*)malloc(sizeof(tABBNode));
 
     temp->info = item;
