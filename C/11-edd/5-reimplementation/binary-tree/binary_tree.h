@@ -63,8 +63,8 @@ void postOrden();
  * Insertar elemento en el arbol.
  *
  * Retornos:
- * 1 - Exito
- * 0 - Sin exito (ya existe el elemento)
+ * - 1 : Exito
+ * - 0 : Sin exito (ya existe el elemento)
  **/
 int insertNode(tABB *T, tABBElem item);
 /**
@@ -74,8 +74,8 @@ int insertNode(tABB *T, tABBElem item);
  * Se utiliza para recorrer por nodo.
  *
  * Retornos:
- * 1 - Exito
- * 0 - Sin exito (ya existe el elemento)
+ * - 1 : Exito
+ * - 0 : Sin exito (ya existe el elemento)
  **/
 int insertAux(tABBNode* node, tABBElem item);
 
@@ -105,8 +105,8 @@ int getSize(tABB* T);
  * Buscar un elemento en el arbol.
  *
  * Retornos:
- * 1 - Exito (existe)
- * 0 - Sin exito (no existe)
+ * - 1 : Exito (existe)
+ * - 0 : Sin exito (no existe)
  **/
 int findNode(tABB* T, tABBElem item);
 /**
@@ -116,8 +116,8 @@ int findNode(tABB* T, tABBElem item);
  * Se utiliza para recorrer por nodo.
  *
  * Retornos:
- * 1 - Exito (existe)
- * 0 - Sin exito (no existe)
+ * - 1 : Exito (existe)
+ * - 0 : Sin exito (no existe)
  **/
 int findAux(tABBNode* node, tABBElem item);
 
