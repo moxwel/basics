@@ -17,7 +17,7 @@ int main() {
     printf("%d\n", getSize(miArbol));
     printf("%d ", insert(miArbol, 4));
     printf("%d\n", getSize(miArbol));
-    printf("%d ", insert(miArbol, 8));
+    printf("%d ", insert(miArbol, 15));
     printf("%d\n", getSize(miArbol));
     printf("%d ", insert(miArbol, 7));
     printf("%d\n", getSize(miArbol));
