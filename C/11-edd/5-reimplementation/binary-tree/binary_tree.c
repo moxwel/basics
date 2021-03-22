@@ -25,7 +25,11 @@ tABBNode* newNode(tABBElem item) {
 }
 
 tABBElem getValue(tABBNode* node) {
-    return node->info;
+    if (node != NULL) {
+        return node->info;
+    } else {
+        return -1;
+    }
 }
 
 int insertNode(tABB* T, tABBElem item) {
@@ -119,4 +123,162 @@ int findAux(tABBNode* node, tABBElem item) {
         printf("[findAux] El elemento es menor al nodo, buscar por la izquierda...\n");
         return findAux(node->izq, item);
     }
+}
+
+int removeNode(tABB* T, tABBElem item) {
+    printf("[removeNode] Elemento a borrar: %d ...\n", item);
+
+    // Solo borrar elementos si es que existe
+    if (findNode(T, item)) {
+        printf("[removeNode] El elemento existe. Proceder a borrar...\n");
+
+        // Si la raiz es el unico nodo que hay en el arbol, hay que borrarlo, si no, hay que buscar en el arbol
+        if ((T->root->der == NULL) && (T->root->izq == NULL)) {
+            printf("[removeNode] El elemento a eliminar es el unico nodo del arbol. Liberando memoria...\n");
+            free(T->root);
+            T->root = NULL;
+        } else {
+            printf("[removeNode] Hay mas nodos. Entrando en la raiz...\n");
+            removeAux(T, T->root, T->root, item);
+        }
+
+        printf("[removeNode] Eliminacion completada. Disminuyendo tamano...\n");
+        T->size--;
+        return 1;
+    } else {
+         printf("[removeNode] El elemento no existe. No hacer nada.\n");
+        return 0;
+    }
+}
+
+void removeAux(tABB* T, tABBNode* node, tABBNode* penult, tABBElem item) {
+    printf("[removeAux] Elemento a borrar: %d - Nodo actual: %d - Nodo padre: %d\n", item, getValue(node), getValue(penult));
+
+    // Si se encuentra el nodo, borrarlo
+    if (getValue(node) == item) {
+        printf("[removeAux] Se encontro el nodo, analizar caso...\n");
+
+        // Caso 1: El nodo es una hoja
+        if ((node->izq == NULL) && (node->der == NULL)) {
+            printf("[removeAux] Caso 1: El nodo es una hoja (no tiene hijos)\n");
+
+            // Dependiendo del lugar donde esta el hijo, hay que cambiar los punteros del padre
+            if (item > getValue(penult)) {
+                printf("[removeAux] El nodo a eliminar esta a la derecha del padre. Desvinculando padre->derecho...\n");
+                penult->der = NULL;
+            } else {
+                printf("[removeAux] El nodo a eliminar esta a la izquierda del padre. Desvinculando padre->izquierdo...\n");
+                penult->izq = NULL;
+            }
+
+            printf("[removeAux] Liberando memoria...\n");
+            free(node);
+        }
+        // Caso 2: El nodo tiene solo un hijo (derecho)
+        else if ((node->izq == NULL) && (node->der != NULL)) {
+            printf("[removeAux] Caso 2: El nodo tiene solo un hijo (derecho)...\n");
+
+            // Si el nodo a eliminar es la raiz, hay que cambiar los punteros del TDA
+            if (node == T->root) {
+                printf("[removeAux] El nodo a eliminar es la raiz, cambiar raiz al hijo derecho...\n");
+                T->root = node->der;
+
+                printf("[removeAux] Liberando memoria...\n");
+                free(node);
+                return;
+            }
+
+            printf("[removeAux] Conectando padre con el hijo derecho del nodo a eliminar.\n");
+            // Dependiendo del lugar donde esta el hijo, hay que cambiar los punteros del padre
+            if (item > getValue(penult)) {
+                printf("[removeAux] El nodo a eliminar esta a la derecha del padre. Conectando padre->derecho...\n");
+                penult->der = node->der;
+            } else {
+                printf("[removeAux] El nodo a eliminar esta a la izquierda del padre. Conectando padre->izquierdo...\n");
+                penult->izq = node->der;
+            }
+
+            printf("[removeAux] Liberando memoria...\n");
+            free(node);
+
+        }
+        // Caso 3: El nodo tiene solo un hijo (izquierdo)
+        else if ((node->izq != NULL) && (node->der == NULL)) {
+            printf("[removeAux] Caso 3: El nodo tiene solo un hijo (izquierdo)...\n");
+
+            // Si el nodo a eliminar es la raiz, hay que cambiar los punteros del TDA
+            if (node == T->root) {
+                printf("[removeAux] El nodo a eliminar es la raiz, cambiar raiz al hijo izquierdo...\n");
+                T->root = node->izq;
+
+                printf("[removeAux] Liberando memoria...\n");
+                free(node);
+                return;
+            }
+
+            printf("[removeAux] Conectando padre con el hijo izquierdo del nodo a eliminar.\n");
+            // Dependiendo del lugar donde esta el hijo, hay que cambiar los punteros del padre
+            if (item > getValue(penult)) {
+                printf("[removeAux] El nodo a eliminar esta a la derecha del padre. Conectando padre->derecho...\n");
+                penult->der = node->izq;
+            } else {
+                printf("[removeAux] El nodo a eliminar esta a la izquierda del padre. Conectando padre->izquierdo...\n");
+                penult->izq = node->izq;
+            }
+
+            printf("[removeAux] Liberando memoria...\n");
+            free(node);
+        }
+        // Caso 4: El nodo tiene dos hijos
+        else if ((node->izq != NULL) && (node->der != NULL)) {
+            printf("[removeAux] Caso 4: El nodo tiene dos hijos...\n");
+
+            tABBNode* temp = sucesor(node);
+            tABBElem valor = getValue(temp);
+            printf("[removeAux] Obteniendo valor de sucesor... Es %d\n", valor);
+
+            printf("[removeAux] Eliminar nodo sucesor...\n");
+            removeNode(T, valor);
+
+            printf("[removeAux] Reemplazando valores %d -> %d ...\n", getValue(node), valor);
+            node->info = valor;
+
+            printf("[removeAux] Contrarrestar disminucion de tamaño de arbol. Aumentar tamaño...\n");
+            T->size++;
+        }
+
+        return;
+    }
+
+    // Seguir buscando si no se encuentra el elemento
+    if (item > getValue(node)) {
+        printf("[removeAux] El elemento es mayor al nodo, buscar por la derecha...\n");
+        return removeAux(T, node->der, node, item);
+    } else {
+        printf("[removeAux] El elemento es menor al nodo, buscar por la izquierda...\n");
+        return removeAux(T, node->izq, node, item);
+    }
+}
+
+tABBNode* sucesor(tABBNode* node) {
+    printf("[sucesor] Buscando sucesor desde: %d\n", getValue(node));
+    tABBNode* succ = node;
+
+    // Si es posible, moverse una vez hacia la derecha y luego todo lo que se pueda hacia la izquierda
+    if (node->der != NULL) {
+        succ = node->der;
+        printf("[sucesor] Moverse derecha. Sucesor hasta ahora: %d\n", getValue(succ));
+    } else {
+        printf("[sucesor] No es posible moverse a la derecha. Sucesor sigue siendo el mismo: %d\n", getValue(succ));
+        return succ;
+    }
+
+    while (succ->izq != NULL) {
+        succ = succ->izq;
+        printf("[sucesor] Moverse izquierda. Sucesor hasta ahora: %d\n", getValue(succ));
+    }
+
+    printf("[sucesor] No se puede mover mas a la izquierda. Sucesor de %d es %d\n", getValue(node), getValue(succ));
+
+    return succ;
 }

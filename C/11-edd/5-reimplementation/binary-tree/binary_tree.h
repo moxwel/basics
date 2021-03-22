@@ -79,7 +79,23 @@ int insertNode(tABB *T, tABBElem item);
  **/
 int insertAux(tABBNode* node, tABBElem item);
 
+/**
+ * Borrar elemento del arbol.
+ *
+ * Retornos:
+ * - 1 : Exito
+ * - 0 : Sin exito (no existe el elemento)
+ **/
 int removeNode(tABB* T, tABBElem item);
+/**
+ * [Funcion auxiliar recursiva]
+ * Borrar un nodo.
+ *
+ * Se utiliza para recorrer por nodo.
+ *
+ * Sin retornos, pues, solo se accedera cuando el elemento exista.
+ **/
+void removeAux(tABB* T, tABBNode* node, tABBNode* penult, tABBElem item);
 
 void clearABB();
 
@@ -120,6 +136,14 @@ int findNode(tABB* T, tABBElem item);
  * - 0 : Sin exito (no existe)
  **/
 int findAux(tABBNode* node, tABBElem item);
+
+/**
+ * Retorna el nodo sucesor desde uno dado.
+ *
+ * Retornos:
+ * - tABBNode* : Nodo sucesor al dado
+ **/
+tABBNode* sucesor(tABBNode* node);
 
 // ====================
 
