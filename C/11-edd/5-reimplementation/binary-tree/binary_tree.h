@@ -98,7 +98,10 @@ void setValue();
  **/
 tABBElem getValue(tABBNode* node);
 
-int getSize();
+/**
+ * Obtener el tamano del arbol.
+ **/
+int getSize(tABB* T);
 
 int find();
 

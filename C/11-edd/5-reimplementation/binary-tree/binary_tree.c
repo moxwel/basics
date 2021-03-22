@@ -38,9 +38,14 @@ int insert(tABB* T, tABBElem item) {
     }
 
     printf("[1] La raiz no esta vacia, entrando a la raiz...\n");
-    int ret = insertAux(T->root, item);
-    T->size++;
-    return ret;
+
+    // Si hubo exito, entonces aumentar tamano
+    if (insertAux(T->root, item)) {
+        T->size++;
+        return 1;
+    } else {
+        return 0;
+    }
 }
 
 int insertAux(tABBNode* node, tABBElem item) {
@@ -76,4 +81,8 @@ int insertAux(tABBNode* node, tABBElem item) {
             return insertAux(node->izq, item);
         }
     }
+}
+
+int getSize(tABB* T) {
+    return T->size;
 }
