@@ -7,27 +7,25 @@
 int main() {
     tABB* miArbol = newABB();
 
-    printf("%d ", insert(miArbol, 4));
-    printf("%d\n", getSize(miArbol));
-    printf("%d ", insert(miArbol, 6));
-    printf("%d\n", getSize(miArbol));
-    printf("%d ", insert(miArbol, 5));
-    printf("%d\n", getSize(miArbol));
-    printf("%d ", insert(miArbol, 6));
-    printf("%d\n", getSize(miArbol));
-    printf("%d ", insert(miArbol, 4));
-    printf("%d\n", getSize(miArbol));
-    printf("%d ", insert(miArbol, 15));
-    printf("%d\n", getSize(miArbol));
-    printf("%d ", insert(miArbol, 7));
-    printf("%d\n", getSize(miArbol));
-    printf("%d ", insert(miArbol, 3));
-    printf("%d\n", getSize(miArbol));
-    printf("%d ", insert(miArbol, 2));
-    printf("%d\n", getSize(miArbol));
+    printf("%d ", insertNode(miArbol, 4));
 
-    printf("%d\n", find(miArbol, 8));
+    printf("%d ", insertNode(miArbol, 6));
 
+    printf("%d ", insertNode(miArbol, 5));
+
+    printf("%d ", insertNode(miArbol, 6));
+
+    printf("%d ", insertNode(miArbol, 4));
+
+    printf("%d ", insertNode(miArbol, 15));
+
+    printf("%d ", insertNode(miArbol, 7));
+
+    printf("%d ", insertNode(miArbol, 3));
+
+    printf("%d ", insertNode(miArbol, 2));
+
+    printf("%d\n", findNode(miArbol, 8));
 
     return 0;
 }

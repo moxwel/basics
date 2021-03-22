@@ -28,26 +28,26 @@ tABBElem getValue(tABBNode* node) {
     return node->info;
 }
 
-int insert(tABB* T, tABBElem item) {
-    printf("[insert] Insertando elemento: %d\n", item);
+int insertNode(tABB* T, tABBElem item) {
+    printf("[insertNode] Insertando elemento: %d\n", item);
 
     // Si el arbol esta vacio
     if (T->root == NULL) {
-        printf("[insert] La raiz esta vacia, insertando elemento: %d. Y aumentando tamano...\n", item);
+        printf("[insertNode] La raiz esta vacia, insertando elemento: %d. Y aumentando tamano...\n", item);
         T->root = newNode(item);
         T->size++;
         return 1;
     }
 
-    printf("[insert] La raiz no esta vacia, entrando a la raiz...\n");
+    printf("[insertNode] La raiz no esta vacia, entrando a la raiz...\n");
 
     // Si hubo exito, entonces aumentar tamano
     if (insertAux(T->root, item)) {
-        printf("[insert] Insercion con exito, aumentando tamano...\n");
+        printf("[insertNode] Insercion con exito, aumentando tamano...\n");
         T->size++;
         return 1;
     } else {
-        printf("[insert] Insercion sin exito, no aumentar tamano.\n");
+        printf("[insertNode] Insercion sin exito, no aumentar tamano.\n");
         return 0;
     }
 }
@@ -91,8 +91,8 @@ int getSize(tABB* T) {
     return T->size;
 }
 
-int find(tABB* T, tABBElem item) {
-    printf("[find] Buscando elemento: %d. Entrando en la raiz...\n", item);
+int findNode(tABB* T, tABBElem item) {
+    printf("[findNode] Buscando elemento: %d. Entrando en la raiz...\n", item);
     return findAux(T->root, item);
 }
 

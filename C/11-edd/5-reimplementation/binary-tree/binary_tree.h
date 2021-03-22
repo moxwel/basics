@@ -66,7 +66,7 @@ void postOrden();
  * 1 - Exito
  * 0 - Sin exito (ya existe el elemento)
  **/
-int insert(tABB *T, tABBElem item);
+int insertNode(tABB *T, tABBElem item);
 /**
  * [Funcion auxiliar recursiva]
  * Inserta elemento en un nodo.
@@ -79,7 +79,7 @@ int insert(tABB *T, tABBElem item);
  **/
 int insertAux(tABBNode* node, tABBElem item);
 
-int remove();
+int removeNode(tABB* T, tABBElem item);
 
 void clearABB();
 
@@ -108,7 +108,7 @@ int getSize(tABB* T);
  * 1 - Exito (existe)
  * 0 - Sin exito (no existe)
  **/
-int find(tABB* T, tABBElem item);
+int findNode(tABB* T, tABBElem item);
 /**
  * [Funcion auxiliar recursiva]
  * Buscar un elemento en un nodo.
