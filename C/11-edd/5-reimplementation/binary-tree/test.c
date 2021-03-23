@@ -18,8 +18,11 @@ int main() {
     printf("%d\n", insertNode(miArbol, 5));
     printf("%d\n", insertNode(miArbol, 11));
     printf("%d\n", insertNode(miArbol, 14));
+    printf("%d\n", insertNode(miArbol, 5));
 
     inOrden(miArbol);
+
+    deleteABB(miArbol);
 
     return 0;
 }
