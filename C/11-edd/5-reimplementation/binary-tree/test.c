@@ -7,12 +7,21 @@
 int main() {
     tABB* miArbol = newABB();
 
-    printf("%d\n", insertNode(miArbol, 8));
+    printf("%d\n", insertNode(miArbol, 10));
+    printf("%d\n", insertNode(miArbol, 7));
     printf("%d\n", insertNode(miArbol, 15));
-    printf("%d\n", insertNode(miArbol, 13));
-    printf("%d\n", insertNode(miArbol, 20));
+    printf("%d\n", insertNode(miArbol, 4));
     printf("%d\n", insertNode(miArbol, 9));
+    printf("%d\n", insertNode(miArbol, 13));
+    printf("%d\n", insertNode(miArbol, 18));
+    printf("%d\n", insertNode(miArbol, 2));
+    printf("%d\n", insertNode(miArbol, 5));
+    printf("%d\n", insertNode(miArbol, 11));
     printf("%d\n", insertNode(miArbol, 14));
+
+    postOrden(miArbol);
+
+    printf("%d\n", getSize(miArbol));
 
     deleteABB(miArbol);
 

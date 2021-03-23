@@ -55,11 +55,41 @@ void deleteABB(tABB* T);
 
 // Operaciones de recorrido
 
-void preOrden();
+/**
+ * Recorrer el arbol en pre-orden.
+ **/
+void preOrden(tABB* T);
+/**
+ * [Funcion auxiliar recursiva]
+ * Recorrer el arbol en pre-orden.
+ *
+ * Se utiliza para recorrer por nodo.
+ **/
+void preOrdenAux(tABBNode* node);
 
-void inOrden();
+/**
+ * Recorrer el arbol en in-orden.
+ **/
+void inOrden(tABB* T);
+/**
+ * [Funcion auxiliar recursiva]
+ * Recorrer el arbol en in-orden.
+ *
+ * Se utiliza para recorrer por nodo.
+ **/
+void inOrdenAux(tABBNode* node);
 
-void postOrden();
+/**
+ * Recorrer el arbol en post-orden.
+ **/
+void postOrden(tABB* T);
+/**
+ * [Funcion auxiliar recursiva]
+ * Recorrer el arbol en post-orden.
+ *
+ * Se utiliza para recorrer por nodo.
+ **/
+void postOrdenAux(tABBNode* node);
 
 // Operaciones de elemento
 

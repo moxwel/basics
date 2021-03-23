@@ -321,3 +321,49 @@ void preOrdenAux(tABBNode* node) {
 
     printf("[preOrdenAux] Termine este nivel, devolverse...\n");
 }
+
+void inOrden(tABB* T) {
+    printf("[inOrden] Iniciando recorrido en in-orden. Entrando en raiz\n");
+    inOrdenAux(T->root);
+}
+
+void inOrdenAux(tABBNode* node) {
+    // Ya no hay mas profundidad, devolverse un nodo hacia arriba
+    if (node == NULL) {
+        printf("[inOrdenAux] Aqui no hay nada, devolverse...\n");
+        return;
+    }
+
+    printf("[inOrdenAux] Ir a izquierda...\n");
+    inOrdenAux(node->izq);
+
+    printf("[inOrdenAux] Nodo actual: %d\n", getValue(node));
+
+    printf("[inOrdenAux] Ir a derecha...\n");
+    inOrdenAux(node->der);
+
+    printf("[inOrdenAux] Termine este nivel, devolverse...\n");
+}
+
+void postOrden(tABB* T) {
+    printf("[postOrden] Iniciando recorrido en in-orden. Entrando en raiz\n");
+    postOrdenAux(T->root);
+}
+
+void postOrdenAux(tABBNode* node) {
+    // Ya no hay mas profundidad, devolverse un nodo hacia arriba
+    if (node == NULL) {
+        printf("[postOrdenAux] Aqui no hay nada, devolverse...\n");
+        return;
+    }
+
+    printf("[postOrdenAux] Ir a izquierda...\n");
+    postOrdenAux(node->izq);
+
+    printf("[postOrdenAux] Ir a derecha...\n");
+    postOrdenAux(node->der);
+
+    printf("[postOrdenAux] Nodo actual: %d\n", getValue(node));
+
+    printf("[postOrdenAux] Termine este nivel, devolverse...\n");
+}
