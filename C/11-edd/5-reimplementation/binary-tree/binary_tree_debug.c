@@ -174,6 +174,7 @@ void removeAux(tABB* T, tABBNode* node, tABBNode* penult, tABBElem item) {
             printf("[removeAux] Liberando memoria...\n");
             free(node);
         }
+
         // Caso 2: El nodo tiene solo un hijo (derecho)
         else if ((node->izq == NULL) && (node->der != NULL)) {
             printf("[removeAux] Caso 2: El nodo tiene solo un hijo (derecho)...\n");
@@ -202,6 +203,7 @@ void removeAux(tABB* T, tABBNode* node, tABBNode* penult, tABBElem item) {
             free(node);
 
         }
+
         // Caso 3: El nodo tiene solo un hijo (izquierdo)
         else if ((node->izq != NULL) && (node->der == NULL)) {
             printf("[removeAux] Caso 3: El nodo tiene solo un hijo (izquierdo)...\n");
@@ -229,6 +231,7 @@ void removeAux(tABB* T, tABBNode* node, tABBNode* penult, tABBElem item) {
             printf("[removeAux] Liberando memoria...\n");
             free(node);
         }
+
         // Caso 4: El nodo tiene dos hijos
         else if ((node->izq != NULL) && (node->der != NULL)) {
             printf("[removeAux] Caso 4: El nodo tiene dos hijos...\n");
@@ -237,12 +240,14 @@ void removeAux(tABB* T, tABBNode* node, tABBNode* penult, tABBElem item) {
             tABBElem valor = getValue(temp);
             printf("[removeAux] Obteniendo valor de sucesor... Es %d\n", valor);
 
+            // Eliminar el sucesor y reemplazar el valor
             printf("[removeAux] Eliminar nodo sucesor...\n");
             removeNode(T, valor);
 
             printf("[removeAux] Reemplazando valores %d -> %d ...\n", getValue(node), valor);
             node->info = valor;
 
+            // Contrarrestar la disminucion duplicada del tamano del arbol
             printf("[removeAux] Contrarrestar disminucion de tamaño de arbol. Aumentar tamaño...\n");
             T->size++;
         }
