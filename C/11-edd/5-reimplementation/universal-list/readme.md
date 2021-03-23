@@ -1,17 +1,17 @@
-# Documentacion: Lista enlazada
+# Documentación: Lista universal
 
-Esta es una implementacion de una lista enlazada en C.
+Esta es una implementacion de una combinacion de estrcuturas de datos, en este caso, una **lista**, una **pila** y una **cola**, al estilo de Python en C.
 
 Consiste en una estructura donde bloques llamados _nodos_ estan unidos mediante punteros.
 
-## Compilacion
+## Compilación
 
 Para poder usarse, se debe utilizar compilacion separada. Para ello, se debe incluir el header del TDA de lista enlazada en tu codigo principal:
 
 ```c
 // tu_archivo.c
 
-#include "linked.list.h"
+#include "universal_list.h"
 
 int main() {
      /* ... */
@@ -22,9 +22,8 @@ int main() {
 Y luego compilar y enlazar de forma separada:
 
 ```shell
-$ gcc -c linked_list.c tu_archivo.c
-
-$ gcc linked_list.o tu_archivo.o
+$ gcc -c universal_list.c tu_archivo.c
+$ gcc universal_list.o tu_archivo.o
 ```
 
 ## Estructuras
@@ -35,7 +34,9 @@ $ gcc linked_list.o tu_archivo.o
 
   * `info` : Alberga un _elemento_ de tipo `tListElem`.
 
-  * `sig` : Un puntero que apunta a otro _nodo_ `tListNode`, quien es siguiente en la lista.
+  * `ant` : Un puntero que apunta a otro _nodo_ `tListNode`, quien es el **anterior** en la lista.
+
+  * `sig` : Un puntero que apunta a otro _nodo_ `tListNode`, quien es **siguiente** en la lista.
 
 * `tList` : Estructura principal de la lista. Desde aqui nacen los punteros a los _nodos_ para que sean accesibles.
 
@@ -57,7 +58,7 @@ $ gcc linked_list.o tu_archivo.o
 **Retorno:** Puntero a un `tList` en memoria.
 
 * `deleteList` : Elimina una lista completa y libera su memoria.\
-Deberia usarse en todas las listas que se hayan creado en el progama, antes de que este termine para evitar fugas de memoria.
+Deberia usarse en todas las listas que se hayan creado en el progama, antes de que éste termine para evitar fugas de memoria.
 
 **Operaciones de elemento:**
 
@@ -66,20 +67,20 @@ Deberia usarse en todas las listas que se hayan creado en el progama, antes de q
 * `append` : Agrega un _elemento_ **al final** de la lista.
 
 * `erase` : Elimina el _elemento_ **despues** del _cursor_.\
-**Retorno:** 1 = exito; 0 = Sin exito (lista vacia)
+**Retorno:** 1 = Exito; 0 = Sin exito (lista vacia)
 
 * `clearList` : Elimina **todos** los _elementos_ de la lista.
 
 **Operaciones de cursor:**
 
 * `next` : Mueve el _cursor_ un elemento hacia **adelante**.\
-**Retorno:** 1 = exito; 0 = Sin exito (cursor en `tail`)
+**Retorno:** 1 = Exito; 0 = Sin exito (cursor en `tail`)
 
 * `prev` : Mueve el _cursor_ un elemento hacia **atras**.\
-**Retorno:** 1 = exito; 0 = Sin exito (cursor en `head`)
+**Retorno:** 1 = Exito; 0 = Sin exito (cursor en `head`)
 
 * `moveToPos` : Mueve el _cursor_ a una **posicion especificada**.\
-**Retorno:** 1 = exito; 0 = Sin exito (posicion invalida)
+**Retorno:** 1 = Exito; 0 = Sin exito (posicion invalida)
 
 * `moveToStart` : Mueve el _cursor_ al **inicio de la lista**.
 
@@ -87,7 +88,7 @@ Deberia usarse en todas las listas que se hayan creado en el progama, antes de q
 
 **Operaciones de obtencion:**
 
-* `getValue` : Obtiene el valor del _elemento_ siguiente al _cursor_.\
+* `getValue` : Obtiene el valor del _elemento_ **siguiente** al _cursor_.\
 **Retorno:** Valor de tipo `tListElem`.
 
 * `getLength` : Obtiene el _tamaño_ de la lsita.\
@@ -95,6 +96,26 @@ Deberia usarse en todas las listas que se hayan creado en el progama, antes de q
 
 * `getPos` : Obtiene la _posicion_ del _cursor_.\
 **Retorno:** `int`
+
+**Operaciones de Pila:**
+
+* `push` : Agrega un _elemento_ **al final** de la lista (igual a `append`).
+
+* `pop` : Elimina el _elemento_ que esta **al final** de la lista (sin modificar el _cursor_).\
+**Retorno:** 1 = Exito; 0 = Sin exito (lista vacia)
+
+* `topValue` : Obtiene el valor del **ultimo** _elemento_ de la lista.\
+**Retorno:** Valor de tipo `tListElem`.
+
+**Operaciones de Cola:**
+
+* `enqueue` : Agrega un _elemento_ **al final** de la lista (igual a `append`).
+
+* `dequeue` : Elimina el **primer** _elemento_ de la lista (sin modificar el _cursor_).\
+**Retorno:** 1 = Exito; 0 = Sin exito (lista vacia)
+
+* `frontValue` : Obtiene el valor del **primer** _elemento_ de la lista.\
+**Retorno:** Valor de tipo `tListElem`.
 
 ## Comportamiento
 
