@@ -19,11 +19,7 @@ int main() {
     printf("%d\n", insertNode(miArbol, 11));
     printf("%d\n", insertNode(miArbol, 14));
 
-    postOrden(miArbol);
-
-    printf("%d\n", getSize(miArbol));
-
-    deleteABB(miArbol);
+    inOrden(miArbol);
 
     return 0;
 }

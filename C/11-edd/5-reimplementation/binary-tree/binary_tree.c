@@ -318,8 +318,6 @@ void preOrdenAux(tABBNode* node) {
 
     printf("[preOrdenAux] Ir a derecha...\n");
     preOrdenAux(node->der);
-
-    printf("[preOrdenAux] Termine este nivel, devolverse...\n");
 }
 
 void inOrden(tABB* T) {
@@ -341,8 +339,6 @@ void inOrdenAux(tABBNode* node) {
 
     printf("[inOrdenAux] Ir a derecha...\n");
     inOrdenAux(node->der);
-
-    printf("[inOrdenAux] Termine este nivel, devolverse...\n");
 }
 
 void postOrden(tABB* T) {
@@ -364,6 +360,4 @@ void postOrdenAux(tABBNode* node) {
     postOrdenAux(node->der);
 
     printf("[postOrdenAux] Nodo actual: %d\n", getValue(node));
-
-    printf("[postOrdenAux] Termine este nivel, devolverse...\n");
 }
