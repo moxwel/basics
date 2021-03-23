@@ -284,13 +284,40 @@ tABBNode* sucesor(tABBNode* node) {
 }
 
 void clearABB(tABB* T) {
+    printf("[clearABB] Iniciando limpieza del arbol...\n");
     while (T->root != NULL) {
+        printf("[clearABB] Eliminando la raiz... Nodo: %d\n", getValue(T->root));
         removeNode(T, getValue(T->root));
     }
 }
 
 void deleteABB(tABB* T) {
+    printf("[deleteABB] Iniciando eliminacion del arbol...\n");
     clearABB(T);
 
+    printf("[deleteABB] Liberando memoria...\n");
     free(T);
+}
+
+void preOrden(tABB* T) {
+    printf("[preOrden] Iniciando recorrido en pre-orden. Entrando en raiz\n");
+    preOrdenAux(T->root);
+}
+
+void preOrdenAux(tABBNode* node) {
+    // Ya no hay mas profundidad, devolverse un nodo hacia arriba
+    if (node == NULL) {
+        printf("[preOrdenAux] Aqui no hay nada, devolverse...\n");
+        return;
+    }
+
+    printf("[preOrdenAux] Nodo actual: %d\n", getValue(node));
+
+    printf("[preOrdenAux] Ir a izquierda...\n");
+    preOrdenAux(node->izq);
+
+    printf("[preOrdenAux] Ir a derecha...\n");
+    preOrdenAux(node->der);
+
+    printf("[preOrdenAux] Termine este nivel, devolverse...\n");
 }
