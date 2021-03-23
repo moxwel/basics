@@ -1,5 +1,5 @@
 // Compilar de forma separada:
-// gcc -c binary_tree.c
+// gcc -c binary_tree_debug.c
 
 #include "binary_tree.h"
 
