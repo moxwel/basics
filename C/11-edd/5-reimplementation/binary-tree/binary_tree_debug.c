@@ -366,3 +366,56 @@ void postOrdenAux(tABBNode* node) {
 
     printf("[postOrdenAux] Nodo actual: %d\n", getValue(node));
 }
+
+int getHeight(tABB* T) {
+    printf("[getHeight] Obteniendo la altura del arbol.\n");
+    // Si el arbol esta vacio, entonces la altura es 0
+    if (T->root == NULL) {
+        printf("[getHeight] No hay nada en la raiz, el arbol esta vacio. Altura es 0.\n");
+        return 0;
+    } else {
+        // Crear una variable independiente en memoria para almacenar la altura maxima
+
+        printf("[getHeight] Asignando memoria para guardar altura...\n");
+        int* maxHeight = (int*)malloc(sizeof(int));
+        (*maxHeight) = 0;
+
+        printf("[getHeight] Entrando en la raiz y proceder en pre-orden...\n");
+        getHeightAux(T->root, maxHeight, 0);
+
+        // Copiando valor para liberar memoria y retornarlo
+        printf("[getHeight] Copiando valor y liberando memoria... Retornando...\n");
+        int ret = (*maxHeight);
+        free(maxHeight);
+
+        return ret;
+    }
+}
+
+void getHeightAux(tABBNode* node, int* h, int current) {
+    // Se utiliza el mismo recorrido pre-orden
+
+    // Ya no hay mas profundidad, devolverse un nodo hacia arriba
+    if (node == NULL) {
+        printf("[getHeightAux] Aqui no hay nada, devolverse (disminuir altura)...\n");
+        return;
+    }
+
+    printf("[getHeightAux] Altura hasta ahora: %d - Maxima altura hasta ahora: %d\n", current, (*h));
+
+    // Si se encuentra una nueva altura maxima, guardar en variable independiente en memoria
+    if (current > (*h)) {
+        printf("[getHeightAux] Nueva altura maxima encontrada: %d\n", current);
+        (*h) = current;
+    }
+
+    printf("[getHeightAux] Nodo actual: %d\n", getValue(node));
+
+    printf("[getHeightAux] Ir a izquierda (aumentar altura)...\n");
+    getHeightAux(node->izq, h, current+1);
+
+    printf("[getHeightAux] Ir a derecha (aumentar altura)...\n");
+    getHeightAux(node->der, h, current+1);
+
+    printf("[getHeightAux] Termine este nodo, devolverse (disminuir altura)...\n");
+}

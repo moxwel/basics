@@ -152,8 +152,23 @@ tABBElem getValue(tABBNode* node);
 
 /**
  * Obtener el tamano del arbol.
+ * Retorna la cantidad de elementos que hay dentro del arbol.
  **/
 int getSize(tABB* T);
+
+/**
+ * Obtener la altura del arbol.
+ **/
+int getHeight(tABB* T);
+/**
+ * [Funcion auxiliar recursiva]
+ * Obtener la altura del arbol.
+ *
+ * Se utiliza para recorrer por nodo.
+ *
+ * Se recorre el arbol en pre-orden y se calcula la mayor altura al que se ha llegado.
+ **/
+void getHeightAux(tABBNode* node, int* h, int current);
 
 /**
  * Buscar un elemento en el arbol.

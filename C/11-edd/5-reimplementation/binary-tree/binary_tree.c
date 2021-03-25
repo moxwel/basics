@@ -275,3 +275,39 @@ void postOrdenAux(tABBNode* node) {
 
     printf("[postOrdenAux] Nodo actual: %d\n", getValue(node));
 }
+
+int getHeight(tABB* T) {
+    // Si el arbol esta vacio, entonces la altura es 0
+    if (T->root == NULL) {
+        return 0;
+    } else {
+        // Crear una variable independiente en memoria para almacenar la altura maxima
+        int* maxHeight = (int*)malloc(sizeof(int));
+        (*maxHeight) = 0;
+
+        getHeightAux(T->root, maxHeight, 0);
+
+        // Copiando valor para liberar memoria y retornarlo
+        int ret = (*maxHeight);
+        free(maxHeight);
+
+        return ret;
+    }
+}
+
+void getHeightAux(tABBNode* node, int* h, int current) {
+    // Se utiliza el mismo recorrido pre-orden
+
+    // Ya no hay mas profundidad, devolverse un nodo hacia arriba
+    if (node == NULL) {
+        return;
+    }
+
+    // Si se encuentra una nueva altura maxima, guardar en variable independiente en memoria
+    if (current > (*h)) {
+        (*h) = current;
+    }
+
+    getHeightAux(node->izq, h, current+1);
+    getHeightAux(node->der, h, current+1);
+}

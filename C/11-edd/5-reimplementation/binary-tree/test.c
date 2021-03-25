@@ -7,20 +7,21 @@
 int main() {
     tABB* miArbol = newABB();
 
-    insertNode(miArbol, 10);
-    insertNode(miArbol, 7);
-    insertNode(miArbol, 15);
     insertNode(miArbol, 4);
-    insertNode(miArbol, 9);
-    insertNode(miArbol, 13);
-    insertNode(miArbol, 18);
     insertNode(miArbol, 2);
+    insertNode(miArbol, 6);
+    insertNode(miArbol, 1);
+    insertNode(miArbol, 3);
     insertNode(miArbol, 5);
-    insertNode(miArbol, 11);
-    insertNode(miArbol, 14);
-    insertNode(miArbol, 5);
+    insertNode(miArbol, 7);
 
-    inOrden(miArbol);
+    preOrden(miArbol);
+
+    printf("=====\n");
+
+    printf("Altura: %d\n" ,getHeight(miArbol));
+
+    printf("=====\n");
 
     deleteABB(miArbol);
 
