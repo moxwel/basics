@@ -49,6 +49,10 @@ void deleteHeap(tHeap* H);
  **/
 void pushHeap(tHeap* H, tHeapElem item);
 
+/**
+ * Elimina elemento del heap.
+ * Se elimina el primer elemento del heap.
+ **/
 void popHeap(tHeap* H);
 
 /**
@@ -89,7 +93,7 @@ void growHeap(tHeap* H);
 
 /**
  * Intercambiar elementos del arreglo.
- * Se intercambia el elemento item1 con item2.
+ * Se intercambia el elemento del indice item1 con item2.
  **/
 void swapElems(tHeap* H, int item1, int item2);
 

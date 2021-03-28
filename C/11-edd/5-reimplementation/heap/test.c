@@ -3,30 +3,23 @@
 
 #include "max_heap.h"
 
-int main() {
+int main(){
+    int numeros[] = {4,3,2,1,2,4,6,7,8,9};
 
-    tHeap* miHeap = newHeap();
+    tHeap* h = newHeap();
+    for(int i = 0; i < 10; i++) pushHeap(h, numeros[i]);
 
-    pushHeap(miHeap, 1);
-    pushHeap(miHeap, 2);
-    pushHeap(miHeap, 3);
-    pushHeap(miHeap, 4);
-    pushHeap(miHeap, 2);
-    pushHeap(miHeap, 1);
-    pushHeap(miHeap, 5);
-    pushHeap(miHeap, 6);
-    pushHeap(miHeap, 4);
+    printHeap(h);
 
+    while(!isHeapEmpty(h)){
+        printf("%d ", topHeap(h));
+        popHeap(h);
+    }
+    printf("\n");
 
-    printHeap(miHeap);
+    printHeap(h);
 
-    printf("%d\n", isHeapEmpty(miHeap));
-
-    clearHeap(miHeap);
-
-    printf("%d\n", isHeapEmpty(miHeap));
-
-    deleteHeap(miHeap);
+    deleteHeap(h);
 
     return 0;
 }
