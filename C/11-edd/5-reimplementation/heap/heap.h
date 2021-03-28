@@ -66,6 +66,7 @@ void clearHeap(tHeap* H);
 /**
  * Obtiene el primer elemento del heap.
  * En Max-Heap, seria el mayor elemento.
+ * En Min-Heap, seria el menor elemento.
  **/
 tHeapElem topHeap(tHeap* H);
 
@@ -86,7 +87,7 @@ int isHeapEmpty(tHeap* H);
 // Operaciones auxiliares
 
 /**
- * Aumentar el tamano del arreglo.
+ * Aumentar el tamano maximo del arreglo.
  * Se añade un nuevo nivel al pseudo arbol.
  **/
 void growHeap(tHeap* H);

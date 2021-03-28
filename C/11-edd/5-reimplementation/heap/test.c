@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "max_heap.h"
+#include "heap.h"
 
 int main(){
     int numeros[] = {4,3,2,1,2,4,6,7,8,9};
