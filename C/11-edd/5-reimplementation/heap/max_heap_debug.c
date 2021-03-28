@@ -1,7 +1,7 @@
 // Compilar de forma separada:
 // gcc -c max_heap_debug.c
 
-#include "max_heap.h"
+#include "heap.h"
 
 tHeap* newHeap() {
     printf("[newHeap] Creando heap nuevo. Asignando memoria...\n");

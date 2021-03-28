@@ -1,5 +1,5 @@
-#ifndef __MAX_HEAP__
-#define __MAX_HEAP__
+#ifndef __PRIOR_HEAP__
+#define __PRIOR_HEAP__
 
 // ====================
 

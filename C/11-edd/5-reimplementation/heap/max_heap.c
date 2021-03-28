@@ -1,7 +1,7 @@
 // Compilar de forma separada:
 // gcc -c max_heap.c
 
-#include "max_heap.h"
+#include "heap.h"
 
 tHeap* newHeap() {
     // Asignar memoria para el TDA
