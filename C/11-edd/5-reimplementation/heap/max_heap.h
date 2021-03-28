@@ -36,6 +36,10 @@ typedef struct {
  **/
 tHeap* newHeap();
 
+/**
+ * Eliminar heap.
+ * Libera toda la memoria.
+ **/
 void deleteHeap(tHeap* H);
 
 // Operaciones de elemento
@@ -47,6 +51,10 @@ void pushHeap(tHeap* H, tHeapElem item);
 
 void popHeap(tHeap* H);
 
+/**
+ * Limpiar heap.
+ * Todos los elementos se borran.
+ **/
 void clearHeap(tHeap* H);
 
 // Operaciones de obtencion
@@ -61,6 +69,15 @@ tHeapElem topHeap(tHeap* H);
  * Obtiene el numero de elementos que contiene el heap
  **/
 int getSize(tHeap* H);
+
+/**
+ * Revisa si el heap esta vacio.
+ *
+ * Retornos:
+ * - 1 : Si
+ * - 0 : No
+ **/
+int isHeapEmpty(tHeap* H);
 
 // Operaciones auxiliares
 

@@ -17,7 +17,16 @@ int main() {
     pushHeap(miHeap, 6);
     pushHeap(miHeap, 4);
 
+
     printHeap(miHeap);
+
+    printf("%d\n", isHeapEmpty(miHeap));
+
+    clearHeap(miHeap);
+
+    printf("%d\n", isHeapEmpty(miHeap));
+
+    deleteHeap(miHeap);
 
     return 0;
 }

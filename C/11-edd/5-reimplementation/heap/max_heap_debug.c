@@ -85,6 +85,10 @@ int getSize(tHeap* H) {
     return H->nElems;
 }
 
+int isHeapEmpty(tHeap* H) {
+    return (H->nElems == 0);
+}
+
 void printHeap(tHeap* H) {
     printf("-----HEAP-----\nTop: %d - nElems: %d - Size: %d\n", topHeap(H), getSize(H), H->size);
 
@@ -92,4 +96,23 @@ void printHeap(tHeap* H) {
         printf("[%d] %d\n", i, H->heap[i]);
     }
     printf("==============\n");
+}
+
+void clearHeap(tHeap* H) {
+    printf("[clearHeap] Limpiando heap...\n");
+
+    // Ilusion: El heap no tiene ningun elemento.
+    H->nElems = 0;
+
+    // Cambiar el primer elemento para cambiar el topHeap()
+    H->heap[1] = 0;
+
+    return;
+}
+
+void deleteHeap(tHeap* H) {
+    printf("[deleteHeap] Liberando memoria...\n");
+    free(H->heap);
+    free(H);
+    return;
 }
