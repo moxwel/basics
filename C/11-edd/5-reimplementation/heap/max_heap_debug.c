@@ -38,12 +38,14 @@ void pushHeap(tHeap* H, tHeapElem item) {
         // El nodo padre en un arreglo heap esta dado por el indice del nodo dividido en 2
         int padre = insert / 2;
 
-        printf("[pushHeap] Revisando el padre del nodo insertado. Posicion del padre: %d.\n", padre);
+        printf("[pushHeap] Revisando el padre del nodo %d. Posicion del padre: %d.\n", insert, padre);
 
         // Si el elemento insertado es mayor que su padre, hay que intercambiar los nodos.
         if (H->heap[insert] > H->heap[padre]) {
             printf("[pushHeap] El insertado es mayor que el padre, hay que intercambiar.\n");
             swapElems(H, insert, padre);
+        } else {
+            printf("[pushHeap] El elemento no es mayor que el padre. No hacer nada.\n");
         }
 
         insert = padre;
