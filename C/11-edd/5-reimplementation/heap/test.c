@@ -14,10 +14,10 @@ int main(){
     while(!isHeapEmpty(h)){
         printf("%d ", topHeap(h));
         popHeap(h);
+        printHeap(h);
+        printf("\n");
     }
-    printf("\n");
 
-    printHeap(h);
 
     deleteHeap(h);
 

@@ -69,6 +69,12 @@ void growHeap(tHeap* H) {
 void swapElems(tHeap* H, int item1, int item2) {
     printf("[swapElems] Intercambiando indice %d con %d...\n", item1, item2);
 
+    // No hacer nada si se intenta intercambiar el mismo elemento.
+    if (item1 == item2) {
+        printf("[swapElems] Se esta intentando intercambiar el mismo elemento. No hacer nada.\n");
+        return;
+    }
+
     tHeapElem temp = H->heap[item1];
 
     H->heap[item1] = H->heap[item2];
