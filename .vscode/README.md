@@ -14,6 +14,8 @@ Aqui se dejan las instrucciones de compilacion para los archivos. Es necesario c
 
 Actualmente solo se tienen instrucciones para compilar en un entorno Linux.
 
+---
+
 ## Launch.json
 
 Aqui se dejan las instrucciones de depuracion para los archivos. Trabaja junto con `tasks.json`, y es el responsable de ejecutar el depurador.
