@@ -198,4 +198,6 @@ void moveToStart(tList* L){
 void moveToEnd(tList* L){
     L->curr = L->tail;
     L->pos = getLength(L);
+    
+    prev(L);
 }
