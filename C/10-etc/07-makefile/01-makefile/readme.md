@@ -29,7 +29,7 @@ objN: dep1 dep2 ... depN
     * _¿Que se quiere obtener?_
 
   * ``dep`` : Dependencias
-    * _¿Que se necesita antes para poder realziar el objetivo?_ Pueden ser archivos que necesitan existir, o tambien pueden ser otras **Reglas**.
+    * _¿Que se necesita antes para poder realizar el objetivo?_ Pueden ser archivos que necesitan existir, o tambien pueden ser otras **Reglas**.
 
   * ``instr`` : Instrucciones
     * _¿Que hay que realizar?_ Basicamente son comandos de terminal que ``make`` va a ejecutar automaticamente.

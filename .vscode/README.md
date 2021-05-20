@@ -6,11 +6,15 @@
 
 - `launch.json` : Instrucciones de depuración
 
+---
+
 ## Tasks.json
 
 Aqui se dejan las instrucciones de compilacion para los archivos. Es necesario compilar el codigo antes de depurarlo.
 
 Actualmente solo se tienen instrucciones para compilar en un entorno Linux.
+
+---
 
 ## Launch.json
 
