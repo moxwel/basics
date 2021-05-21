@@ -46,7 +46,6 @@ public class P02_variables {
         /*
         Prescedencia de operadores:
         ()  = Asociatividad
-        ^   = Potencia
         * / = Multiplicacion y division
         + - = Suma y resta
         */
