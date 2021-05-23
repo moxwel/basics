@@ -25,6 +25,11 @@ public class P10_matrices {
 
         System.out.println(matriz[0][2]); // 3
 
+        // De la misma forma, se puede acceder a la cantidad de filas y columnas
+        System.out.println("Filas: " + matriz.length);
+        System.out.println("Columnas: " + matriz[0].length);
+
+
         Scanner entrada = new Scanner(System.in);
 
         System.out.print("Ingrese la cantidad de filas: ");
@@ -44,7 +49,7 @@ public class P10_matrices {
 
         for (int m = 0; m < filas; m++) {
             for (int n = 0; n < columnas; n++) {
-                System.out.print(numeros[m][n] + "     ");
+                System.out.print(numeros[m][n] + "\t");
             }
             System.out.print("\n");
         }
