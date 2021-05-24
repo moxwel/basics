@@ -30,8 +30,12 @@ public class P10_matrices {
         System.out.println("Columnas: " + matriz[0].length);
 
 
-        Scanner entrada = new Scanner(System.in);
+        // Otra forma de declarar y definir matrices
+        int[][] arreglo2 = {{2, 3, 4}, {6, 7, 8}};
+        System.out.println(arreglo2[1][0]); // 6
 
+
+        Scanner entrada = new Scanner(System.in);
         System.out.print("Ingrese la cantidad de filas: ");
         int filas = entrada.nextInt();
         System.out.print("Ingrese la cantidad de columnas: ");

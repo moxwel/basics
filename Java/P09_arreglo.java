@@ -24,9 +24,12 @@ public class P09_arreglo {
         System.out.println(arreglo.length); // 5
 
 
+        // Otra forma de delarar y definir arreglos
+        int[] arreglo2 = {34, 21, 43, 12, 54};
+        System.out.println(arreglo2[2]); // 43
+
 
         Scanner entrada = new Scanner(System.in);
-
         System.out.print("Ingrese el largo del arreglo: ");
         int len = entrada.nextInt();
         int numeros[] = new int[len];
