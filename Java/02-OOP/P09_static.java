@@ -45,7 +45,7 @@ public class P09_static {
 
         bob.getInfo(); // Notese la frase "Perros creados hasta ahora"
 
-        // Al crear 2 'Perro' mas, el contador 'cantidad' aumentara a 3.
+        // Al crear 2 Perros mas, el contador 'cantidad' aumentara a 3.
         Perro rojo = new Perro("Rojo", 9, "Nicolas");
         Perro blu = new Perro("Blu", 9, "Sergio");
 
