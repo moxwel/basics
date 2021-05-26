@@ -63,3 +63,6 @@ public class P09_static {
         // un objeto. Pero con las caracteristicas estaticas, se debe acceder directamente desde la clase.
     }
 }
+
+// Los metodos de la clase Math son estaticos, pues, son funciones que son parte de la clase, y
+// no es necesario decalrar objetos de esa clase para poder usar esos metodos.
