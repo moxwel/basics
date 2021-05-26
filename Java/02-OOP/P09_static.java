@@ -66,3 +66,5 @@ public class P09_static {
 
 // Los metodos de la clase Math son estaticos, pues, son funciones que son parte de la clase, y
 // no es necesario decalrar objetos de esa clase para poder usar esos metodos.
+
+// Como convencion, los nombres de los atributos estaticos deben estar en mayusculas.
