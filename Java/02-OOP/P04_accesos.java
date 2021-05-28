@@ -11,6 +11,7 @@ Sin colocar ningun modificador, la clase solo sera accesible por clases del MISM
 que pertenezcan a la misma carpeta podran acceder a la clase.
 
 
+
 Para Atributos y Metodos:
 - Acceso publico:
 Con 'public', los atributos/metodos pueden ser accedidos desde
@@ -58,6 +59,8 @@ class Vehiculo2 {
     // Es buena practica mantener los atributos de una clase de manera privada, ya que de esta
     // forma se sigue el concepto de TDA. Para modificar estos valores, es necesario utilizar metodos
     // destinados a esa tarea, llamados 'setters' y 'getters'.
+
+    // Esta es la idea detras de la ENCAPSULACION
 
     void bocina() {
         System.out.println("Beep!");
