@@ -4,6 +4,8 @@ en que el objeto es instanciado.
 
 Tambien se permiten tener varios constructores con diferentes parametros (sobrecarga).
 Segun como se instancie la clase, se llamaran de forma diferente.
+
+Esto sigue la idea del POLIMORFISMO
 */
 
 class Vehiculo5 {
