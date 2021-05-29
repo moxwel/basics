@@ -26,5 +26,8 @@ public class P12_math {
 
         // Raiz cuadrada
         System.out.println(Math.sqrt(81)); // 9.0
+
+        // Constante Pi
+        System.out.println(Math.PI); // 3.141592653589793
     }
 }
