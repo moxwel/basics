@@ -32,7 +32,7 @@ class OtraClase extends MiClase {
     }
 }
 
-public class P13_herencia2 {
+public class P12_herencia2 {
     public static void main(String[] args) {
         // Tambien podemos definir el tipo de la variable como la clase padre, y creear un objeto de
         // una subclase de esta. Esto nos permite poder usar variables de tipo 'MiClase' sin saber
