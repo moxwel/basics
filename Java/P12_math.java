@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /*
 El JDK de Java viene con clases utiles que nos pueden servir para resolver distintos problemas.
 
@@ -29,5 +31,10 @@ public class P12_math {
 
         // Constante Pi
         System.out.println(Math.PI); // 3.141592653589793
+
+        // Numeros aleatorios
+        Random aleatorio = new Random();
+        System.out.println(aleatorio.nextInt(50)); // Int entre 0-49
+
     }
 }
