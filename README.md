@@ -2,13 +2,14 @@
 
 Este repositorio almacena algunos codigos que he creado para aprender ciertos lenguajes.
 
-Actualmente hay 5 carpetas con diferentes lenguajes:
+Actualmente hay 6 carpetas con diferentes lenguajes:
 
 * C
 * Python
 * PHP
 * LaTeX
 * Java
+* Scheme
 
 ---
 
