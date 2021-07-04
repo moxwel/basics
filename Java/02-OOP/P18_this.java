@@ -4,9 +4,9 @@
 
 
 class MiClase {
-    int dato;
+    protected int dato;
 
-    MiClase (int dato) {
+    public MiClase (int dato) {
         // Aqui debemos usar 'this' ya que dentro del constructor, decir 'dato' en realidad se
         // refiere al parametro, y no al miembro 'dato' de la clase.
 
@@ -21,10 +21,19 @@ class MiClase {
 
 }
 
+class SubClase extends MiClase{
+    private int wea;
+
+    public SubClase(int dato) {
+        super(dato);
+    }
+
+}
+
 
 public class P18_this {
     public static void main(String[] args) {
-        MiClase objeto = new MiClase(34);
+        MiClase objeto = new SubClase(34);
 
         objeto.unMetodo();
 
