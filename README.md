@@ -1,4 +1,4 @@
-# Basics
+# basics
 
 Este repositorio almacena algunos codigos que he creado para aprender ciertos lenguajes.
 
