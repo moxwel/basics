@@ -9,8 +9,8 @@ Actualmente hay 6 carpetas con diferentes lenguajes:
 * PHP
 * LaTeX
 * Java
-* Scheme
-* Prolog(?)
+* Scheme (?)
+* Prolog (?)
 
 ---
 
