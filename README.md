@@ -10,6 +10,7 @@ Actualmente hay 6 carpetas con diferentes lenguajes:
 * LaTeX
 * Java
 * Scheme
+* Prolog(?)
 
 ---
 
