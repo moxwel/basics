@@ -11,6 +11,7 @@ Actualmente hay 6 carpetas con diferentes lenguajes:
 * Java
 * Scheme (?)
 * Prolog (?)
+* SQL
 
 ---
 
