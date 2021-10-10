@@ -47,3 +47,6 @@ SELECT
     SUM(precio*cantidad) as "Precio por cantidad total de productos"
 FROM productos;
 
+
+-- Referencia: https://www.tutorialesprogramacionya.com/oracleya/temarios/descripcion.php?inicio=25&cod=188&punto=30
+

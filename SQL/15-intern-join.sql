@@ -27,10 +27,12 @@ INSERT INTO biblioteca VALUES (300, 'Libro D', 'Autor 3', 333, 1000);
 INSERT INTO biblioteca VALUES (400, 'Libro C', 'Autor 4', 111, 1000);
 INSERT INTO biblioteca VALUES (500, 'Libro B', 'Autor 2', 333, 1000);
 INSERT INTO biblioteca VALUES (600, 'Libro E', 'Autor 5', null, 1000);
+INSERT INTO biblioteca VALUES (700, 'Libro F', 'Autor 1', 444, 1000);
 
 INSERT INTO editoriales VALUES (111, 'Editorial 1', 'Direccion ED1');
 INSERT INTO editoriales VALUES (222, 'Editorial 2', 'Direccion ED2');
 INSERT INTO editoriales VALUES (333, 'Editorial 3', 'Direccion ED3');
+INSERT INTO editoriales VALUES (666, 'Editorial 6', 'Direccion ED6');
 
 
 
