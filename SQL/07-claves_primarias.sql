@@ -30,3 +30,20 @@ INSERT INTO empleados VALUES (1, 'EL ADMIN', null, null);
 -- Esta sentencia causaria un error porque ya existe un registro con
 -- RUT '1', y eso no es posible, porque es clave primaria, no puede
 -- repetirse.
+
+
+
+
+
+-- Las claves primarias tienen ciertas propiedades, pero de manera alternativa
+-- podemos establecer otros campos como "unicos" tambien. Esto se logra con la
+-- restriccion UNIQUE.
+CREATE TABLE empleados (
+    id_empleado number(8),
+    rut number(8),
+    nombre varchar2(30) NOT NULL,
+    apellido varchar2(30),
+    genero varchar2(1),
+    PRIMARY KEY (id_empleado),
+    UNIQUE (rut)
+);
