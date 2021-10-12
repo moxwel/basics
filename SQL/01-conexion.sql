@@ -33,3 +33,6 @@ SELECT * FROM all_tables;
 -- 'all_tables' es una tabla especial que tiene Oracle Database que contiene
 -- los nombres de todas las tablas de la base de datos. Con este comando,
 -- observaremos todos los campos de esa tabla, con sus registros correspondientes.
+
+-- Advertencia, es una tabla demasiado grande, no la ejecutes en sqlplus, se va a
+-- demorar mucho
