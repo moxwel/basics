@@ -3,13 +3,13 @@
 -- Inserta un registro nuevo (fila) en la tabla dada, con los respectivos datos
 -- correspondientes a cada columna de la tabla.
 
--- Considerando que tenemos la tabla 'mis_clientes'
-INSERT INTO mis_clientes (nombre,apellido,edad)
+-- Considerando que tenemos la tabla 'mis_clientes' con la consulta anterior...
+INSERT INTO mis_clientes (nombre, apellido, edad)
     VALUES ('Juan', 'Pepito', 22);
 -- Notemos que los strings se denotan con comillas simples.
     
 -- El orden de los valores depende del orden en como estan puestas las columnas.
-INSERT INTO mis_clientes (apellido,nombre,edad)
+INSERT INTO mis_clientes (apellido, nombre, edad)
     VALUES ('Perez', 'Pedro', 52);
     
 -- Si no se especifica el nombre de las columnas, se toma el orden por defecto
@@ -36,7 +36,7 @@ SELECT apellido, edad FROM mis_clientes;
 
 -- Agreguemos mas campos.
 INSERT INTO mis_clientes
-    VALUES ('Lolo', 'Lala', 999);
+    VALUES ('Don', 'Fede', 999);
     
 INSERT INTO mis_clientes
     VALUES ('Bromo', 'Mentos', 69);
@@ -45,4 +45,4 @@ INSERT INTO mis_clientes
     VALUES ('Bassed', 'Chad', 40);
 
 INSERT INTO mis_clientes
-    VALUES ('Juan', 'Gabriel', 40);
+    VALUES ('Charles', 'Marino', 40);
