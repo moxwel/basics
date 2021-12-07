@@ -37,7 +37,7 @@ INSERT INTO empleados VALUES (700, 7777, 'El', 'Admin', 9999999);
 -- la empresa, pero obviamente queremos ocultar sus datos personales como el rut
 -- y el sueldo. Como administradores de la base de datos, podemos crear
 -- una vista para ellos.
-CREATE VIEW vista_empleados AS (
+CREATE OR REPLACE VIEW vista_empleados AS (
     SELECT id_empleado, nombre, apellido FROM empleados
 );
 
