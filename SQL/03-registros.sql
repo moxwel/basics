@@ -7,11 +7,11 @@
 INSERT INTO mis_clientes (nombre, apellido, edad)
     VALUES ('Juan', 'Pepito', 22);
 -- Notemos que los strings se denotan con comillas simples.
-    
+
 -- El orden de los valores depende del orden en como estan puestas las columnas.
 INSERT INTO mis_clientes (apellido, nombre, edad)
     VALUES ('Perez', 'Pedro', 52);
-    
+
 -- Si no se especifica el nombre de las columnas, se toma el orden por defecto
 -- (es decir, el orden en como fueron creados).
 INSERT INTO mis_clientes
@@ -37,7 +37,7 @@ SELECT apellido, edad FROM mis_clientes;
 -- Agreguemos mas campos.
 INSERT INTO mis_clientes
     VALUES ('Don', 'Fede', 999);
-    
+
 INSERT INTO mis_clientes
     VALUES ('Bromo', 'Mentos', 69);
 
@@ -46,3 +46,10 @@ INSERT INTO mis_clientes
 
 INSERT INTO mis_clientes
     VALUES ('Charles', 'Marino', 40);
+
+
+
+-- Podemos limitar la cantidad de filas que se quieren recuperar
+
+-- Aqui solo se van a mostrar 5 filas
+SELECT * FROM mis_clientes LIMIT 5;
