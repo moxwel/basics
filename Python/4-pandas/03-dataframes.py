@@ -25,3 +25,6 @@ print(tablaEntrenamiento_nombres)
 
 # Y de la misma manera, ahora podemos "localizar" filas utilizando dichos nombres
 print(tablaEntrenamiento_nombres.loc["dia 3"])
+
+# Para poder imprimir unicamente una columna especifica, se puede mencionar como arreglo.
+print(tablaEntrenamiento_nombres["calorias"])
