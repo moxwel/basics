@@ -24,12 +24,15 @@ print(datos.to_string())
 # duplicado, y queremos quitarlo. Para saber si el dataframe tiene duplicados, debemos
 # usar el metodo "duplicated" sobre el dataframe.
 print("Buscando duplicados..-")
-print(dict(datos.duplicated()))
+duplic = dict(datos.duplicated())
+print(duplic)
 # Esto retornara una lista (iterable) con un booleano por cada fila, sera True si detecta que
 # dicha fila esta duplicada. En este caso, la fila 12 si se detecta como duplicada.
-# Podemos quitarla si usamos un for-loop:
-for x in list((datos.duplicated()).items()): # TODO: Terminar esto
-	print(str(x[0]) + " es " + str(x[1]))
+# Podemos quitarla si usamos el metodo "drop_duplicated()" sobre el dataframe:
+datos.drop_duplicates(inplace=True)
+# Notese el "inplace=True", es para sobreescribir la tabla.
+# Se habra borrado la fila 12
+
 
 
 # Reemplazar muchos valores en el mismo dataset sera un trabajo mas o menos dificil,
