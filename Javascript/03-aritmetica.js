@@ -7,7 +7,7 @@ console.log(12 - 1) // yapo
 
 console.log(25 * 3) // 75
 
-console.log(100 / 2) // 50
+console.log(22/7) // 3.142857142857143
 
 console.log(56 % 3) // 2
 
