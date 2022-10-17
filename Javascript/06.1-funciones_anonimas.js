@@ -2,7 +2,7 @@
 // Esto es bastante util cuando se desea realizar operaciones funcionales, o definir una funcion en la misma linea.
 
 /*
-function() {
+function(argumentos) {
     //Definicion de funcion
 }
 */
