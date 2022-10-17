@@ -1,0 +1,31 @@
+Node.js es un programa que permite ejecutar Javascript 'fuera del navegador'.
+
+Con esto, podemos ejecutar Javascript en algun servidor, aplicacion de escritorio, aplicacion movil, etc.
+
+Para instalar Node.js, se puede descargar para Windows desde su pagina web: https://nodejs.org
+
+De manera alternativa, se puede instalar en Linux utilizando Node Version Manager (NVM).
+
+https://github.com/nvm-sh/nvm#installing-and-updating
+
+Para probar que se haya instalado, se puede ejecutar en consola:
+
+$ nvm -v
+
+Una vez instalado, ejecutar en consola:
+
+$ nvm install --lts
+
+Este comando instalara la ultima version LTS (Long Term Service) de Node.js
+
+Una vez hecho esto, Node.js y NPM (Node Package Manager) se habran instalado, se puede comprobar de la siguiente manera en terminal:
+
+$ node -v
+
+$ npm -v
+
+Node.js esta listo para usarse.
+
+Ejecutar 'node' sin argumentos provocara que se ejecute en modo REPL, es decir, en modo interactivo.
+Alli se puede escribir codigo Javascript directamente e inmediamente recibir resultados en consola.
+Es el mismo comportamiento que la consola interactiva de Python, pero para Javascript.
