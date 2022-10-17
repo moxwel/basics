@@ -1,4 +1,4 @@
-// Los objetos en Javascript son mas parecidos a un diccionario en Python que a un objeto en Java.
+// Los objetos en Javascript son parecidos a un diccionario en Python.
 
 // Un objeto consiste en una coleccion de pares de datos nombre:valor llamados 'Propeidades'.
 
