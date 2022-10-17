@@ -20,3 +20,6 @@ document.write('Hola pagina web.')
 Para escribir comentarios multilinea, se hace con
 esta sintaxis.
 */
+
+// Javascript en general no requiere el uso de semicolons (;), sin embargo, en algunas ocasiones
+// puede ser util usarlas.
