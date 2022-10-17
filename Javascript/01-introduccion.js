@@ -6,12 +6,12 @@
 
 // Para imprimir elementos en consola:
 
-console.log('Hola consola.')
+console.log('Hola consola.');
 
 // En un documento HTML, codigo en Javascript debe estar dentro de la etiqueta <script>,
 // alli podemos escribir dentro del documento HTML:
 
-document.write('Hola pagina web.')
+document.write('Hola pagina web.');
 
 // Esto escribirá texto en el HTML, no en la consola. (No funciona en Node, pues se necesita un
 // navegador)
