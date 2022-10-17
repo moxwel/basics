@@ -2,13 +2,13 @@
 
 // Un objeto consiste en una coleccion de pares de datos nombre:valor llamados 'Propeidades'.
 
-var objeto = {nombre:'Max', edad:22, color:'Azul'};
+var miObjeto = {nombre:'Max', edad:22, color:'Azul'};
 
 // Para obtener los datos de una propiedad, se puede hacer de dos maneras:
 
-objeto.nombre; // Max
+miObjeto.nombre; // Max
 
-objeto['nombre']; // Max
+miObjeto['nombre']; // Max
 
 // Algunos tipos de datos poseen propiedades nativas, por ejemplo, la propiedad 'length' sirve para obtener el
 // tamaño de un string (el numero de caracteres)
