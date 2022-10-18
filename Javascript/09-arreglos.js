@@ -27,6 +27,12 @@ miArreglo[1] = "Nuevo string";
 
 console.log(miArreglo[1]); // Nuevo string
 
+// Obtener el tamaño de un arreglo
+
+console.log(miArreglo.length); // 4
+
+
+
 
 
 // Podemos crear un arreglo vacio:
