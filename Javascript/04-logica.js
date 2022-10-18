@@ -13,6 +13,8 @@
 
 '10' == 10; // true - Igualdad de valor
 '10' === 10; // false - Igualdad de valor y tipo
+'10' != 10; // false - Desigualdad de valor
+'10' !== 10; // true - Desigualdad de valor y tipo
 
 // El operador 'igual a' (==) utiliza correccion de tipo, sin embargo 'identico a' (===) no.
 

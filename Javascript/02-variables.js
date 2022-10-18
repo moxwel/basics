@@ -40,3 +40,29 @@ booleano = false;
 var decimal = 3.14;
 
 var nombre = "Max";
+
+
+
+
+// 'var' es la forma convencional de crear variables (el mas compatible de todos entre navegaodres)
+// En Javascript moderno (ECMAScript6) tambien podemos declarar variables con 'let' y 'const'
+
+
+
+// 'const' declara una variable constante, y no se puede modificar
+
+const unaConstante = 3.1415;
+
+//unaConstante = 3 // Esto dará un error
+
+
+
+// 'let' declara una variable comun y corriente, puede ser modificado despues
+
+let unaVariable = 3;
+
+unaVariable = 5;
+
+// Sin embargo, una variable declarada con 'let' no puede ser re-declarada nuevamente
+
+//let unaVariable = 6; // Esto dará un error
