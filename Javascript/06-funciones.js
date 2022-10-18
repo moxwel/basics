@@ -7,7 +7,7 @@ function saludo(nombre) {
 
 // Para llamar a una funcion, es necesario 'llamarlo':
 
-saludo('Max');
+saludo('Max'); // Hola Max
 
 // Todas las funciones retornan algo, si no hay un 'return' definido, retornan 'undefined'
 
@@ -15,7 +15,7 @@ function suma(x, y) {
     return x + y;
 }
 
-console.log( suma(4,7) );
+console.log( suma(4,7) ); // 11
 
 // Return causa que la funcion retorne un valor y se detenga su ejecucion.
 
@@ -32,5 +32,22 @@ function miFuncion(arg1, arg2, arg3) {
 }
 
 miFuncion('Max', 4, 22/7);
+// Max
+// 4
+// 3.142857142857143
+// undefined
+// undefined
+
 miFuncion('Bob');
+// Bob
+// undefined
+// undefined
+// undefined
+// undefined
+
 miFuncion('Pip', 'String', 'Otro string', 'Hola');
+// Pip
+// String
+// Otro string
+// Hola
+// undefined

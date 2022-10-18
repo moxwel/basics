@@ -22,22 +22,40 @@ for (i = 0; i < 10; i++) {
 
 var x = 0;
 
-while (x < 10) {     
-    console.log(x);
+while (x < 10) {
 
     if (x == 5) {
         break;
     }
 
+    console.log(x);
     x++;
 }
 
+// 0
+// 1
+// 2
+// 3
+// 4
+
+x = 0;
 while (x < 10) {
-    console.log(x);
 
     if (x == 5) {
+        x++;
         continue;
     }
 
+    console.log(x);
     x++;
 }
+
+// 0
+// 1
+// 2
+// 3
+// 4
+// 6
+// 7
+// 8
+// 9
