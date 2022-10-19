@@ -1,10 +1,10 @@
 // En Node.js, para usar modulos dentro de la carpeta 'node_modules' es necesario utilizar
 // la funcion 'require'
 
-var axios = require('axios');
+const axios = require('axios');
 
 // La gran mayoria de desarrolladores recomienda utilizar este metodo para importar librerias
-// de Node.js
+// de Node.js. Se utiliza 'const' porque se supone que no deberia ser modificado.
 
 console.log(axios);
 // [Function: wrap] {
