@@ -19,6 +19,14 @@ console.log(unString.length); // 17
 
 
 
+// Tambien podemos añadir una propiedad de la siguiente manera:
+
+miObjeto.nuevaPropiedad = "Nuevo";
+
+console.log(miObjeto); // { nombre: 'Max', edad: 22, color: 'Azul', nuevaPropiedad: 'Nuevo' }
+
+
+
 
 // Una propiedad puede contener cualquier tipo de dato, desde numeros, strings, hasta funciones.
 

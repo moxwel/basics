@@ -13,7 +13,7 @@ function ejecutarFuncion(valor, funcion) {
 
 // Notese que la funcion 'ejecutarFuncion()' recibe como parametros un valor y otra funcion.
 
-ejecutarFuncion(25, function(arg){return arg*arg;} ) // 625
+console.log(ejecutarFuncion(25, function(arg){return arg*arg} )); // 625
 
 // Al llamar 'ejecutarFuncion()', se define alli mismo una funcion anonima que eleva al cuadrado, donde su definicion es utilizada junto al valor ingresado (24).
 
@@ -22,4 +22,18 @@ ejecutarFuncion(25, function(arg){return arg*arg;} ) // 625
 // Las funciones anonimas tambien se pueden definir usando la notacion de flechas.
 // (argumentos) => {Definicion de funcion}
 
-ejecutarFuncion(25, (arg) => {return arg*arg} ) // 625
+console.log(ejecutarFuncion(6, (arg) => {return arg*arg} )); // 36
+
+
+
+// Podemos guardar funciones en variables tambien.
+
+var saludo = function(nombre) {
+    console.log("Hola " + nombre);
+}
+
+saludo("Max"); // Hola Max
+
+var despedida = (nombre) => {console.log("Adios " + nombre)};
+
+despedida("Bob"); // Adios Bob
