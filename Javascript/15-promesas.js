@@ -22,13 +22,15 @@ let miPromesa = new Promise((funcionExito, funcionFracaso) => {
 
     // Codigo asincrono (que puede demorarse)...
 
-
     // Ejecutores de promesa.
     // Estas funciones causaran que la promesa se resuelva en un exito (o fracaso).
     // Aqui se decide CUANDO 'aceptar' o 'rechazar' la promesa.
-    funcionExito(unValor);
-    funcionFracaso(unError);
-})
+    if (exito) {
+        funcionExito(unValor);
+    } else {
+        funcionFracaso(unError);
+    }
+});
 
 // Apenas se crea la promesa, el codigo asincrono comenzara a ejecutarse "en segundo plano", y eventualmente obtendrá un resultado.
 
@@ -49,7 +51,7 @@ miPromesa
     .finally(() => {
         // Opcional.
         // Este bloque siempre se ejecutara no importa el resultado.
-    })
+    });
 
 
 
@@ -66,7 +68,7 @@ miPromesa
     (error) => {
         // Codigo que se ejecuta cuando la promesa haya fracasado.
         // La variable 'unError' (de la promesa) se recibe en el parametro 'error'.
-    })
+    });
 
 
 

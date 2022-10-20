@@ -5,7 +5,7 @@
 // De todas maneras, al recibir la respuesta del conductor, la promesa se ha resuelto.
 
 
-console.log("Creando promesa...")
+console.log("Creando promesa...");
 
 var viaje = new Promise((resolve, reject) => {
 
@@ -43,22 +43,22 @@ var viaje = new Promise((resolve, reject) => {
 
 });
 
-console.log("Promesa creada. Ejecutando en segundo plano...")
+console.log("Promesa creada. Ejecutando en segundo plano...");
 
 
 
-console.log("Definiendo acciones...")
+console.log("Definiendo acciones...");
 
 viaje
     .then(
     (result) => {
-        console.log(`Tu conductor ha aceptado el viaje!\n\nMensaje del conductor: \"${result.mensaje}\"\nTiempo de espera: ${result.tiempo} ms\nID de viaje: #${result.id}`)
+        console.log(`Tu conductor ha aceptado el viaje!\n\nMensaje del conductor: \"${result.mensaje}\"\nTiempo de espera: ${result.tiempo} ms\nID de viaje: #${result.id}`);
     },
     (error) => {
-        console.log(`Tu conductor ha rechazado el viaje...\n\nMensaje del conductor: \"${error.mensaje}\"\nTiempo de espera: ${error.tiempo} ms`)
+        console.log(`Tu conductor ha rechazado el viaje...\n\nMensaje del conductor: \"${error.mensaje}\"\nTiempo de espera: ${error.tiempo} ms`);
     })
 
-console.log("Listo.")
+console.log("Listo.");
 // Creando promesa...
 // Promesa creada. Ejecutando en segundo plano...
 // Definiendo acciones...
