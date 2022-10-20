@@ -26,9 +26,9 @@ let miPromesa = new Promise((funcionExito, funcionFracaso) => {
     // Estas funciones causaran que la promesa se resuelva en un exito (o fracaso).
     // Aqui se decide CUANDO 'aceptar' o 'rechazar' la promesa.
     if (exito) {
-        funcionExito(unValor);
+        funcionExito(unValor); // La promesa retorna el valor 'unValor'
     } else {
-        funcionFracaso(unError);
+        funcionFracaso(unError); // La promesa lanza una excepcion con el valor 'unError'
     }
 });
 
