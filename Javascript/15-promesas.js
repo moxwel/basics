@@ -25,25 +25,54 @@ let miPromesa = new Promise((funcionExito, funcionFracaso) => {
 
     // Ejecutores de promesa.
     // Estas funciones causaran que la promesa se resuelva en un exito (o fracaso).
-    // Aqui, uno decide CUANDO 'aceptar' o 'rechazar' la promesa.
+    // Squi se decide CUANDO 'aceptar' o 'rechazar' la promesa.
     funcionExito(unValor);
     funcionFracaso(unError);
 })
+
+// Apenas se crea la promesa, el codigo asincrono comenzara a ejecutarse "en segundo plano", y eventualmente obtendrá un resultado.
+
 
 
 
 // Aquel que consume:
 // Aqui se decide QUE HACER una vez la promesa se haya resuelto
 miPromesa
-    .then((valor) => {
+    .then((resultado) => {
         // Codigo que se ejecuta cuando la promesa se haya cumplido.
-        // La variable 'unValor' se recibe aqui.
+        // La variable 'unValor' (de la promesa) se recibe en el parametro 'resultado'.
     })
     .catch((error) => {
         // Codigo que se ejecuta cuando la promesa haya fracasado.
-        // La variable 'unError' se recibe aqui.
+        // La variable 'unError' (de la promesa) se recibe en el parametro 'error'.
     })
     .finally(() => {
         // Opcional.
         // Este bloque siempre se ejecutara no importa el resultado.
     })
+
+
+
+
+// El metodo 'then()' tambien puede recibir dos parametros: la funcion cuadno la promesa se cumple,
+// y la funcion cuando la promesa fracasa.
+
+miPromesa
+    .then(
+    (resultado) => {
+        // Codigo que se ejecuta cuando la promesa se haya cumplido.
+        // La variable 'unValor' (de la promesa) se recibe en el parametro 'resultado'.
+    },
+    (error) => {
+        // Codigo que se ejecuta cuando la promesa haya fracasado.
+        // La variable 'unError' (de la promesa) se recibe en el parametro 'error'.
+    })
+
+
+
+// En resumen:
+// - Una Promesa es un objeto en Javascript que ejecuta un codigo (que puede demorarse) y que obtendra un
+//   resultado en un futuro.
+// - Una Promesa es ejecutada inmeditamente despues de instanciarse (en el momento que se crea con 'new').
+// - La Promesa se ejecuta en "segundo plano" mientras el resto del codigo sigue funcionando.
+// - El metodo 'then()' de una promesa ejecuta codigo dependiendo del resultado que se haya obtenido de la promesa.

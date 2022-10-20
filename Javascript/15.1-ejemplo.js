@@ -6,10 +6,11 @@
 
 
 
-let viaje = new Promise((exito, fracaso) => {
+var viaje = new Promise((resolve, reject) => {
 
     let tiempoEspera = Math.floor(Math.random()*6000); // Numero aleatorio entre 0 y 6000
 
+    // Esta funcion se demorará en ejecutarse (simulando codigo asincrono)
     setTimeout(() => {
 
         let aceptarViaje = Math.round(Math.random()); // Numero aleatorio, puede ser 0 o 1.
@@ -21,10 +22,20 @@ let viaje = new Promise((exito, fracaso) => {
             let idViaje = Math.floor(Math.random()*10000); // Numero aleatorio entre 0 y 10000.
             let mensajeConductor = "Voy en camino!!";
 
-            exito( [mensajeConductor, tiempoEspera, idViaje] );
+            resolve({
+                mensaje: mensajeConductor,
+                tiempo: tiempoEspera,
+                id: idViaje
+            });
 
         } else {
-            fracaso(tiempoEspera);
+
+            let mensajeConductor = "Estas muy lejos.";
+
+            reject({
+                mensaje: mensajeConductor,
+                tiempo: tiempoEspera
+            });
         }
 
     }, tiempoEspera);
@@ -34,9 +45,10 @@ let viaje = new Promise((exito, fracaso) => {
 
 
 viaje
-    .then((respuesta) => {
-        console.log(`Tu conductor ha aceptado el viaje!\n\nMensaje del conductor: \"${respuesta[0]}\"\nTiempo de espera: ${respuesta[1]} ms\nID de viaje: #${respuesta[2]}`)
-    })
-    .catch((respuesta) => {
-        console.log(`Tu conductor ha rechazado el viaje...\n\nTiempo de espera: ${respuesta} ms`)
+    .then(
+    (result) => {
+        console.log(`Tu conductor ha aceptado el viaje!\n\nMensaje del conductor: \"${result.mensaje}\"\nTiempo de espera: ${result.tiempo} ms\nID de viaje: #${result.id}`)
+    },
+    (error) => {
+        console.log(`Tu conductor ha rechazado el viaje...\n\nMensaje del conductor: \"${error.mensaje}\"\nTiempo de espera: ${error.tiempo} ms`)
     })
