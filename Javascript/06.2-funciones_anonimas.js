@@ -19,10 +19,13 @@ console.log(ejecutarFuncion(25, function(arg){return arg*arg} )); // 625
 
 
 
+
+
 // Las funciones anonimas tambien se pueden definir usando la notacion de flechas.
 // (argumentos) => {Definicion de funcion}
 
 console.log(ejecutarFuncion(6, (arg) => {return arg*arg} )); // 36
+
 
 
 
@@ -37,3 +40,31 @@ saludo("Max"); // Hola Max
 var despedida = (nombre) => {console.log("Adios " + nombre)};
 
 despedida("Bob"); // Adios Bob
+
+
+
+
+
+// Las funciones anonimas pueden retornar valores.
+
+var retornarValor1 = (valor) => {return valor};
+
+console.log(retornarValor1(32)) // 32
+
+// Si solo es una unica expresion la que se quiere retornar, entonces se puede prescindir de los corchetes.
+
+var retornarValor2 = (valor) => valor;
+
+console.log(retornarValor2(32)) // 32
+
+// Si se ingresan corchetes, se debe explicitar 'return' para poder retornar.
+
+var retornarValor3 = (valor) => {valor};
+
+console.log(retornarValor3(32)) // undefined
+
+// Si solo se tiene un unico parametro, se puede prescindir de los parentesis.
+
+var unaFuncion1 = param => param+45;
+
+console.log(unaFuncion1(32)); // 77
