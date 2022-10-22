@@ -37,7 +37,7 @@ let miPromesa = new Promise((funcionExito, funcionFracaso) => {
 
 
 
-// Aquel que consume:
+// Aquel que consume: (capturadores de promesa)
 // Aqui se decide QUE HACER una vez la promesa se haya resuelto
 miPromesa
     .then((resultado) => {
@@ -56,8 +56,8 @@ miPromesa
 
 
 
-// El metodo 'then()' tambien puede recibir dos parametros: la funcion cuadno la promesa se cumple,
-// y la funcion cuando la promesa fracasa.
+// El metodo 'then()' tambien puede recibir dos parametros: la funcion a ejecutar cuadno la promesa se cumple,
+// y la funcion a ejecutar cuando la promesa fracasa.
 
 miPromesa
     .then(

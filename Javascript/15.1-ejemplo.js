@@ -5,16 +5,18 @@
 // De todas maneras, al recibir la respuesta del conductor, la promesa se ha resuelto.
 
 
-console.log("Creando promesa...");
+console.log("[1] Creando promesa...");
 
 var viaje = new Promise((resolve, reject) => {
 
+    console.log("[2] Promesa creada. Ejecutando codigo...");
+
     let tiempoEspera = Math.floor(Math.random()*6000); // Numero aleatorio entre 0 y 6000
+
+    let aceptarViaje = Math.round(Math.random()); // Numero aleatorio, puede ser 0 o 1.;
 
     // Esta funcion se demorará en ejecutarse (simulando codigo asincrono)
     setTimeout(() => {
-
-        let aceptarViaje = Math.round(Math.random()); // Numero aleatorio, puede ser 0 o 1.
 
         // Si el conductor acepta el viaje, se ejecutará la funcion de exito, en caso contrario
         // se ejecutara la funcion de fracaso.
@@ -39,32 +41,31 @@ var viaje = new Promise((resolve, reject) => {
             });
         }
 
-    }, tiempoEspera);
+        console.log("[3] Ejecucion de promesa terminada.");
 
+    }, tiempoEspera);
 });
 
-console.log("Promesa creada. Ejecutando en segundo plano...");
 
 
-
-console.log("Definiendo acciones...");
+console.log("[4] Definiendo acciones...");
 
 viaje
     .then(
     (result) => {
-        console.log(`Tu conductor ha aceptado el viaje!\n\nMensaje del conductor: \"${result.mensaje}\"\nTiempo de espera: ${result.tiempo} ms\nID de viaje: #${result.id}`);
+        console.log(`[5] Tu conductor ha aceptado el viaje!\n\nMensaje del conductor: \"${result.mensaje}\"\nTiempo de espera: ${result.tiempo} ms\nID de viaje: #${result.id}`);
     },
     (error) => {
-        console.log(`Tu conductor ha rechazado el viaje...\n\nMensaje del conductor: \"${error.mensaje}\"\nTiempo de espera: ${error.tiempo} ms`);
+        console.log(`[6] Tu conductor ha rechazado el viaje...\n\nMensaje del conductor: \"${error.mensaje}\"\nTiempo de espera: ${error.tiempo} ms`);
     })
 
-console.log("Listo.");
-// Creando promesa...
-// Promesa creada. Ejecutando en segundo plano...
-// Definiendo acciones...
-// Listo.
-// Tu conductor ha aceptado el viaje!
+console.log("[7] Fin del codigo.");
+// [1] Creando promesa...
+// [2] Promesa creada. Ejecutando codigo...
+// [4] Definiendo acciones...
+// [7] Fin del codigo.
+// [3] Ejecucion de promesa terminada.
+// [6] Tu conductor ha rechazado el viaje...
 
-// Mensaje del conductor: "Voy en camino!!"
-// Tiempo de espera: 3992 ms
-// ID de viaje: #658
+// Mensaje del conductor: "Estas muy lejos."
+// Tiempo de espera: 5060 ms
