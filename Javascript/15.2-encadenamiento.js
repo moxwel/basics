@@ -14,9 +14,9 @@ var miPromesa = new Promise((resolve) => {
 
         resolve(10);
 
-        console.log("[miPromesa] Promesa ejecutada.")
+        console.log("[miPromesa] Promesa ejecutada.");
 
-    }, 3000)
+    }, 3000);
 
 })
 
@@ -30,17 +30,17 @@ miPromesa
         return result;
     })
     .then((valor)=>{
-        console.log("Miltiplicando valor recibido por 25...")
+        console.log("Miltiplicando valor recibido por 25...");
         let result = valor*25;
         return result;
     })
     .then((arg)=>{
-        console.log("Dividiendo valor recibido por 7...")
+        console.log("Dividiendo valor recibido por 7...");
         let result = arg/7;
         return result;
     })
     .then((valorFinal)=>{
-        console.log("El valor final recibido es: " + valorFinal)
+        console.log("El valor final recibido es: " + valorFinal);
     })
 
 
