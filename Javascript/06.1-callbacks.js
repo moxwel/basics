@@ -1,4 +1,5 @@
-// Las funciones pueden recibir otras funciones como parametros.
+// Las funciones pueden recibir otras funciones como argumento.
+
 // Cuando ese parametro se llama dentro de la funcion, se denomina 'callback'.
 
 // Definamos una calculadora.
@@ -32,4 +33,4 @@ calculadora(7,12,restar);
 // Los numeros ingresados son: 7 y 12
 // El resultado es: -5
 
-// NOTA: cuando pasamos funciones como parametros, no se deben usar parentesis
+// NOTA: cuando pasamos funciones como arumentos, no se deben usar parentesis

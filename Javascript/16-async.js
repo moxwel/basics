@@ -88,3 +88,14 @@ async function ejecutarFuncionConEspera() {
 }
 
 ejecutarFuncionConEspera(); // Este resultado demora en obtenerse.
+
+
+
+
+// Como nota adicional, tambien se pueden definir funciones asincronicas anonimas:
+
+// async function(parametros) {
+//     //Definicion de funcion
+// }
+
+// async(parametros) => {Definicion de funcion}

@@ -2,7 +2,7 @@
 // Esto es bastante util cuando se desea realizar operaciones funcionales, o definir una funcion en la misma linea.
 
 /*
-function(argumentos) {
+function(parametros) {
     //Definicion de funcion
 }
 */
@@ -11,7 +11,7 @@ function ejecutarFuncion(valor, funcion) {
     return funcion(valor);
 }
 
-// Notese que la funcion 'ejecutarFuncion()' recibe como parametros un valor y otra funcion.
+// Notese que la funcion 'ejecutarFuncion()' recibe como argumento un valor y otra funcion.
 
 console.log(ejecutarFuncion(25, function(arg){return arg*arg} )); // 625
 
@@ -22,7 +22,7 @@ console.log(ejecutarFuncion(25, function(arg){return arg*arg} )); // 625
 
 
 // Las funciones anonimas tambien se pueden definir usando la notacion de flechas.
-// (argumentos) => {Definicion de funcion}
+// (parametros) => {Definicion de funcion}
 
 console.log(ejecutarFuncion(6, (arg) => {return arg*arg} )); // 36
 

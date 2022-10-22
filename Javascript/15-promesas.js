@@ -56,7 +56,7 @@ miPromesa
 
 
 
-// El metodo 'then()' tambien puede recibir dos parametros: la funcion a ejecutar cuadno la promesa se cumple,
+// El metodo 'then()' tambien puede recibir dos argumentos: la funcion a ejecutar cuadno la promesa se cumple,
 // y la funcion a ejecutar cuando la promesa fracasa.
 
 miPromesa
