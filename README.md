@@ -1,13 +1,30 @@
 # 📐 basics
 
-Este repositorio almacena algunos codigos que he creado para aprender ciertos lenguajes.
+Este repositorio almacena algunos códigos de ejemplo para aprender los conceptos básicos de ciertos lenguajes.
 
----
-
-Tambien hay algunos archivos auxiliares para ejecuciones avanzadas como _depuracion_:
+Carpetas y archivos especiales en esta ubicación:
 
 * `.vscode` : Instrucciones para depuracion en VSCode.
 
-* `.gitattributes` : Manipulacion de archivos especial para GIT. En este caso, se normalizan los finales de linea a **LF**.
+* `.gitattributes` : Opciones de archivo para GIT. En este caso, se normalizan los finales de linea a **LF**.
 
-* `.gitignore` : Ignorar ciertos archivos en los _commits_. En este caso, se ignoran archivos compilados de C (.out).
+* `.gitignore` : Ignorar ciertos archivos en los **commits** de GIT. En este caso, se ignoran archivos compilados de C como `.out`.
+
+
+## To-Do
+
+- [ ] Realizar documentación "mas bonita" (usar Wikis o GitBook).
+- [ ] Traducir a inglés.
+- [ ] Tutorial de C++.
+- [ ] Tutorial de Lua.
+- [ ] Tutorial de PHP.
+
+## Colaborar
+
+Si encuentras alguna falta de ortografía o deseas aportar a este repositorio, [¡crea un issue!](https://github.com/moxwel/basics/issues/new).
+
+---
+
+## Repositorios relacionados
+
+- [backpack](https://github.com/moxwel/backpack)
