@@ -15,7 +15,7 @@ function ejecutarFuncion(valor, funcion) {
 
 console.log(ejecutarFuncion(25, function(arg){return arg*arg} )); // 625
 
-// Al llamar 'ejecutarFuncion()', se define alli mismo una funcion anonima que eleva al cuadrado, donde su definicion es utilizada junto al valor ingresado (24).
+// Al llamar 'ejecutarFuncion()', se define alli mismo una funcion anonima que eleva al cuadrado, donde su definicion es utilizada junto al valor ingresado (25).
 
 
 
