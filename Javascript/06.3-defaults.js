@@ -5,7 +5,7 @@ function saludo(nombre = "Persona") {
 }
 
 // Cuando una funcion se llama y no se le define valores a los parametros,
-// los valores por defecto definidos toman su lugar.
+// los valores por defecto toman su lugar.
 
 saludo("Max"); // Saludos Max
 saludo(); // Saludos Persona
