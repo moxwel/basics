@@ -21,6 +21,7 @@ Carpetas y archivos especiales en esta ubicación:
 - [ ] Tutorial de C++.
 - [ ] Tutorial de Lua.
 - [ ] Tutorial de PHP.
+- [ ] Tutorial de Python (OOP).
 
 ## Colaborar
 
