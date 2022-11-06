@@ -20,13 +20,10 @@ console.log(x); // 10
 // Dependiendo de como declaremos variables, podemos restringir su uso por contextos (o bloques)
 // como por ejemplo un bloque 'if', 'while', 'for', etc.
 // En otras palabras, utilizar variables dentro de un bloque de codigo, pero que fuera de dicho
-// bloque, no pueda ser accesado (o no afecte a otros valores fuera).
+// bloque, no pueda ser accesado (o no afecte a otras variables fuera).
 
 
 
-
-
-// Utilizar 'var' no tiene efecto.
 
 var x = 5;
 
@@ -38,6 +35,8 @@ console.log(x); // 5
 }
 
 console.log(x); // 2
+// La variable definida dentro del bloque ha modificado a la variable definida fuera del bloque.
+
 
 
 
@@ -48,9 +47,10 @@ let y = 50;
 console.log(y); // 50
 
 {
-    // Aqui, la variable 'y' no existe, hay que declararla.
+    // Aqui, la variable 'y' no existe (dentro de este bloque), hay que declararla.
     let y = 20;
     console.log(y); // 20
 }
 
 console.log(y) // 50
+// La variable definida dentro del bloque NO ha modificado a la variable definida fuera del bloque.
