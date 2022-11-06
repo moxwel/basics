@@ -37,7 +37,7 @@ for (let variable in unArreglo) {
 
 
 // 'for-of' se usa para que la variable que ira recorriendo el iterable tome los
-// valores del iterable. (No sirve en objetos)
+// valores del iterable. (No sirve en objetos, porque los objetos no son iterables)
 
 for (let variable of unArreglo) {
     console.log(variable);

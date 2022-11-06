@@ -18,8 +18,11 @@ console.log(x); // 10
 // Sin embargo, con 'let' y 'const' tenemos otro contexto mas: bloque
 
 // Dependiendo de como declaremos variables, podemos restringir su uso por contextos (o bloques)
+// como por ejemplo un bloque 'if', 'while', 'for', etc.
 // En otras palabras, utilizar variables dentro de un bloque de codigo, pero que fuera de dicho
 // bloque, no pueda ser accesado (o no afecte a otros valores fuera).
+
+
 
 
 
