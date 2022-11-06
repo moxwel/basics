@@ -1,4 +1,4 @@
-// Una funcion sin nombre se llama 'funcion anomina'. Estos generan una funcion normal como cualquier otro, sin embargo, no se pueden llamar directamente.
+// Una funcion sin nombre se llama 'funcion anonima'. Estos generan una funcion normal como cualquier otro, sin embargo, no se pueden llamar directamente.
 // Esto es bastante util cuando se desea realizar operaciones funcionales, o definir una funcion en la misma linea.
 
 /*
