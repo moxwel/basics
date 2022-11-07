@@ -1,4 +1,4 @@
-// Una funcion sin nombre se llama 'funcion anomina'. Estos generan una funcion normal como cualquier otro, sin embargo, no se pueden llamar directamente.
+// Una funcion sin nombre se llama 'funcion anonima'. Estos generan una funcion normal como cualquier otro, sin embargo, no se pueden llamar directamente.
 // Esto es bastante util cuando se desea realizar operaciones funcionales, o definir una funcion en la misma linea.
 
 /*
@@ -15,7 +15,7 @@ function ejecutarFuncion(valor, funcion) {
 
 console.log(ejecutarFuncion(25, function(arg){return arg*arg} )); // 625
 
-// Al llamar 'ejecutarFuncion()', se define alli mismo una funcion anonima que eleva al cuadrado, donde su definicion es utilizada junto al valor ingresado (24).
+// Al llamar 'ejecutarFuncion()', se define alli mismo una funcion anonima que eleva al cuadrado, donde su definicion es utilizada junto al valor ingresado (25).
 
 
 
