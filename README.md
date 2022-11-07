@@ -13,16 +13,17 @@ Carpetas y archivos especiales en esta ubicación:
 
 ## To-Do
 
-- [ ] Realizar documentación "mas bonita" (usar Wikis o GitBook).
+- [ ] Realizar documentación "mas bonita".
 - [ ] Traducir a inglés.
-- [x] Tutorial de Javascript.
-- [ ] Tutorial de MongoDB.
-- [ ] Tutorial de Docker.
-- [ ] Tutorial de C++.
-- [ ] Tutorial de Lua.
-- [ ] Tutorial de PHP.
-- [ ] Tutorial de Python (OOP).
-- [ ] Tutorial de Java (Swing).
+- [x] Tutorial de **Javascript**.
+- [ ] Tutorial de **MongoDB**.
+- [ ] Tutorial de **Docker**.
+- [ ] Tutorial de **C++**.
+- [ ] Tutorial de **Lua**.
+- [ ] Tutorial de **PHP**.
+- [ ] Tutorial de **Python (OOP)**.
+- [ ] Tutorial de **Java (Swing)**.
+- [ ] Tutorial de **Godot**.
 
 ## Colaborar
 
