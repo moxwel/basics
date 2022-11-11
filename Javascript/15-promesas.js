@@ -37,6 +37,17 @@ let miPromesa = new Promise((funcionExito, funcionFracaso) => {
 
 
 
+
+// Luego del tiempo necesario, la promesa habra terminado su ejecucion, y habrá decidido si se aceptó o se rechazó.
+
+miPromesa // Promise { <...> }
+
+// Y ahora que tenemos la promesa... ¿que podemos hacer con la respuesta (o el rechazo)?
+
+
+
+
+
 // Aquel que consume: (capturadores de promesa)
 // Aqui se decide QUE HACER una vez la promesa se haya resuelto
 miPromesa
@@ -73,8 +84,7 @@ miPromesa
 
 
 // En resumen:
-// - Una Promesa es un objeto en Javascript que ejecuta un codigo (que puede demorarse) y que obtendra un
-//   resultado en un futuro.
+// - Una Promesa es un objeto en Javascript que ejecuta un codigo (que puede demorarse) y que obtendra un resultado en un futuro.
 // - Una Promesa es ejecutada inmeditamente despues de instanciarse (en el momento que se crea con 'new').
 // - La Promesa se ejecuta en "segundo plano" mientras el resto del codigo sigue funcionando.
 // - El metodo 'then()' de una promesa ejecuta codigo dependiendo del resultado que se haya obtenido de la promesa.
