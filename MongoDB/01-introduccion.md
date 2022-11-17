@@ -37,7 +37,7 @@ Una vez descargado, añadir `C:/Program Files/MongoDB/Server/x.x/bin` (la ubicac
 
 Al descargar MongoDB Shell, copiar los archivos a `MongoDB/Server/x.x/bin` tambien.
 
-Deberian haber 3 ejecutables:
+Deberian haber 3 ejecutables en esa carpeta `bin`:
 
 * `mongod.exe` (servidor)
 
