@@ -18,7 +18,7 @@ Carpetas y archivos especiales en esta ubicación:
 - [x] Tutorial de **Javascript**.
   - [ ] Tutorial de **Express**.
 - [ ] ⌛ Tutorial de **MongoDB**.
-- [ ] Tutorial de **Docker**.
+- [ ] ⌛ Tutorial de **Docker**.
 - [ ] Tutorial de **C++**.
 - [ ] Tutorial de **Lua**.
 - [ ] Tutorial de **PHP**.
