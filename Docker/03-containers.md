@@ -58,7 +58,7 @@ $ docker rm <nombre|id>
 
 ---
 
-Veamos un ejemplo:
+## Por ejemplo...
 
 ```
 $ docker create --name amongo mongo
@@ -109,4 +109,4 @@ la ejecutara, mostrando y siguiendo los logs de este.
 Si se intenta salir de la consola en ese estado, el contenedor se detendrá. Para evitar mostrar
 los logs y poder seguir utilizando el terminal, se debe usar con la opcion `-d` o `--detach`.
 
-> Las opciones `--name`, `-p` tambien se pueden usar con este comando.
+> Las opciones `--name`, `-p` tambien se pueden usar con este comando. 
