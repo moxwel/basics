@@ -34,6 +34,8 @@ $ docker create --name <nombre_contenedor> <nombre_imagen>:<etiqueta>
 
 > Si no se especifica un nombre, Docker eligirá uno de manera aleatoria.
 
+> El nombre debe ser único para cada contenedor.
+
 Para **iniciar un contenedor**, se utiliza el siguiente comando:
 
 ```
@@ -51,6 +53,8 @@ Para **borrar un contenedor**, se utiliza el siguiente comando:
 ```
 $ docker rm <nombre|id>
 ```
+
+> Para borrar un contenedor, este debe estar detenido.
 
 ---
 
@@ -76,3 +80,33 @@ embargo no nos sirve de nada porque desde nuestra maquina anfitrión no podemos 
 contenedores (recordemos que los contenedores son pequeñas maquinas virtuales).
 
 A continuación veremos como conectarnos a un contenedor.
+
+---
+
+## Logs
+
+Cuando un contenedor se ejecuta, Docker tendrá un registro de lo que esta sucediendo en su terminal.
+Para acceder a los registros (logs) de un contenedor, se puede usar el comando:
+
+```
+$ docker logs <nombre_contenedor|id>
+```
+
+> Si se añade la opción `--follow`, la consola se mantendrá en los registros y se actualizará cuando
+> ocurran cambios.
+
+## Docker Run
+
+Existe un comando que combina la creación de imágenes y de contenedores de manera automática.
+
+```
+$ docker run <nombre_imagen>
+```
+
+Este comando buscara la imagen, la descargará de ser necesario, **creará un contenedor nuevo** y
+la ejecutara, mostrando y siguiendo los logs de este.
+
+Si se intenta salir de la consola en ese estado, el contenedor se detendrá. Para evitar mostrar
+los logs y poder seguir utilizando el terminal, se debe usar con la opcion `-d` o `--detach`.
+
+> Las opciones `--name`, `-p` tambien se pueden usar con este comando.
