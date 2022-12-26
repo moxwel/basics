@@ -22,3 +22,5 @@ nuestro sistema invitado (Contenedor).
 
 Lo que quiere decir esto es: **si desde Windows se intenta conectar al puerto 6000, Docker va a
 redirigir esa conexión al puerto 27017 de este contenedor**
+
+> La opción `-p` se puede usar mas de una vez.

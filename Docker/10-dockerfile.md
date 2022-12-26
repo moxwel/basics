@@ -5,6 +5,22 @@
 Este archivo se puede utilizar en un proyecto para crear un imagen que pueda
 crear un contenedor que almacene la aplicación que estamos desarrollando.
 
+## Docker build
+
+Para construir la imagen en base a un archivo `Dockerfile`, se debe utilizar el comando:
+
+```
+$ docker build -t <nombre_imagen>:<etiqueta> <dirección_dockerfile>
+```
+
+> La opcion `-t` sirve para ingresar el nombre de la imagen y su respectiva etiqueta.
+
+Una vez hecho esto, podemos usar `docker create` para crear un contenedor con dicha imagen que creamos.
+
+---
+
+# Sintaxis de `Dockerfile`
+
 ## FROM
 
 Cada imagen que nosotros creemos debe basarse en otra imagen. La instrucción `FROM` nos dice
@@ -67,15 +83,3 @@ entonces el contenedor se detendrá también.
 ```
 CMD ["comando", "arg1", "arg2, "arg3" , ...]
 ```
-
-## Docker build
-
-Para construir la imagen en base a un archivo `Dockerfile`, se debe utilizar el comando:
-
-```
-$ docker build -t <nombre_imagen>:<etiqueta> <dirección_dockerfile>
-```
-
-> La opcion `-t` sirve para ingresar el nombre de la imagen y su respectiva etiqueta.
-
-Una vez hecho esto, podemos usar `docker create` para crear un contenedor con dicha imagen que creamos.
