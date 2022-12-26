@@ -10,6 +10,13 @@ Carpetas y archivos especiales en esta ubicación:
 
 * `.gitignore` : Ignorar ciertos archivos en los **commits** de GIT. En este caso, se ignoran archivos compilados de C como `.out`.
 
+## Estructura
+
+Cada carpeta es un **tema**.
+
+Dentro de cada carpeta hay **cápsulas**: archivos de codigo con comentarios o documentos markdown.
+
+Cada cápsula esta ordenada con un número, la idea es ir viendo los archivos en orden.
 
 ## To-Do
 
