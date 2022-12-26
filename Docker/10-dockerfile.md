@@ -13,7 +13,7 @@ Para construir la imagen en base a un archivo `Dockerfile`, se debe utilizar el 
 $ docker build -t <nombre_imagen>:<etiqueta> <dirección_dockerfile>
 ```
 
-> La opcion `-t` sirve para ingresar el nombre de la imagen y su respectiva etiqueta.
+> La opción `-t` sirve para ingresar el nombre de la imagen y su respectiva etiqueta.
 
 Una vez hecho esto, podemos usar `docker create` para crear un contenedor con dicha imagen que creamos.
 
@@ -59,6 +59,29 @@ COPY <dirección_origen> <dirección_destino>
 
 La dirección de origen debe ser una dirección del sistema operativo anfitrión (en este caso Windows), y la dirección de destino
 debe ser una dirección dentro del sistema operativo del contenedor.
+
+## WORKDIR
+
+Esta instrucción cambia la carpeta actual a otra especificada. Esto afecta a todas las instrucciones que dependan
+de la ubicación en donde se ejecutan como `RUN`, `CMD`, `COPY`, etc.
+
+```
+WORKDIR <dirección>
+```
+
+> Por defecto las direcciones son relativas. Si no existe la carpeta, se creará.
+
+> Se puede utilizar varias veces.
+
+## ENV
+
+Esta instrucción define variables de entorno.
+
+```
+ENV <nombre_variable=<valor>
+```
+
+> Se puede utilizar varias veces para definir mas de una variable de entorno.
 
 ## EXPOSE
 
