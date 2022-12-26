@@ -107,6 +107,6 @@ Este comando buscara la imagen, la descargará de ser necesario, **creará un co
 la ejecutara, mostrando y siguiendo los logs de este.
 
 Si se intenta salir de la consola en ese estado, el contenedor se detendrá. Para evitar mostrar
-los logs y poder seguir utilizando el terminal, se debe usar con la opcion `-d` o `--detach`.
+los logs y poder seguir utilizando el terminal, se debe usar con la opción `-d` o `--detach`.
 
-> Las opciones `--name`, `-p` tambien se pueden usar con este comando. 
+> Las opciones `--name`, `-p` también se pueden usar con este comando.

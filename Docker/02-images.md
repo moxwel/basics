@@ -8,7 +8,7 @@ Para conocer la **lista de imágenes** que tenemos disponibles de manera local (
 $ docker images
 ```
 
-> Tambien sirve `docker image ls`
+> También sirve `docker image ls`
 
 Para **descargar imágenes** se utiliza el comando:
 
@@ -16,7 +16,7 @@ Para **descargar imágenes** se utiliza el comando:
 $ docker pull <nombre_repositorio>:<etiqueta>
 ```
 
-> Tambien sirve `docker image pull`
+> También sirve `docker image pull`
 
 Las imágenes se descargan desde un repositorio de imágenes, en este caso es
 [Docker Hub](https://hub.docker.com/). El nombre de los repositorios y de sus
