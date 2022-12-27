@@ -17,7 +17,7 @@ Cada cápsula esta ordenada con un número, la idea es ir viendo los archivos en
 - [x] Tutorial de **Javascript**.
   - [ ] Tutorial de **Express**.
 - [ ] ⌛ Tutorial de **MongoDB**.
-- [ ] ⌛ Tutorial de **Docker**.
+- [x] Tutorial de **Docker**.
 - [ ] Tutorial de **C++**.
 - [ ] Tutorial de **Lua**.
 - [ ] Tutorial de **PHP**.
