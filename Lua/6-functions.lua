@@ -43,3 +43,18 @@ end
 
 print(mi_funcion(1)) -- Uno
 print(mi_funcion(0)) -- <nada>
+
+
+
+
+
+-- Tambien podemos definir funciones de manera local. Esto tendra el mismo comportamiento que las
+-- variables locales: solo podran ser accedidas dentro de un ambito.
+do
+    local function funcion_local()
+        print("Esto es una funcion local")
+    end
+
+    funcion_local() -- Esto es una funcion local
+end
+-- 'funcion_local' no existe aqui

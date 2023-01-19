@@ -47,4 +47,4 @@ calculadora(multi,5,10) -- El resultado es: 50
 -- Podemos comprobar esto:
 
 print(type(calculadora)) -- function
-print(calculadora)       -- function: 0x55a0205d60c0
+print(calculadora)       -- function: 0x55a0205d60c0 (referencia)

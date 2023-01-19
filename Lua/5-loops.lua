@@ -37,9 +37,10 @@ until (contador > 5)
 
 
 
--- Tambien tenemos el bucle 'for'
 
--- for <inicializacion>, <valor maximo/minimo>, <incremento> do:
+-- Tambien tenemos el bucle 'for'
+-- for <inicializacion>, <valor maximo/minimo>, <incremento> do
+
 for i=1, 10, 1 do
     print("Valor de 'i': "..i)
 end
@@ -57,7 +58,9 @@ end
 -- A diferencia de C, en el 'for' no es necesario definir operaciones ni comparaciones en los lugares
 -- del valor maximo y el incremento; esto es porque la logica se procesa internamente en el lenguaje.
 
--- El valor comienza desde el inicio, y termina cuando alzanca el valor maximo o minimo.
+-- La variable de iniciacion siempre es local
+
+-- Si no se especifica el incremento, se asignará 1 por defecto.
 
 
 
