@@ -1,0 +1,1 @@
+-- Tambien es posible definir funciones en tablas.
