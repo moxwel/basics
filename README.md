@@ -19,7 +19,7 @@ Cada cápsula esta ordenada con un número, la idea es ir viendo los archivos en
 - [ ] ⌛ Tutorial de **MongoDB**.
 - [x] Tutorial de **Docker**.
 - [ ] Tutorial de **C++**.
-- [ ] ⌛ Tutorial de **Lua**.
+- [x] Tutorial de **Lua**.
 - [ ] Tutorial de **PHP**.
 - [ ] Tutorial de **Python (OOP)**.
 - [ ] Tutorial de **Java (Swing)**.
