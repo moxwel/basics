@@ -42,9 +42,3 @@ Cada cápsula esta ordenada con un número, la idea es ir viendo los archivos en
 # Colaborar
 
 Si encuentras alguna falta de ortografía o deseas aportar a este repositorio, [¡crea un issue!](https://github.com/moxwel/basics/issues/new).
-
----
-
-## Repositorios relacionados
-
-- [backpack](https://github.com/moxwel/backpack)
