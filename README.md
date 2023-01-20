@@ -16,7 +16,7 @@ Cada cápsula esta ordenada con un número, la idea es ir viendo los archivos en
 
 ## To-Do
 
-- [ ] Realizar documentación "mas bonita".
+- [ ] ⌛ Realizar documentación "mas bonita".
 - [ ] Traducir a inglés.
 - [x] Tutorial de **Javascript**.
   - [ ] Tutorial de **Express**.
