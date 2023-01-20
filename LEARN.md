@@ -1,6 +1,6 @@
 # LEARN.md
 
-This repository is a personal knowledge base that I built through my years learning programming languages
+This repository is a personal knowledge base that I built through all my years learning programming languages
 and my university career.
 
 I'd like to share with you what I've learned, and the way I learned it. I'm sure this will help many who
