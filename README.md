@@ -1,3 +1,7 @@
+### ℹ **I'm translating this into English! Soon it will be available as a GitBook page!**
+
+---
+
 # 📐 basics
 
 Este repositorio almacena algunos códigos de ejemplo para aprender los conceptos básicos de ciertos lenguajes.
