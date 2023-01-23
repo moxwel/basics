@@ -34,7 +34,7 @@ Notice the address bar in File Explorer.
 
 You can access WSL files from Windows. The files are located in a virtual "network" WSL creates.
 
-To view WSL available filesystems, enter this address in **File Explorer** or **Run Prompt** (**Ctrl + R**):
+To view WSL available filesystems, enter this address in **File Explorer** or **Run Prompt** (**Win + R**):
 
 ```
 \\wsl$\
