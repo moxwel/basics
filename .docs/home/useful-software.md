@@ -30,7 +30,11 @@ If you are on Windows, the **Windows Subsystem for Linux** will be a must. Is a 
 
 With this, you get all the power of Linux, with the convenience of not to dual-boot or install virtual machines and things like that.
 
-If you want to install and configure WSL, there will be a tutorial too!
+If you want to install and configure WSL, check the guide below!
+
+{% content-ref url="../software/wsl/" %}
+[wsl](../software/wsl/)
+{% endcontent-ref %}
 
 {% hint style="info" %}
 WSL integrates well with [**Visual Studio Code**](useful-software.md#visual-studio-code) and [**Windows Terminal**](useful-software.md#windows-terminal).
@@ -56,7 +60,7 @@ It has support for tabs, rich text, custom colors, and integrates well with othe
 Git homepage
 {% endembed %}
 
-You're going to have to use it sooner or later. A SCM[^3] software that helps you to **gain control over the changes you (and your team) make in your project**.
+You're going to have to use it sooner or later. An SCM[^3] software that helps you to **gain control over the changes you (and your team) make in your project**.
 
 Services like GitHub, GitLab, Bitbucket (and more) relays on this system for all their projects inside.
 
