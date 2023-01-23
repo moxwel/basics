@@ -1,5 +1,5 @@
 ---
-description: Hello, and welcome to Moxwel's Basics in Programming Languages!
+description: Hi, and welcome to Moxwel's Basics in Programming Languages!
 ---
 
 # 👋 First page
