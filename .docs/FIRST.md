@@ -1,5 +1,5 @@
 ---
-description: Welcome to Moxwel's Basics in Programming Languages!
+description: Hello, and welcome to Moxwel's Basics in Programming Languages!
 ---
 
 # 👋 First page
@@ -22,4 +22,4 @@ For this reason, don't expect too much advanced tutorials. Although there may st
 
 In any case, the main goal is to help you learn new programming languages and the differences between them, different approaches, and different thinking for each one.
 
-_The start is here, the rest is your own exploration. Good luck!_
+_The start is here, the rest is your own exploration.  <mark style="background-color:green;">**Good luck!**</mark>_&#x20;
