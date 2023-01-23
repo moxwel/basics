@@ -56,3 +56,5 @@ OracleLinux_7_9    Oracle Linux 7.9
 {% hint style="info" %}
 This guide will continue using **Ubuntu 20.04**.
 {% endhint %}
+
+&#x20;<mark style="background-color:green;">**Congratulations!**</mark>**  You just installed Ubuntu in WSL.**

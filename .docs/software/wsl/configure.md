@@ -28,9 +28,9 @@ When everything is ready, you will see something like this:
 bob@LAPTOP-9AB0OA0V:~$
 ```
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Terminal window with Ubuntu in WSL</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/wsl_img1.png" alt=""><figcaption><p>Terminal window with Ubuntu in WSL</p></figcaption></figure>
 
-**Congratulations! You are now running Ubuntu in WSL.**
+&#x20;<mark style="background-color:green;">**Congratulations!**</mark>**  You are now running Ubuntu in WSL.**
 
 [^1]: SuperUser Do.
 

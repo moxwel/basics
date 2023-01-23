@@ -34,7 +34,7 @@ WSL it's kind of a Virtual Machine, but very lightweight compared to traditional
 | --------------------------------------------------- | ------------------------------------------ |
 | Basic understanding of Linux environments.          | Install, configure and use WSL in Windows. |
 | Basic understanding of Linux commands (like `apt`). | Integrate WSL with Visual Studio Code.     |
-| Basic usage of "shells" (like `bash`).              | Install Linux software on WSL.             |
+| Basic usage of "shells" (like `bash`).              | Install Linux software on WSL with APT.    |
 | Know to use terminal-only applications.             |                                            |
 
 [^1]: Virtual Machine
@@ -55,6 +55,6 @@ WSL it's kind of a Virtual Machine, but very lightweight compared to traditional
 
 [^5]: Linux distribution.
 
-    An Operating System including the Linux kernel (e.g., Ubuntu)
+    An Operating System including the Linux kernel (e.g., Ubuntu).
 
     [\[ Wikipedia \]](https://en.wikipedia.org/wiki/Linux\_distribution)
