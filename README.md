@@ -1,3 +1,7 @@
+### ℹ **I'm translating this into English! Soon it will be available as a GitBook page!**
+
+---
+
 # 📐 basics
 
 Este repositorio almacena algunos códigos de ejemplo para aprender los conceptos básicos de ciertos lenguajes.
@@ -12,14 +16,14 @@ Cada cápsula esta ordenada con un número, la idea es ir viendo los archivos en
 
 ## To-Do
 
-- [ ] Realizar documentación "mas bonita".
+- [ ] ⌛ Realizar documentación "mas bonita".
 - [ ] Traducir a inglés.
 - [x] Tutorial de **Javascript**.
   - [ ] Tutorial de **Express**.
 - [ ] ⌛ Tutorial de **MongoDB**.
 - [x] Tutorial de **Docker**.
 - [ ] Tutorial de **C++**.
-- [ ] ⌛ Tutorial de **Lua**.
+- [x] Tutorial de **Lua**.
 - [ ] Tutorial de **PHP**.
 - [ ] Tutorial de **Python (OOP)**.
 - [ ] Tutorial de **Java (Swing)**.
@@ -38,9 +42,3 @@ Cada cápsula esta ordenada con un número, la idea es ir viendo los archivos en
 # Colaborar
 
 Si encuentras alguna falta de ortografía o deseas aportar a este repositorio, [¡crea un issue!](https://github.com/moxwel/basics/issues/new).
-
----
-
-## Repositorios relacionados
-
-- [backpack](https://github.com/moxwel/backpack)
