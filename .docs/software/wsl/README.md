@@ -24,7 +24,7 @@ Most people have one PC and use Windows as their primary OS, and most developers
 
 Dual-boot is a great solution, but if you want to change OS, you need to restart the whole computer to do so. Also, you can't use the two OS at the same time. What an inconvenience.
 
-Using Virtual Machines solves the "have to restart to change" and "two OS at the same time" problems, but the nature of Virtual Machines in itself is an inconvenience, mainly because they are so resource-heavy to run (you are running **two entire** OS's in one CPU[^3])
+Using Virtual Machines solves the "have to restart to change" and "two OS at the same time" problems, but the nature of Virtual Machines in itself is an inconvenience, mainly because they are so resource-heavy to run (you are running **two entire** OSs in one CPU[^3])
 
 WSL it's kind of a Virtual Machine, but very lightweight compared to traditional VMs so you don't need to worry about getting out of resources, it only runs the main kernel[^4] of Linux, and on top of that the distro[^5] you want to use.
 
@@ -37,24 +37,46 @@ WSL it's kind of a Virtual Machine, but very lightweight compared to traditional
 | Basic usage of "shells" (like `bash`).              | Install Linux software on WSL with APT.    |
 | Know to use terminal-only applications.             |                                            |
 
-[^1]: Virtual Machine
+[^1]: **Virtual Machine**
+
+    A software that can "emulate" an entire computer.
+
+
 
     [\[ Wikipedia \]](https://en.wikipedia.org/wiki/Virtual\_machine)
 
-[^2]: Have two or more OS in the same computer.
+[^2]: Have two or more OSs in the same computer.
+
+
 
     [\[ Article \]](https://www.howtogeek.com/187789/dual-booting-explained-how-you-can-have-multiple-operating-systems-on-your-computer/)
 
-[^3]: Central Processing Unit
+[^3]: **Central Processing Unit**
+
+    The main component of every computer, used for fast calculations and data processing.
+
+
+
+    _Without CPU, there's not computer._
+
+
 
     [\[ Wikipedia \]](https://en.wikipedia.org/wiki/Central\_processing\_unit)
 
 [^4]: The "core" program of any Operating System.
 
+
+
     [\[ Wikipedia \]](https://en.wikipedia.org/wiki/Kernel\_\(operating\_system\))
 
-[^5]: Linux distribution.
+[^5]: **Linux distribution**
 
-    An Operating System including the Linux kernel (e.g., Ubuntu).
+    An Operating System including the Linux kernel.
+
+
+
+    _Ubuntu, Linux Mint, Arch, Debian, Manjaro, etc. are Linux distros._
+
+
 
     [\[ Wikipedia \]](https://en.wikipedia.org/wiki/Linux\_distribution)

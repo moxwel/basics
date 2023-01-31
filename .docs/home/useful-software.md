@@ -4,7 +4,7 @@ description: Here is a list of useful software you may need.
 
 # Useful Software
 
-## Visual Studio Code
+## Visual Studio Code <a href="#vscode" id="vscode"></a>
 
 <figure><img src="../.gitbook/assets/vsc.png" alt=""><figcaption><p>Visual Studio Code window</p></figcaption></figure>
 
@@ -18,7 +18,7 @@ Visual Studio Code homepage
 If you want to use other text editor, you can search alternatives in [Alternativeto.net](https://alternativeto.net/software/visual-studio-code/).
 {% endhint %}
 
-## WSL (Windows Subsystem for Linux)
+## WSL (Windows Subsystem for Linux) <a href="#wsl" id="wsl"></a>
 
 <figure><img src="../.gitbook/assets/wsl.png" alt=""><figcaption><p>Ubuntu on WSL in Windows Terminal</p></figcaption></figure>
 
@@ -30,15 +30,17 @@ If you are on Windows, the **Windows Subsystem for Linux** will be a must. Is a 
 
 With this, you get all the power of Linux, with the convenience of not to dual-boot or install virtual machines and things like that.
 
-If you want to install and configure WSL, check the guide below!
+{% hint style="info" %}
+WSL integrates well with [**Visual Studio Code**](useful-software.md#visual-studio-code) and [**Windows Terminal**](useful-software.md#windows-terminal).
+{% endhint %}
+
+{% hint style="success" %}
+If you want to install and configure WSL, **check the guide below!**
+{% endhint %}
 
 {% content-ref url="../software/wsl/" %}
 [wsl](../software/wsl/)
 {% endcontent-ref %}
-
-{% hint style="info" %}
-WSL integrates well with [**Visual Studio Code**](useful-software.md#visual-studio-code) and [**Windows Terminal**](useful-software.md#windows-terminal).
-{% endhint %}
 
 ## Windows Terminal
 
@@ -64,10 +66,12 @@ You're going to have to use it sooner or later. An SCM[^3] software that helps y
 
 Services like GitHub, GitLab, Bitbucket (and more) relays on this system for all their projects inside.
 
-It will be a tutorial for Git too. Stay tuned!
-
 {% hint style="info" %}
 Git integrates well with [**Visual Studio Code**](useful-software.md#visual-studio-code).
+{% endhint %}
+
+{% hint style="info" %}
+It will be a tutorial for Git too. Stay tuned!
 {% endhint %}
 
 ## GitHub Desktop
@@ -86,14 +90,26 @@ This program will help you if you want to have simple control over your changes 
 If you are on Linux, use this fork instead: [shiftkey/desktop](https://github.com/shiftkey/desktop).
 {% endhint %}
 
-[^1]: Integrated Development Environment
+[^1]: **Integrated Development Environment**
+
+    Software with many tools for development.
+
+
 
     [\[ Wikipedia \]](https://en.wikipedia.org/wiki/Integrated\_development\_environment)
 
-[^2]: Command Prompt
+[^2]: **Command Prompt (cmd.exe)**
+
+    The default command-line interpreter for Windows.
+
+
 
     [\[ Wikipedia \]](https://en.wikipedia.org/wiki/Cmd.exe)
 
-[^3]: Source Code Management
+[^3]: **Source Code Management**
+
+    A tool that helps manage source code like changes and versions.
+
+
 
     [\[ Wikipedia \]](https://en.wikipedia.org/wiki/Version\_control)

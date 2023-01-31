@@ -24,7 +24,7 @@ Don't forget the final dot.
 
 This will open File Explorer in the current folder you are in WSL.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Calling Windows File Explorer inside WSL</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/wsl_img5.png" alt=""><figcaption><p>Calling Windows File Explorer inside WSL</p></figcaption></figure>
 
 {% hint style="info" %}
 Notice the address bar in File Explorer.
@@ -40,7 +40,7 @@ To view WSL available filesystems, enter this address in **File Explorer** or **
 \\wsl$\
 ```
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Accessing Ubuntu filesystem from Windows</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/wsl_img2.png" alt=""><figcaption><p>Accessing Ubuntu filesystem from Windows</p></figcaption></figure>
 
 You will see one folder. That's your Ubuntu filesystem. Go inside and you will see every folder and file of the system.
 
@@ -64,7 +64,7 @@ In Ubuntu, the Windows partitions are located in `/mnt/`.
 
 Inside that folder there's all your mounted Windows partitions (you can indentify them by the initial letter). For example, if you enter folder "c", you are accessing partition `C:\` from Windows.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Accessing Windows filesystem from WSL</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/wsl_img3.png" alt=""><figcaption><p>Accessing Windows filesystem from WSL</p></figcaption></figure>
 
 {% hint style="warning" %}
 Be careful when using Linux software on Windows filesystem. Unwanted things may happen.

@@ -4,19 +4,19 @@ description: For those who want to start for the first time...
 
 # Some tips
 
-## &#x20;<mark style="background-color:yellow;"></mark> <mark style="background-color:yellow;"></mark>_<mark style="background-color:yellow;">TRY</mark>  _ every command
+## &#x20;<mark style="background-color:yellow;">TRY</mark> every command
 
 Even if it is the simplest "Hello World", just try it in your terminal.
 
 At the same time while you're reading, open a terminal and put all the commands you see in the tutorials. The best way to learn is to do it yourself.
 
-## &#x20;_<mark style="background-color:blue;">MODIFY</mark>  _ every command
+## &#x20;_<mark style="background-color:blue;"></mark>_ <mark style="background-color:blue;"></mark><mark style="background-color:blue;">MODIFY</mark> every command
 
 Don't just copy-paste the commands, modify them!
 
 See with your own eyes what each thing does. Change variables, names, modify conditions, build your own code. Experimenting is the key to understanding.
 
-## &#x20;_<mark style="background-color:red;">BREAK</mark>  _ the language
+## &#x20;_<mark style="background-color:red;"></mark>_ <mark style="background-color:red;"></mark><mark style="background-color:red;">BREAK</mark> the language
 
 Don't be afraid about errors in your code.
 
@@ -46,6 +46,10 @@ Also, when using software, read every button, every prompt, every message. The d
 
 [^1]: Hello!
 
-[^2]: Operating System
+[^2]: **Operating System**
+
+    A computer program that manages hardware resources and other software in a computer.
+
+
 
     [\[ Wikipedia \]](https://en.wikipedia.org/wiki/Operating\_system)

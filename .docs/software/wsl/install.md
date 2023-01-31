@@ -2,7 +2,7 @@
 
 Installing WSL is very easy!
 
-* To install WSL, run this command:
+* To install WSL, open **Powershell** and run this command:
 
 ```
 wsl --install
@@ -24,18 +24,21 @@ If you want to install WSL with other distribution than Ubuntu, you can do that.
 wsl --list --online
 ```
 
-Look at the "NAME" column, you will need that.
+{% hint style="info" %}
+Look at the _**"NAME"**_ column, you will need that.
+{% endhint %}
 
-* To install WSL with a **different distribution**, run this command:
+* To **install WSL with a different distribution,** run this command:
 
 ```
 wsl --install -d <distro>
 ```
 
-Where `<distro>` is the name of the distribution that appears in the "NAME" column in the list before.
+Where `<distro>` is the name of the distribution that appears in the _**"NAME"**_ column in the list before.
 
-For example, if you want to install Ubuntu 20.04, you will have to run this command:
+For example, if you want to install **Ubuntu 20.04**, you will have to run this command:
 
+{% code title="Powershell" %}
 ```
 > wsl --list --online
 
@@ -52,9 +55,10 @@ OracleLinux_7_9    Oracle Linux 7.9
 
 > wsl --install -d Ubuntu-20.04
 ```
+{% endcode %}
 
 {% hint style="info" %}
 This guide will continue using **Ubuntu 20.04**.
 {% endhint %}
 
-&#x20;<mark style="background-color:green;">**Congratulations!**</mark>**  You just installed Ubuntu in WSL.**
+&#x20;<mark style="background-color:green;">**👏 Congratulations!**</mark>**  You just installed Ubuntu in WSL.**

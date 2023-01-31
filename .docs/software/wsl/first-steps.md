@@ -24,7 +24,7 @@ Every time you use `sudo`, you'll need to enter your password. The same one you 
 
 This may take some time. Sit back and relax.
 
-&#x20;<mark style="background-color:green;">**Congratulations!**</mark>**  You just updated your Ubuntu installation.**
+&#x20;<mark style="background-color:green;">**👏 Congratulations!**</mark>**  You just updated your Ubuntu installation.**
 
 [^1]: Bourne Again Shell
 
@@ -34,8 +34,10 @@ This may take some time. Sit back and relax.
 
     [\[ Wikipedia \]](https://en.wikipedia.org/wiki/Shell\_\(computing\))
 
-[^3]: Advanced Package Tool.
+[^3]: **Advanced Package Tool**
 
     Default package manager for Ubuntu.
+
+
 
     [\[ Wikipedia \]](https://en.wikipedia.org/wiki/APT\_\(software\))
