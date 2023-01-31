@@ -55,7 +55,7 @@ You may break things!
 {% hint style="danger" %}
 **Only access WSL filesystem through this method.**
 
-Accessing it with other method may break things regarding file metadata and permissions.
+Accessing with other method may break things.
 {% endhint %}
 
 ## Access Windows files from WSL
