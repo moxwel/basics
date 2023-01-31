@@ -2,7 +2,7 @@
 
 The first time you open Ubuntu, you will see this:
 
-{% code title="WSL" %}
+{% code title="Console: WSL" %}
 ```
 Installing, this may take a few minutes...
 
@@ -16,7 +16,7 @@ Enter new UNIX username:_
 
 You need to input a username. It can be anything. I will put Bob.
 
-{% code title="WSL" %}
+{% code title="Console: WSL" %}
 ```
 Enter new UNIX username: bob
 

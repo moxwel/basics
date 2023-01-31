@@ -38,7 +38,7 @@ Where `<distro>` is the name of the distribution that appears in the _**"NAME"**
 
 For example, if you want to install **Ubuntu 20.04**, you will have to run this command:
 
-{% code title="Powershell" %}
+{% code title="Console: Powershell" %}
 ```
 > wsl --list --online
 

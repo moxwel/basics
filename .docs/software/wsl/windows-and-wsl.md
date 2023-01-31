@@ -34,7 +34,7 @@ Notice the address bar in File Explorer.
 
 You can access WSL files from Windows. The files are located in a virtual "network" WSL creates.
 
-To view WSL available filesystems, enter this address in **File Explorer** or **Run Prompt** (**Win + R**):
+To view WSL available filesystems, enter the following address in **File Explorer** or **Run Prompt** (**Win + R**):
 
 ```
 \\wsl$\
@@ -62,12 +62,12 @@ Accessing with other method may break things.
 
 In Ubuntu, the Windows partitions are located in `/mnt/`.
 
-Inside that folder there's all your mounted Windows partitions (you can indentify them by the initial letter). For example, if you enter folder "c", you are accessing partition `C:\` from Windows.
+Inside that folder there's all your mounted Windows partitions (you can indentify them by the initial letter). For example, if you enter folder "c", you are accessing partition `C:\`.
 
 <figure><img src="../../.gitbook/assets/wsl_img3.png" alt=""><figcaption><p>Accessing Windows filesystem from WSL</p></figcaption></figure>
 
 {% hint style="warning" %}
-Be careful when using Linux software on Windows filesystem. Unwanted things may happen.
+Be careful when using Linux software on Windows filesystem. Unwanted things may happen. Only do that if you know what you are doing.
 {% endhint %}
 
-&#x20;<mark style="background-color:green;">**Congratulations!**</mark>**  You can access Ubuntu filesystem from Windows.**
+&#x20;<mark style="background-color:green;">**👏 Congratulations!**</mark>**  You can access Ubuntu filesystem from Windows.**

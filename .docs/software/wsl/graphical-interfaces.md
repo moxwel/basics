@@ -2,6 +2,8 @@
 
 {% hint style="warning" %}
 **This topic is:  **_<mark style="background-color:red;"><mark style="color:red;background-color:red;">****<mark style="color:red;background-color:red;"></mark>_<mark style="background-color:red;">** **</mark><mark style="background-color:red;">**advanced**</mark>&#x20;
+
+If you know how to use Linux and you are comfortable using it, you can do this.
 {% endhint %}
 
 You know WSL can be accessed only by command line. But there's a way to use GUI[^1] apps.
@@ -46,23 +48,52 @@ When it is installed open GWSL from your Start Menu.
 If is the first time you open GWSL in your PC, a firewall prompt may appear. Allow access.
 {% endhint %}
 
-Configure
+### Configure
+
+Before we continue, we need to tell our distro to use GWSL for display exporting.
 
 GWSL is designed to be easy to configure without using any commands.
 
 Open GWSL menu (click the icon in the taskbar) and select **"GWSL Distro Tools"**. Then **"Display/Audio Auto-Exporting"**, **"LibGL Indirect"** and **"Configure DBus"**.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Look at the marked options, must be like this.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Look at the marked options, must be like this.</p></figcaption></figure>
 
 Then, click **"Reboot Ubuntu 20.04"**. That's it.
 
 To check if GWSL was properly configured, check your `.bashrc` file. At the end, it must have these lines:
 
+{% code title="File: ~/.bashrc" %}
 ```bash
 export LIBGL_ALWAYS_INDIRECT=1 #GWSL
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0 #GWSL
 export PULSE_SERVER=tcp:$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}') #GWSL
 ```
+{% endcode %}
+
+### Disable WSLg and enable system
+
+If you use GWSL, is recommended to disable WSLg too. For this, you must create the file `.wslconfig` in your **Windows personal folder** (`%HOMEPATH%`). Inside, put this:
+
+{% code title="File: %HOMEPATH%\.wslconfig" %}
+```
+[wsl2]
+guiApplications=false
+```
+{% endcode %}
+
+Now WSLg is disabled and we can use GWSL without conflicts.
+
+### Run Linux apps
+
+Supposing you have installed the same application as before (Mousepad). Open your GWSL Menu and go to **"Linux Apps"**, you will see the app there.
+
+### Create shortcuts
+
+With GWSL you can create your own shortcuts. Open the menu and select **"Shortcut Creator"**.
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Shortcut Creator window</p></figcaption></figure>
+
+There you can specify the command of the app to be opened, if it requires 'sudo', and more settings if you need. The shortcut will be created in your Start Menu.
 
 [^1]: **Graphical User Interface**
 

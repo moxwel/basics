@@ -2,6 +2,8 @@
 
 {% hint style="warning" %}
 **This topic is:  **_<mark style="background-color:red;"><mark style="color:red;background-color:red;">****<mark style="color:red;background-color:red;"></mark>_<mark style="background-color:red;">** **</mark><mark style="background-color:red;">**advanced**</mark>&#x20;
+
+If you know how to use Linux and you are comfortable using it, you can do this.
 {% endhint %}
 
 {% embed url="https://learn.microsoft.com/en-us/windows/wsl/compare-versions" %}
@@ -57,3 +59,30 @@ wsl --set-version Ubuntu-20.04 2
 {% hint style="info" %}
 This guide will continue using **WSL 2**.
 {% endhint %}
+
+## Systemd
+
+{% embed url="https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/" %}
+Microsoft Developer Blog about Systemd on WSL
+{% endembed %}
+
+> Systemd is a suite of basic building blocks for a Linux system. It provides a system and service manager that runs as PID 1 and starts the rest of the system.
+
+WSL2 can run Systemd, this means software that depends on that service will work, and the experience on WSL will be closer to "using a bare metal Linux machine".
+
+To enable Systemd on WSL2, you need to edit `/etc/wsl.conf`. I recommend using [micro ](https://micro-editor.github.io/)as text editor (you need 'sudo' for this).
+
+```
+sudo micro /etc/wsl.conf
+```
+
+In that file, you must put this:
+
+{% code title="File: /etc/wsl.conf" %}
+```
+[boot]
+systemd=true
+```
+{% endcode %}
+
+Save it and now restart WSL using `wsl --shutdown`. Now your distro will be using Systemd.
