@@ -72,8 +72,9 @@ WSL2 can run Systemd, this means software that depends on that service will work
 
 To check if you are using Systemd or not, run this command:
 
-<pre><code><strong>ps 1
-</strong></code></pre>
+```
+ps -p 1 -o comm=
+```
 
 To enable Systemd on WSL2, you need to edit `/etc/wsl.conf`. I recommend using [micro ](https://micro-editor.github.io/)as text editor (you need 'sudo' for this).
 
