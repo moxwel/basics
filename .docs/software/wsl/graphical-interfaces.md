@@ -1,7 +1,7 @@
 # Graphical Interfaces
 
 {% hint style="warning" %}
-**This topic is:  **_<mark style="background-color:red;"><mark style="color:red;background-color:red;">****<mark style="color:red;background-color:red;"></mark>_<mark style="background-color:red;">** **</mark><mark style="background-color:red;">**advanced**</mark>&#x20;
+**This topic is: ** <mark style="background-color:red;">**advanced**</mark>&#x20;
 
 If you know how to use Linux and you are comfortable using it, you can do this.
 {% endhint %}
@@ -70,7 +70,7 @@ export PULSE_SERVER=tcp:$(cat /etc/resolv.conf | grep nameserver | awk '{print $
 ```
 {% endcode %}
 
-### Disable WSLg and enable system
+### Disable WSLg
 
 If you use GWSL, is recommended to disable WSLg too. For this, you must create the file `.wslconfig` in your **Windows personal folder** (`%HOMEPATH%`). Inside, put this:
 

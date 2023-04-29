@@ -1,7 +1,7 @@
 # WSL1 and WSL2
 
 {% hint style="warning" %}
-**This topic is:  **_<mark style="background-color:red;"><mark style="color:red;background-color:red;">****<mark style="color:red;background-color:red;"></mark>_<mark style="background-color:red;">** **</mark><mark style="background-color:red;">**advanced**</mark>&#x20;
+**This topic is: ** <mark style="background-color:red;">**advanced**</mark>&#x20;
 
 If you know how to use Linux and you are comfortable using it, you can do this.
 {% endhint %}
@@ -69,6 +69,11 @@ Microsoft Developer Blog about Systemd on WSL
 > Systemd is a suite of basic building blocks for a Linux system. It provides a system and service manager that runs as PID 1 and starts the rest of the system.
 
 WSL2 can run Systemd, this means software that depends on that service will work, and the experience on WSL will be closer to "using a bare metal Linux machine".
+
+To check if you are using Systemd or not, run this command:
+
+<pre><code><strong>ps 1
+</strong></code></pre>
 
 To enable Systemd on WSL2, you need to edit `/etc/wsl.conf`. I recommend using [micro ](https://micro-editor.github.io/)as text editor (you need 'sudo' for this).
 
