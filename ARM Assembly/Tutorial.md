@@ -91,7 +91,7 @@ mi_variable:  .word 0x1234
 
               ldr r0, =mi_variable  @ r0 = Dirección de memoria de 'mi_variable'
 
-              ldr r0, [r0]          @ r0 = 0x1234
+              ldr r1, [r0]          @ r1 = 0x1234
 
               wfi
               .end
