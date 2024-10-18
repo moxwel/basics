@@ -1,0 +1,25 @@
+Si es primera vez abriendo el proyecto, se debe ejecutar el siguiente comando para instalar las dependencias:
+
+$ npm install
+
+Luego de esto, puedes ejecutar los siguientes comandos para iniciar el proyecto.
+
+====================
+
+Para iniciar el servidor de desarrollo, se puede ejecutar los siguientes comandos:
+
+$ npm start
+Para iniciar el servidor en modo desarrollo. La pagina se recargará cuando hayan cambios.
+
+$ npm run build
+Para construir la aplicación para producción en la carpeta build. Esto empaqueta React en modo de producción y optimiza la compilación para obtener el mejor rendimiento.
+
+=======================
+
+Otros comandos son:
+
+$ npm test
+Para iniciar el corredor de pruebas en modo de reloj interactivo.
+
+$ npm run eject
+Cuando usas 'create-react-app', toda la configuración de compilación se oculta, pues hace mas facil comenzar con el proyecto. Pero a veces es necesario personalizar la configuración. Ejecutar este comando copiará todas las configuraciones de compilación y las dejara en el proyecto. Luego de esto, no se puede volver atras, y toda la configuración de compilación deberá ser manejada a mano.

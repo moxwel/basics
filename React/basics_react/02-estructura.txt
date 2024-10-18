@@ -1,0 +1,29 @@
+Al iniciar el proyecto, habrán varios archivos y carpetas.
+
+- `node_modules` contiene los paquetes de npm que se necesitan para el proyecto.
+    Son DEMASIADOS archivos. Por esta razón, esta excluido del repositorio con el archivo `.gitignore`.
+
+- `public` contiene los archivos estáticos que se servirán en la aplicación.
+    Estos archivos no se compilan y se sirven tal cual. Util para imágenes, fuentes, etc.
+    La direccion de esta capeta se puede acceder con la variable de entorno `%PUBLIC_URL%`.
+
+    - 'manifest.json' es un archivo de configuración para la aplicación web progresiva.
+    - 'favicon.ico' es el ícono de la aplicación web que se muestra en la pestaña del navegador.
+    - 'index.html' es la página principal de la aplicación web.
+
+- `src` contiene el código fuente de la aplicación.
+    Aqui deberia estar todo el código de la aplicación.
+
+    - `index.js` es el punto de entrada de la aplicación.
+
+===================
+
+Cuando se ingresa por primera vez a la direccion web, se carga el archivo `index.html` que se encuentra en la carpeta `public`.
+
+    En este archivo se encuentra un div con el id `root`. Este div será el contenedor de la aplicación.
+
+Luego, react busca el archivo `index.js` que se encuentra en la carpeta `src`.
+
+    En este archivo, se busca el elemento con el id `root` y se renderiza la aplicación dentro de este elemento.
+
+    Lo que se renderiza es el componente `App` que se encuentra en el archivo `App.js` que se encuentra en la carpeta `src`.

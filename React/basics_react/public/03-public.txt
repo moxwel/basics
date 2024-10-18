@@ -1,0 +1,3 @@
+Cuando se carga una pagina web, lo primero que hace React es cargar 'index.html'.
+
+Esa plantilla html se utiliza para cargar todos los componentes de React en este proyecto.

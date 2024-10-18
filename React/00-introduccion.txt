@@ -1,0 +1,7 @@
+Para comenzar un projecto en React, se debe ejecutar el siguiente comando en la terminal:
+
+$ npx create-react-app basics_react
+
+Esto creará una carpeta con el nombre del proyecto.
+
+Ingresando a la carpeta del proyecto, se puede iniciar el servidor.
