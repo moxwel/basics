@@ -1,0 +1,16 @@
+Go (Golang para los amigos) es un lenguaje creado por empleados de Google en 2007.
+
+Fué diseñado para ser aplicado en sistemas de gran escala y de alta demanda. Tambien es un lenguaje
+de programación de código abierto.
+
+Uno de los puntos fuertes que destaca Go es que esta diseñado especificamente para multi-procesamiento, concurrencia y paralelismo. Y con esto
+tambien implica la escalabilidad de los sistemas.
+
+--> A diferencia de Python, que se debe insistir en la concurrencia y paralelismo, Go ya lo tiene integrado en su diseño.
+
+Programas como Docker y Kubernetes estan hechos en Go.
+
+Go se utiliza en el desarrollo de servicios en la nube, microservicios, APIs, etc.
+
+Sobre su sintaxis, es similar a C, pero contiene un recolector de basura, lo que significa que no es necesario liberar la memoria manualmente.
+
